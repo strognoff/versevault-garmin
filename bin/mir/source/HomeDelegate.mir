@@ -1,0 +1,318 @@
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+//! Input delegate for HomeView
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc"; @line = 5; @symbol_classdef = [HomeDelegate,5,6,18]; @symbol_extends<0> = [WatchUi,5,27,34]; @symbol_extends<1> = [BehaviorDelegate,5,35,51]; ]
+class HomeDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc"; @line = 7; @position = 16; @symbol_vardef = [_view,7,16,21]; @symbol_type<0> = [HomeView,7,25,33]; ]
+    private
+    var _view as HomeView;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc"; @line = 9; @symbol_functiondef = [initialize,9,13,23]; @symbol_param<0> = [view,9,24,28]; @symbol_param<0>_type<0> = [HomeView,9,32,40]; ]
+    function initialize(view as HomeView) as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_9_42_12_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 10 8 ]
+        symbol [ BehaviorDelegate %tmp.2 10 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 10 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 11 8 ]
+        %tmp.4 = lgetv %view;
+        symbol [ view %tmp.4 11 16 20 ];
+        symbol [ _view ? 11 8 13 ];
+        putv self :_view %tmp.4;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_9_42_12_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc"; @line = 14; @symbol_functiondef = [onTap,14,13,18]; @symbol_param<0> = [clickEvent,14,19,29]; @symbol_param<0>_type<0> = [WatchUi,14,33,40]; @symbol_param<0>_type<1> = [ClickEvent,14,41,51]; @symbol_return<0> = [Boolean,14,56,63]; ]
+    function onTap(clickEvent as WatchUi.ClickEvent) as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_14_64_17_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 15 8 ]
+        symbol [ _view %tmp.2 15 8 13 ];
+        %tmp.2 = getv ? :_view;
+        symbol [ onTap %tmp.3 15 14 19 ];
+        %tmp.3 = getv function %tmp.2 :onTap;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 16 8 ]
+        %tmp.4 = true;
+        ret %tmp.4;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_14_64_17_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc"; @line = 19; @symbol_functiondef = [onHold,19,13,19]; @symbol_param<0> = [clickEvent,19,20,30]; @symbol_param<0>_type<0> = [WatchUi,19,34,41]; @symbol_param<0>_type<1> = [ClickEvent,19,42,52]; @symbol_return<0> = [Boolean,19,57,64]; ]
+    function onHold(clickEvent as WatchUi.ClickEvent) as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_19_65_22_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 20 8 ]
+        symbol [ _view %tmp.2 20 8 13 ];
+        %tmp.2 = getv ? :_view;
+        symbol [ onHold %tmp.3 20 14 20 ];
+        %tmp.3 = getv function %tmp.2 :onHold;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 21 8 ]
+        %tmp.4 = true;
+        ret %tmp.4;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_19_65_22_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc"; @line = 24; @symbol_functiondef = [onSwipe,24,13,20]; @symbol_param<0> = [swipeEvent,24,21,31]; @symbol_param<0>_type<0> = [WatchUi,24,35,42]; @symbol_param<0>_type<1> = [SwipeEvent,24,43,53]; @symbol_return<0> = [Boolean,24,58,65]; ]
+    function onSwipe(swipeEvent as WatchUi.SwipeEvent) as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_24_66_40_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 25 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_24_66_40_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_24_66_40_4_stop" ]
+        %direction.1 = local;
+        symbol [ direction %direction.1 25 12 21 ];
+        %tmp.1 = lgetv %swipeEvent;
+        symbol [ swipeEvent %tmp.1 25 24 34 ];
+        symbol [ getDirection %tmp.2 25 35 47 ];
+        %tmp.2 = getv function %tmp.1 :getDirection;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %direction.1 %tmp.3;
+        symbol [ direction %direction.1 25 12 21 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 27 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_27_8_37_8_if_stmt:
+        %tmp.4 = lgetv %direction.1;
+        symbol [ direction %tmp.4 27 12 21 ];
+        symbol [ WatchUi %tmp.5 27 25 32 ];
+        %tmp.5 = getm $.Toybox.WatchUi;
+        symbol [ SWIPE_UP %tmp.6 27 33 41 ];
+        %tmp.6 = getv %tmp.5 :SWIPE_UP;
+        %tmp.7 = eq %tmp.4 %tmp.6;
+        bf %tmp.7 @_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_27_8_37_8_if_false;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_27_8_37_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_27_43_32_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 29 12 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_27_43_32_8_start" "_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_27_43_32_8_stop" ]
+        %favView.2 = local;
+        symbol [ favView %favView.2 29 16 23 ];
+        symbol [ FavoritesView %tmp.11 29 30 43 ];
+        %tmp.11 = getv ? :FavoritesView;
+        symbol [ _view %tmp.13 29 44 49 ];
+        %tmp.13 = getv ? :_view;
+        %tmp.8 = newc %tmp.11 (%tmp.13);
+        lputv %favView.2 %tmp.8;
+        symbol [ favView %favView.2 29 16 23 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 30 12 ]
+        symbol [ WatchUi %tmp.14 30 12 19 ];
+        %tmp.14 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.15 30 20 28 ];
+        %tmp.15 = getv function %tmp.14 :pushView;
+        %tmp.16 = lgetv %favView.2;
+        symbol [ favView %tmp.16 30 29 36 ];
+        symbol [ FavoritesDelegate %tmp.20 30 42 59 ];
+        %tmp.20 = getv ? :FavoritesDelegate;
+        %tmp.21 = lgetv %favView.2;
+        symbol [ favView %tmp.21 30 60 67 ];
+        %tmp.17 = newc %tmp.20 (%tmp.21);
+        symbol [ WatchUi %tmp.22 30 70 77 ];
+        %tmp.22 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_UP %tmp.23 30 78 86 ];
+        %tmp.23 = getv %tmp.22 :SLIDE_UP;
+        invoke %tmp.14 %tmp.15(%tmp.16, %tmp.17, %tmp.23);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 31 12 ]
+        %tmp.24 = true;
+        ret %tmp.24;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_27_43_32_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_27_8_37_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_27_8_37_8_if_false:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 32 15 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_32_15_37_8_if_stmt:
+        %tmp.25 = lgetv %direction.1;
+        symbol [ direction %tmp.25 32 19 28 ];
+        symbol [ WatchUi %tmp.26 32 32 39 ];
+        %tmp.26 = getm $.Toybox.WatchUi;
+        symbol [ SWIPE_DOWN %tmp.27 32 40 50 ];
+        %tmp.27 = getv %tmp.26 :SWIPE_DOWN;
+        %tmp.28 = eq %tmp.25 %tmp.27;
+        bf %tmp.28 @_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_32_15_37_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_32_15_37_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_32_52_37_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 34 12 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_32_52_37_8_start" "_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_32_52_37_8_stop" ]
+        %themesView.3 = local;
+        symbol [ themesView %themesView.3 34 16 26 ];
+        symbol [ ThemesView %tmp.32 34 33 43 ];
+        %tmp.32 = getv ? :ThemesView;
+        symbol [ _view %tmp.34 34 44 49 ];
+        %tmp.34 = getv ? :_view;
+        %tmp.29 = newc %tmp.32 (%tmp.34);
+        lputv %themesView.3 %tmp.29;
+        symbol [ themesView %themesView.3 34 16 26 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 35 12 ]
+        symbol [ WatchUi %tmp.35 35 12 19 ];
+        %tmp.35 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.36 35 20 28 ];
+        %tmp.36 = getv function %tmp.35 :pushView;
+        %tmp.37 = lgetv %themesView.3;
+        symbol [ themesView %tmp.37 35 29 39 ];
+        symbol [ ThemesDelegate %tmp.41 35 45 59 ];
+        %tmp.41 = getv ? :ThemesDelegate;
+        %tmp.42 = lgetv %themesView.3;
+        symbol [ themesView %tmp.42 35 60 70 ];
+        %tmp.38 = newc %tmp.41 (%tmp.42);
+        symbol [ WatchUi %tmp.43 35 73 80 ];
+        %tmp.43 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.44 35 81 91 ];
+        %tmp.44 = getv %tmp.43 :SLIDE_DOWN;
+        invoke %tmp.35 %tmp.36(%tmp.37, %tmp.38, %tmp.44);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 36 12 ]
+        %tmp.45 = true;
+        ret %tmp.45;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_32_52_37_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_32_15_37_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_32_15_37_8_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_27_8_37_8_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 39 8 ]
+        %tmp.46 = false;
+        ret %tmp.46;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_24_66_40_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc"; @line = 42; @symbol_functiondef = [onNextPage,42,13,23]; @symbol_return<0> = [Boolean,42,29,36]; ]
+    function onNextPage() as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_42_37_47_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 44 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_42_37_47_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_42_37_47_4_stop" ]
+        %favView.1 = local;
+        symbol [ favView %favView.1 44 12 19 ];
+        symbol [ FavoritesView %tmp.4 44 26 39 ];
+        %tmp.4 = getv ? :FavoritesView;
+        symbol [ _view %tmp.6 44 40 45 ];
+        %tmp.6 = getv ? :_view;
+        %tmp.1 = newc %tmp.4 (%tmp.6);
+        lputv %favView.1 %tmp.1;
+        symbol [ favView %favView.1 44 12 19 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 45 8 ]
+        symbol [ WatchUi %tmp.7 45 8 15 ];
+        %tmp.7 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.8 45 16 24 ];
+        %tmp.8 = getv function %tmp.7 :pushView;
+        %tmp.9 = lgetv %favView.1;
+        symbol [ favView %tmp.9 45 25 32 ];
+        symbol [ FavoritesDelegate %tmp.13 45 38 55 ];
+        %tmp.13 = getv ? :FavoritesDelegate;
+        %tmp.14 = lgetv %favView.1;
+        symbol [ favView %tmp.14 45 56 63 ];
+        %tmp.10 = newc %tmp.13 (%tmp.14);
+        symbol [ WatchUi %tmp.15 45 66 73 ];
+        %tmp.15 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_UP %tmp.16 45 74 82 ];
+        %tmp.16 = getv %tmp.15 :SLIDE_UP;
+        invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.16);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 46 8 ]
+        %tmp.17 = true;
+        ret %tmp.17;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_42_37_47_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc"; @line = 49; @symbol_functiondef = [onPreviousPage,49,13,27]; @symbol_return<0> = [Boolean,49,33,40]; ]
+    function onPreviousPage() as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_49_41_54_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 51 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_49_41_54_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_49_41_54_4_stop" ]
+        %themesView.1 = local;
+        symbol [ themesView %themesView.1 51 12 22 ];
+        symbol [ ThemesView %tmp.4 51 29 39 ];
+        %tmp.4 = getv ? :ThemesView;
+        symbol [ _view %tmp.6 51 40 45 ];
+        %tmp.6 = getv ? :_view;
+        %tmp.1 = newc %tmp.4 (%tmp.6);
+        lputv %themesView.1 %tmp.1;
+        symbol [ themesView %themesView.1 51 12 22 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 52 8 ]
+        symbol [ WatchUi %tmp.7 52 8 15 ];
+        %tmp.7 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.8 52 16 24 ];
+        %tmp.8 = getv function %tmp.7 :pushView;
+        %tmp.9 = lgetv %themesView.1;
+        symbol [ themesView %tmp.9 52 25 35 ];
+        symbol [ ThemesDelegate %tmp.13 52 41 55 ];
+        %tmp.13 = getv ? :ThemesDelegate;
+        %tmp.14 = lgetv %themesView.1;
+        symbol [ themesView %tmp.14 52 56 66 ];
+        %tmp.10 = newc %tmp.13 (%tmp.14);
+        symbol [ WatchUi %tmp.15 52 69 76 ];
+        %tmp.15 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.16 52 77 87 ];
+        %tmp.16 = getv %tmp.15 :SLIDE_DOWN;
+        invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.16);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 53 8 ]
+        %tmp.17 = true;
+        ret %tmp.17;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_49_41_54_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc"; @line = 56; @symbol_functiondef = [onKey,56,13,18]; @symbol_param<0> = [keyEvent,56,19,27]; @symbol_param<0>_type<0> = [WatchUi,56,31,38]; @symbol_param<0>_type<1> = [KeyEvent,56,39,47]; @symbol_return<0> = [Boolean,56,52,59]; ]
+    function onKey(keyEvent as WatchUi.KeyEvent) as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_56_60_67_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 57 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_56_60_67_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_56_60_67_4_stop" ]
+        %key.1 = local;
+        symbol [ key %key.1 57 12 15 ];
+        %tmp.1 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.1 57 18 26 ];
+        symbol [ getKey %tmp.2 57 27 33 ];
+        %tmp.2 = getv function %tmp.1 :getKey;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %key.1 %tmp.3;
+        symbol [ key %key.1 57 12 15 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 59 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_59_8_64_8_if_stmt:
+        %tmp.4 = lgetv %key.1;
+        symbol [ key %tmp.4 59 12 15 ];
+        symbol [ WatchUi %tmp.5 59 19 26 ];
+        %tmp.5 = getm $.Toybox.WatchUi;
+        symbol [ KEY_MENU %tmp.6 59 27 35 ];
+        %tmp.6 = getv %tmp.5 :KEY_MENU;
+        %tmp.7 = eq %tmp.4 %tmp.6;
+        bf %tmp.7 @_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_59_8_64_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_59_8_64_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_59_37_64_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 61 12 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_59_37_64_8_start" "_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_59_37_64_8_stop" ]
+        %settingsView.2 = local;
+        symbol [ settingsView %settingsView.2 61 16 28 ];
+        symbol [ SettingsView %tmp.11 61 35 47 ];
+        %tmp.11 = getv ? :SettingsView;
+        %tmp.8 = newc %tmp.11 ();
+        lputv %settingsView.2 %tmp.8;
+        symbol [ settingsView %settingsView.2 61 16 28 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 62 12 ]
+        symbol [ WatchUi %tmp.12 62 12 19 ];
+        %tmp.12 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.13 62 20 28 ];
+        %tmp.13 = getv function %tmp.12 :pushView;
+        %tmp.14 = lgetv %settingsView.2;
+        symbol [ settingsView %tmp.14 62 29 41 ];
+        symbol [ SettingsDelegate %tmp.18 62 47 63 ];
+        %tmp.18 = getv ? :SettingsDelegate;
+        %tmp.15 = newc %tmp.18 ();
+        symbol [ WatchUi %tmp.19 62 67 74 ];
+        %tmp.19 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_LEFT %tmp.20 62 75 85 ];
+        %tmp.20 = getv %tmp.19 :SLIDE_LEFT;
+        invoke %tmp.12 %tmp.13(%tmp.14, %tmp.15, %tmp.20);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 63 12 ]
+        %tmp.21 = true;
+        ret %tmp.21;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_59_37_64_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_59_8_64_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_59_8_64_8_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 66 8 ]
+        %tmp.22 = false;
+        ret %tmp.22;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_56_60_67_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc"; @line = 69; @symbol_functiondef = [onBack,69,13,19]; @symbol_return<0> = [Boolean,69,25,32]; ]
+    function onBack() as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_69_33_72_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" 71 8 ]
+        %tmp.1 = false;
+        ret %tmp.1;
+_Users_jeffcechinel_Github_versevault_garmin_source_HomeDelegate_mc_69_33_72_4_stop:
+    }
+}
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc"; @line = 1; ]
+<init> {
+}

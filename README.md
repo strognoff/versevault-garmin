@@ -4,27 +4,39 @@ A Garmin Connect IQ app that displays random Bible verses on tap — fully offli
 
 ## Features
 
-- **Random verse on tap** — tap screen, get a random verse instantly
-- **Favorites** — save verses you love, randomize only from favorites
-- **Theme search** — search by theme (peace, strength, faith, hope, love, wisdom, comfort, courage)
+- **Truly random verses** — tap screen to get a random verse instantly (not sequential)
+- **Favorites** — save verses you love with "F - " prefix indicator, view and randomize from favorites
+- **Theme search** — browse by theme (peace, strength, faith, hope, love, wisdom, comfort, courage)
 - **Stats tracking** — verses read, favorites saved, streak counter
 - **Beautiful warming colour scheme** — warm tones (ambers, soft reds, creams)
+- **Dynamic font sizing** — automatically adjusts text size for long verses to prevent overflow
+- **Smart layout** — prevents text from overlapping header/footer elements
 
 ## Screenshots
 
-- Home: Random verse display with tap hint
-- Favorites: List of saved verses
-- Themes: Theme selection grid
-- Stats: Verses read, favorites, streak
+- Home: Random verse display with navigation hints
+- Favorites: List of saved verses with "F - " prefix
+- Themes: Compact theme selection grid
+- Stats: Verses read, favorites count, streak
 
 ## Navigation
 
 - **Tap** → Display random verse
 - **Hold tap** → Save to favorites (or remove if already saved)
-- **Swipe up** → Open favorites
-- **Swipe down** → Open themes
+- **Up button** (or swipe up) → Open favorites
+- **Down button** (or swipe down) → Open themes
 - **Menu button** → Open stats
 - **Back button** → Return to previous screen
+
+### In Favorites View
+- **Left/Right buttons** (or swipe) → Navigate between favorites
+- **Tap** → View selected favorite on home screen
+- **Back** → Return to home
+
+### In Themes View
+- **Up/Down/Left/Right buttons** (or swipe) → Navigate between themes
+- **Tap** (or Enter) → Select theme and show random verse
+- **Back** → Return to home
 
 ## Technical Details
 

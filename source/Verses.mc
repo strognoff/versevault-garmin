@@ -1,4 +1,5 @@
 import Toybox.Lang;
+import Toybox.Math;
 
 //! Represents a Bible verse
 class Verse {
@@ -166,12 +167,10 @@ class Verses {
         return result;
     }
     
-    private static var verseCounter as Number = 0;
-    
-    //! Get a random verse (cycles through based on counter)
+    //! Get a random verse
     static function getRandom() as Verse {
-        verseCounter = (verseCounter + 1) % allVerses.size();
-        return allVerses[verseCounter];
+        var randomIndex = Math.rand() % allVerses.size();
+        return allVerses[randomIndex];
     }
     
     //! Get a random verse from a subset
@@ -179,8 +178,8 @@ class Verses {
         if (verses.size() == 0) {
             return allVerses[0];
         }
-        verseCounter = (verseCounter + 1) % verses.size();
-        return verses[verseCounter];
+        var randomIndex = Math.rand() % verses.size();
+        return verses[randomIndex];
     }
     
     //! Get themes list

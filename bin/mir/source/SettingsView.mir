@@ -1,0 +1,664 @@
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Graphics,3,14,22]; ]
+import Toybox.Graphics;
+//! View for displaying settings
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 6; @symbol_classdef = [SettingsView,6,6,18]; @symbol_extends<0> = [WatchUi,6,27,34]; @symbol_extends<1> = [View,6,35,39]; ]
+class SettingsView extends WatchUi.View {
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 8; @position = 16; @symbol_vardef = [_app,8,16,20]; @symbol_type<0> = [VerseVaultApp,8,24,37]; ]
+    private
+    var _app as VerseVaultApp;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 11; @position = 10; @symbol_constdef = [COLOR_AMBER,11,10,21]; ]
+    const COLOR_AMBER = 0xFFBF00;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 12; @position = 10; @symbol_constdef = [COLOR_SOFT_RED,12,10,24]; ]
+    const COLOR_SOFT_RED = 0xE57373;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 13; @position = 10; @symbol_constdef = [COLOR_CREAM,13,10,21]; ]
+    const COLOR_CREAM = 0xFFF8E1;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 14; @position = 10; @symbol_constdef = [COLOR_WARM_BG,14,10,23]; ]
+    const COLOR_WARM_BG = 0x2D1F1A;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 15; @position = 10; @symbol_constdef = [COLOR_CARD,15,10,20]; ]
+    const COLOR_CARD = 0x3E2B26;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 16; @position = 10; @symbol_constdef = [COLOR_MUTED,16,10,21]; ]
+    const COLOR_MUTED = 0xA89080;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 18; @symbol_functiondef = [initialize,18,13,23]; ]
+    function initialize() as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_18_26_21_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 19 8 ]
+        symbol [ WatchUi %tmp.1 19 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ View %tmp.2 19 16 20 ];
+        %tmp.2 = getv %tmp.1 :View;
+        symbol [ initialize %tmp.3 19 21 31 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 20 8 ]
+        symbol [ Application %tmp.5 20 15 26 ];
+        %tmp.5 = getv ? :Application;
+        symbol [ getApp %tmp.6 20 27 33 ];
+        %tmp.6 = getv function %tmp.5 :getApp;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        %tmp.8 = as %tmp.7 VerseVaultApp;
+        symbol [ VerseVaultApp %tmp.8 20 39 52 ];
+        symbol [ _app ? 20 8 12 ];
+        putv self :_app %tmp.8;
+_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_18_26_21_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 23; @symbol_functiondef = [onLayout,23,13,21]; @symbol_param<0> = [dc,23,22,24]; @symbol_param<0>_type<0> = [Dc,23,28,30]; ]
+    function onLayout(dc as Dc) as Void {
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 27; @symbol_functiondef = [onUpdate,27,13,21]; @symbol_param<0> = [dc,27,22,24]; @symbol_param<0>_type<0> = [Dc,27,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 28 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_stop" ]
+        %w.1 = local;
+        symbol [ w %w.1 28 12 13 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 28 16 18 ];
+        symbol [ getWidth %tmp.2 28 19 27 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %w.1 %tmp.3;
+        symbol [ w %w.1 28 12 13 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 29 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_stop" ]
+        %h.2 = local;
+        symbol [ h %h.2 29 12 13 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 29 16 18 ];
+        symbol [ getHeight %tmp.5 29 19 28 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %h.2 %tmp.6;
+        symbol [ h %h.2 29 12 13 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 32 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 32 8 10 ];
+        symbol [ setColor %tmp.8 32 11 19 ];
+        %tmp.8 = getv function %tmp.7 :setColor;
+        symbol [ COLOR_WARM_BG %tmp.10 32 20 33 ];
+        %tmp.10 = getv ? :COLOR_WARM_BG;
+        symbol [ COLOR_WARM_BG %tmp.12 32 35 48 ];
+        %tmp.12 = getv ? :COLOR_WARM_BG;
+        invoke %tmp.7 %tmp.8(%tmp.10, %tmp.12);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 33 8 ]
+        %tmp.13 = lgetv %dc;
+        symbol [ dc %tmp.13 33 8 10 ];
+        symbol [ clear %tmp.14 33 11 16 ];
+        %tmp.14 = getv function %tmp.13 :clear;
+        invoke %tmp.13 %tmp.14();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 36 8 ]
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 36 8 10 ];
+        symbol [ setColor %tmp.16 36 11 19 ];
+        %tmp.16 = getv function %tmp.15 :setColor;
+        symbol [ COLOR_AMBER %tmp.18 36 20 31 ];
+        %tmp.18 = getv ? :COLOR_AMBER;
+        symbol [ Graphics %tmp.19 36 33 41 ];
+        %tmp.19 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.20 36 42 59 ];
+        %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 37 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 37 8 10 ];
+        symbol [ fillRectangle %tmp.22 37 11 24 ];
+        %tmp.22 = getv function %tmp.21 :fillRectangle;
+        %tmp.23 = 0;
+        %tmp.24 = 0;
+        %tmp.25 = lgetv %w.1;
+        symbol [ w %tmp.25 37 31 32 ];
+        %tmp.26 = 4;
+        invoke %tmp.21 %tmp.22(%tmp.23, %tmp.24, %tmp.25, %tmp.26);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 39 8 ]
+        %tmp.27 = lgetv %dc;
+        symbol [ dc %tmp.27 39 8 10 ];
+        symbol [ setColor %tmp.28 39 11 19 ];
+        %tmp.28 = getv function %tmp.27 :setColor;
+        symbol [ COLOR_CREAM %tmp.30 39 20 31 ];
+        %tmp.30 = getv ? :COLOR_CREAM;
+        symbol [ Graphics %tmp.31 39 33 41 ];
+        %tmp.31 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.32 39 42 59 ];
+        %tmp.32 = getv %tmp.31 :COLOR_TRANSPARENT;
+        invoke %tmp.27 %tmp.28(%tmp.30, %tmp.32);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 40 8 ]
+        %tmp.33 = lgetv %dc;
+        symbol [ dc %tmp.33 40 8 10 ];
+        symbol [ drawText %tmp.34 40 11 19 ];
+        %tmp.34 = getv function %tmp.33 :drawText;
+        %tmp.35 = lgetv %w.1;
+        symbol [ w %tmp.35 40 20 21 ];
+        %tmp.36 = 2;
+        %tmp.37 = div %tmp.35 %tmp.36;
+        %tmp.38 = 25;
+        symbol [ Graphics %tmp.39 40 31 39 ];
+        %tmp.39 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.40 40 40 49 ];
+        %tmp.40 = getv %tmp.39 :FONT_TINY;
+        %tmp.41 = "Stats";
+        symbol [ Graphics %tmp.42 40 60 68 ];
+        %tmp.42 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.43 40 69 88 ];
+        %tmp.43 = getv %tmp.42 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.44 40 91 99 ];
+        %tmp.44 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.45 40 100 120 ];
+        %tmp.45 = getv %tmp.44 :TEXT_JUSTIFY_VCENTER;
+        %tmp.46 = bitor %tmp.43 %tmp.45;
+        invoke %tmp.33 %tmp.34(%tmp.37, %tmp.38, %tmp.40, %tmp.41, %tmp.46);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 43 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_stop" ]
+        %cardPadding.3 = local;
+        symbol [ cardPadding %cardPadding.3 43 12 23 ];
+        %tmp.47 = 15;
+        lputv %cardPadding.3 %tmp.47;
+        symbol [ cardPadding %cardPadding.3 43 12 23 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 44 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_stop" ]
+        %cardWidth.4 = local;
+        symbol [ cardWidth %cardWidth.4 44 12 21 ];
+        %tmp.48 = lgetv %w.1;
+        symbol [ w %tmp.48 44 24 25 ];
+        %tmp.49 = lgetv %cardPadding.3;
+        symbol [ cardPadding %tmp.49 44 29 40 ];
+        %tmp.50 = 2;
+        %tmp.51 = mul %tmp.49 %tmp.50;
+        %tmp.52 = sub %tmp.48 %tmp.51;
+        lputv %cardWidth.4 %tmp.52;
+        symbol [ cardWidth %cardWidth.4 44 12 21 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 45 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_stop" ]
+        %cardX.5 = local;
+        symbol [ cardX %cardX.5 45 12 17 ];
+        %tmp.53 = lgetv %cardPadding.3;
+        symbol [ cardPadding %tmp.53 45 20 31 ];
+        lputv %cardX.5 %tmp.53;
+        symbol [ cardX %cardX.5 45 12 17 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 48 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_stop" ]
+        %card1Y.6 = local;
+        symbol [ card1Y %card1Y.6 48 12 18 ];
+        %tmp.54 = 60;
+        lputv %card1Y.6 %tmp.54;
+        symbol [ card1Y %card1Y.6 48 12 18 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 49 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_stop" ]
+        %card1Height.7 = local;
+        symbol [ card1Height %card1Height.7 49 12 23 ];
+        %tmp.55 = 50;
+        lputv %card1Height.7 %tmp.55;
+        symbol [ card1Height %card1Height.7 49 12 23 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 50 8 ]
+        %tmp.56 = lgetv %dc;
+        symbol [ dc %tmp.56 50 8 10 ];
+        symbol [ setColor %tmp.57 50 11 19 ];
+        %tmp.57 = getv function %tmp.56 :setColor;
+        symbol [ COLOR_CARD %tmp.59 50 20 30 ];
+        %tmp.59 = getv ? :COLOR_CARD;
+        symbol [ Graphics %tmp.60 50 32 40 ];
+        %tmp.60 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.61 50 41 58 ];
+        %tmp.61 = getv %tmp.60 :COLOR_TRANSPARENT;
+        invoke %tmp.56 %tmp.57(%tmp.59, %tmp.61);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 51 8 ]
+        %tmp.62 = lgetv %dc;
+        symbol [ dc %tmp.62 51 8 10 ];
+        symbol [ fillRoundedRectangle %tmp.63 51 11 31 ];
+        %tmp.63 = getv function %tmp.62 :fillRoundedRectangle;
+        %tmp.64 = lgetv %cardX.5;
+        symbol [ cardX %tmp.64 51 32 37 ];
+        %tmp.65 = lgetv %card1Y.6;
+        symbol [ card1Y %tmp.65 51 39 45 ];
+        %tmp.66 = lgetv %cardWidth.4;
+        symbol [ cardWidth %tmp.66 51 47 56 ];
+        %tmp.67 = lgetv %card1Height.7;
+        symbol [ card1Height %tmp.67 51 58 69 ];
+        %tmp.68 = 6;
+        invoke %tmp.62 %tmp.63(%tmp.64, %tmp.65, %tmp.66, %tmp.67, %tmp.68);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 53 8 ]
+        %tmp.69 = lgetv %dc;
+        symbol [ dc %tmp.69 53 8 10 ];
+        symbol [ setColor %tmp.70 53 11 19 ];
+        %tmp.70 = getv function %tmp.69 :setColor;
+        symbol [ COLOR_MUTED %tmp.72 53 20 31 ];
+        %tmp.72 = getv ? :COLOR_MUTED;
+        symbol [ Graphics %tmp.73 53 33 41 ];
+        %tmp.73 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.74 53 42 59 ];
+        %tmp.74 = getv %tmp.73 :COLOR_TRANSPARENT;
+        invoke %tmp.69 %tmp.70(%tmp.72, %tmp.74);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 54 8 ]
+        %tmp.75 = lgetv %dc;
+        symbol [ dc %tmp.75 54 8 10 ];
+        symbol [ drawText %tmp.76 54 11 19 ];
+        %tmp.76 = getv function %tmp.75 :drawText;
+        %tmp.77 = lgetv %cardX.5;
+        symbol [ cardX %tmp.77 54 20 25 ];
+        %tmp.78 = 15;
+        %tmp.79 = add %tmp.77 %tmp.78;
+        %tmp.80 = lgetv %card1Y.6;
+        symbol [ card1Y %tmp.80 54 32 38 ];
+        %tmp.81 = 15;
+        %tmp.82 = add %tmp.80 %tmp.81;
+        symbol [ Graphics %tmp.83 54 45 53 ];
+        %tmp.83 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.84 54 54 64 ];
+        %tmp.84 = getv %tmp.83 :FONT_XTINY;
+        %tmp.85 = "Verses Read";
+        symbol [ Graphics %tmp.86 54 81 89 ];
+        %tmp.86 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.87 54 90 107 ];
+        %tmp.87 = getv %tmp.86 :TEXT_JUSTIFY_LEFT;
+        symbol [ Graphics %tmp.88 54 110 118 ];
+        %tmp.88 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.89 54 119 139 ];
+        %tmp.89 = getv %tmp.88 :TEXT_JUSTIFY_VCENTER;
+        %tmp.90 = bitor %tmp.87 %tmp.89;
+        invoke %tmp.75 %tmp.76(%tmp.79, %tmp.82, %tmp.84, %tmp.85, %tmp.90);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 56 8 ]
+        %tmp.91 = lgetv %dc;
+        symbol [ dc %tmp.91 56 8 10 ];
+        symbol [ setColor %tmp.92 56 11 19 ];
+        %tmp.92 = getv function %tmp.91 :setColor;
+        symbol [ COLOR_CREAM %tmp.94 56 20 31 ];
+        %tmp.94 = getv ? :COLOR_CREAM;
+        symbol [ Graphics %tmp.95 56 33 41 ];
+        %tmp.95 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.96 56 42 59 ];
+        %tmp.96 = getv %tmp.95 :COLOR_TRANSPARENT;
+        invoke %tmp.91 %tmp.92(%tmp.94, %tmp.96);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 57 8 ]
+        %tmp.97 = lgetv %dc;
+        symbol [ dc %tmp.97 57 8 10 ];
+        symbol [ drawText %tmp.98 57 11 19 ];
+        %tmp.98 = getv function %tmp.97 :drawText;
+        %tmp.99 = lgetv %cardX.5;
+        symbol [ cardX %tmp.99 57 20 25 ];
+        %tmp.100 = lgetv %cardWidth.4;
+        symbol [ cardWidth %tmp.100 57 28 37 ];
+        %tmp.101 = add %tmp.99 %tmp.100;
+        %tmp.102 = 15;
+        %tmp.103 = sub %tmp.101 %tmp.102;
+        %tmp.104 = lgetv %card1Y.6;
+        symbol [ card1Y %tmp.104 57 44 50 ];
+        %tmp.105 = 15;
+        %tmp.106 = add %tmp.104 %tmp.105;
+        symbol [ Graphics %tmp.107 57 57 65 ];
+        %tmp.107 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.108 57 66 75 ];
+        %tmp.108 = getv %tmp.107 :FONT_TINY;
+        symbol [ _app %tmp.110 57 77 81 ];
+        %tmp.110 = getv ? :_app;
+        symbol [ versesRead %tmp.111 57 82 92 ];
+        %tmp.111 = getv %tmp.110 :versesRead;
+        symbol [ toString %tmp.112 57 93 101 ];
+        %tmp.112 = getv function %tmp.111 :toString;
+        %tmp.113 = invoke %tmp.111 %tmp.112();
+        symbol [ Graphics %tmp.114 57 105 113 ];
+        %tmp.114 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_RIGHT %tmp.115 57 114 132 ];
+        %tmp.115 = getv %tmp.114 :TEXT_JUSTIFY_RIGHT;
+        symbol [ Graphics %tmp.116 57 135 143 ];
+        %tmp.116 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.117 57 144 164 ];
+        %tmp.117 = getv %tmp.116 :TEXT_JUSTIFY_VCENTER;
+        %tmp.118 = bitor %tmp.115 %tmp.117;
+        invoke %tmp.97 %tmp.98(%tmp.103, %tmp.106, %tmp.108, %tmp.113, %tmp.118);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 60 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_stop" ]
+        %card2Y.8 = local;
+        symbol [ card2Y %card2Y.8 60 12 18 ];
+        %tmp.119 = lgetv %card1Y.6;
+        symbol [ card1Y %tmp.119 60 21 27 ];
+        %tmp.120 = lgetv %card1Height.7;
+        symbol [ card1Height %tmp.120 60 30 41 ];
+        %tmp.121 = add %tmp.119 %tmp.120;
+        %tmp.122 = 10;
+        %tmp.123 = add %tmp.121 %tmp.122;
+        lputv %card2Y.8 %tmp.123;
+        symbol [ card2Y %card2Y.8 60 12 18 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 61 8 ]
+        %tmp.124 = lgetv %dc;
+        symbol [ dc %tmp.124 61 8 10 ];
+        symbol [ setColor %tmp.125 61 11 19 ];
+        %tmp.125 = getv function %tmp.124 :setColor;
+        symbol [ COLOR_CARD %tmp.127 61 20 30 ];
+        %tmp.127 = getv ? :COLOR_CARD;
+        symbol [ Graphics %tmp.128 61 32 40 ];
+        %tmp.128 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.129 61 41 58 ];
+        %tmp.129 = getv %tmp.128 :COLOR_TRANSPARENT;
+        invoke %tmp.124 %tmp.125(%tmp.127, %tmp.129);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 62 8 ]
+        %tmp.130 = lgetv %dc;
+        symbol [ dc %tmp.130 62 8 10 ];
+        symbol [ fillRoundedRectangle %tmp.131 62 11 31 ];
+        %tmp.131 = getv function %tmp.130 :fillRoundedRectangle;
+        %tmp.132 = lgetv %cardX.5;
+        symbol [ cardX %tmp.132 62 32 37 ];
+        %tmp.133 = lgetv %card2Y.8;
+        symbol [ card2Y %tmp.133 62 39 45 ];
+        %tmp.134 = lgetv %cardWidth.4;
+        symbol [ cardWidth %tmp.134 62 47 56 ];
+        %tmp.135 = lgetv %card1Height.7;
+        symbol [ card1Height %tmp.135 62 58 69 ];
+        %tmp.136 = 6;
+        invoke %tmp.130 %tmp.131(%tmp.132, %tmp.133, %tmp.134, %tmp.135, %tmp.136);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 64 8 ]
+        %tmp.137 = lgetv %dc;
+        symbol [ dc %tmp.137 64 8 10 ];
+        symbol [ setColor %tmp.138 64 11 19 ];
+        %tmp.138 = getv function %tmp.137 :setColor;
+        symbol [ COLOR_MUTED %tmp.140 64 20 31 ];
+        %tmp.140 = getv ? :COLOR_MUTED;
+        symbol [ Graphics %tmp.141 64 33 41 ];
+        %tmp.141 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.142 64 42 59 ];
+        %tmp.142 = getv %tmp.141 :COLOR_TRANSPARENT;
+        invoke %tmp.137 %tmp.138(%tmp.140, %tmp.142);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 65 8 ]
+        %tmp.143 = lgetv %dc;
+        symbol [ dc %tmp.143 65 8 10 ];
+        symbol [ drawText %tmp.144 65 11 19 ];
+        %tmp.144 = getv function %tmp.143 :drawText;
+        %tmp.145 = lgetv %cardX.5;
+        symbol [ cardX %tmp.145 65 20 25 ];
+        %tmp.146 = 15;
+        %tmp.147 = add %tmp.145 %tmp.146;
+        %tmp.148 = lgetv %card2Y.8;
+        symbol [ card2Y %tmp.148 65 32 38 ];
+        %tmp.149 = 15;
+        %tmp.150 = add %tmp.148 %tmp.149;
+        symbol [ Graphics %tmp.151 65 45 53 ];
+        %tmp.151 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.152 65 54 64 ];
+        %tmp.152 = getv %tmp.151 :FONT_XTINY;
+        %tmp.153 = "Favorites";
+        symbol [ Graphics %tmp.154 65 79 87 ];
+        %tmp.154 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.155 65 88 105 ];
+        %tmp.155 = getv %tmp.154 :TEXT_JUSTIFY_LEFT;
+        symbol [ Graphics %tmp.156 65 108 116 ];
+        %tmp.156 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.157 65 117 137 ];
+        %tmp.157 = getv %tmp.156 :TEXT_JUSTIFY_VCENTER;
+        %tmp.158 = bitor %tmp.155 %tmp.157;
+        invoke %tmp.143 %tmp.144(%tmp.147, %tmp.150, %tmp.152, %tmp.153, %tmp.158);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 67 8 ]
+        %tmp.159 = lgetv %dc;
+        symbol [ dc %tmp.159 67 8 10 ];
+        symbol [ setColor %tmp.160 67 11 19 ];
+        %tmp.160 = getv function %tmp.159 :setColor;
+        symbol [ COLOR_SOFT_RED %tmp.162 67 20 34 ];
+        %tmp.162 = getv ? :COLOR_SOFT_RED;
+        symbol [ Graphics %tmp.163 67 36 44 ];
+        %tmp.163 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.164 67 45 62 ];
+        %tmp.164 = getv %tmp.163 :COLOR_TRANSPARENT;
+        invoke %tmp.159 %tmp.160(%tmp.162, %tmp.164);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 68 8 ]
+        %tmp.165 = lgetv %dc;
+        symbol [ dc %tmp.165 68 8 10 ];
+        symbol [ drawText %tmp.166 68 11 19 ];
+        %tmp.166 = getv function %tmp.165 :drawText;
+        %tmp.167 = lgetv %cardX.5;
+        symbol [ cardX %tmp.167 68 20 25 ];
+        %tmp.168 = lgetv %cardWidth.4;
+        symbol [ cardWidth %tmp.168 68 28 37 ];
+        %tmp.169 = add %tmp.167 %tmp.168;
+        %tmp.170 = 15;
+        %tmp.171 = sub %tmp.169 %tmp.170;
+        %tmp.172 = lgetv %card2Y.8;
+        symbol [ card2Y %tmp.172 68 44 50 ];
+        %tmp.173 = 15;
+        %tmp.174 = add %tmp.172 %tmp.173;
+        symbol [ Graphics %tmp.175 68 57 65 ];
+        %tmp.175 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.176 68 66 75 ];
+        %tmp.176 = getv %tmp.175 :FONT_TINY;
+        symbol [ _app %tmp.178 68 77 81 ];
+        %tmp.178 = getv ? :_app;
+        symbol [ getFavorites %tmp.179 68 82 94 ];
+        %tmp.179 = getv function %tmp.178 :getFavorites;
+        %tmp.180 = invoke %tmp.178 %tmp.179();
+        symbol [ size %tmp.181 68 97 101 ];
+        %tmp.181 = getv function %tmp.180 :size;
+        %tmp.182 = invoke %tmp.180 %tmp.181();
+        symbol [ toString %tmp.183 68 104 112 ];
+        %tmp.183 = getv function %tmp.182 :toString;
+        %tmp.184 = invoke %tmp.182 %tmp.183();
+        symbol [ Graphics %tmp.185 68 116 124 ];
+        %tmp.185 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_RIGHT %tmp.186 68 125 143 ];
+        %tmp.186 = getv %tmp.185 :TEXT_JUSTIFY_RIGHT;
+        symbol [ Graphics %tmp.187 68 146 154 ];
+        %tmp.187 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.188 68 155 175 ];
+        %tmp.188 = getv %tmp.187 :TEXT_JUSTIFY_VCENTER;
+        %tmp.189 = bitor %tmp.186 %tmp.188;
+        invoke %tmp.165 %tmp.166(%tmp.171, %tmp.174, %tmp.176, %tmp.184, %tmp.189);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 71 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_stop" ]
+        %card3Y.9 = local;
+        symbol [ card3Y %card3Y.9 71 12 18 ];
+        %tmp.190 = lgetv %card2Y.8;
+        symbol [ card2Y %tmp.190 71 21 27 ];
+        %tmp.191 = lgetv %card1Height.7;
+        symbol [ card1Height %tmp.191 71 30 41 ];
+        %tmp.192 = add %tmp.190 %tmp.191;
+        %tmp.193 = 10;
+        %tmp.194 = add %tmp.192 %tmp.193;
+        lputv %card3Y.9 %tmp.194;
+        symbol [ card3Y %card3Y.9 71 12 18 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 72 8 ]
+        %tmp.195 = lgetv %dc;
+        symbol [ dc %tmp.195 72 8 10 ];
+        symbol [ setColor %tmp.196 72 11 19 ];
+        %tmp.196 = getv function %tmp.195 :setColor;
+        symbol [ COLOR_CARD %tmp.198 72 20 30 ];
+        %tmp.198 = getv ? :COLOR_CARD;
+        symbol [ Graphics %tmp.199 72 32 40 ];
+        %tmp.199 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.200 72 41 58 ];
+        %tmp.200 = getv %tmp.199 :COLOR_TRANSPARENT;
+        invoke %tmp.195 %tmp.196(%tmp.198, %tmp.200);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 73 8 ]
+        %tmp.201 = lgetv %dc;
+        symbol [ dc %tmp.201 73 8 10 ];
+        symbol [ fillRoundedRectangle %tmp.202 73 11 31 ];
+        %tmp.202 = getv function %tmp.201 :fillRoundedRectangle;
+        %tmp.203 = lgetv %cardX.5;
+        symbol [ cardX %tmp.203 73 32 37 ];
+        %tmp.204 = lgetv %card3Y.9;
+        symbol [ card3Y %tmp.204 73 39 45 ];
+        %tmp.205 = lgetv %cardWidth.4;
+        symbol [ cardWidth %tmp.205 73 47 56 ];
+        %tmp.206 = lgetv %card1Height.7;
+        symbol [ card1Height %tmp.206 73 58 69 ];
+        %tmp.207 = 6;
+        invoke %tmp.201 %tmp.202(%tmp.203, %tmp.204, %tmp.205, %tmp.206, %tmp.207);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 75 8 ]
+        %tmp.208 = lgetv %dc;
+        symbol [ dc %tmp.208 75 8 10 ];
+        symbol [ setColor %tmp.209 75 11 19 ];
+        %tmp.209 = getv function %tmp.208 :setColor;
+        symbol [ COLOR_MUTED %tmp.211 75 20 31 ];
+        %tmp.211 = getv ? :COLOR_MUTED;
+        symbol [ Graphics %tmp.212 75 33 41 ];
+        %tmp.212 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.213 75 42 59 ];
+        %tmp.213 = getv %tmp.212 :COLOR_TRANSPARENT;
+        invoke %tmp.208 %tmp.209(%tmp.211, %tmp.213);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 76 8 ]
+        %tmp.214 = lgetv %dc;
+        symbol [ dc %tmp.214 76 8 10 ];
+        symbol [ drawText %tmp.215 76 11 19 ];
+        %tmp.215 = getv function %tmp.214 :drawText;
+        %tmp.216 = lgetv %cardX.5;
+        symbol [ cardX %tmp.216 76 20 25 ];
+        %tmp.217 = 15;
+        %tmp.218 = add %tmp.216 %tmp.217;
+        %tmp.219 = lgetv %card3Y.9;
+        symbol [ card3Y %tmp.219 76 32 38 ];
+        %tmp.220 = 15;
+        %tmp.221 = add %tmp.219 %tmp.220;
+        symbol [ Graphics %tmp.222 76 45 53 ];
+        %tmp.222 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.223 76 54 64 ];
+        %tmp.223 = getv %tmp.222 :FONT_XTINY;
+        %tmp.224 = "Streak";
+        symbol [ Graphics %tmp.225 76 76 84 ];
+        %tmp.225 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.226 76 85 102 ];
+        %tmp.226 = getv %tmp.225 :TEXT_JUSTIFY_LEFT;
+        symbol [ Graphics %tmp.227 76 105 113 ];
+        %tmp.227 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.228 76 114 134 ];
+        %tmp.228 = getv %tmp.227 :TEXT_JUSTIFY_VCENTER;
+        %tmp.229 = bitor %tmp.226 %tmp.228;
+        invoke %tmp.214 %tmp.215(%tmp.218, %tmp.221, %tmp.223, %tmp.224, %tmp.229);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 78 8 ]
+        %tmp.230 = lgetv %dc;
+        symbol [ dc %tmp.230 78 8 10 ];
+        symbol [ setColor %tmp.231 78 11 19 ];
+        %tmp.231 = getv function %tmp.230 :setColor;
+        symbol [ COLOR_AMBER %tmp.233 78 20 31 ];
+        %tmp.233 = getv ? :COLOR_AMBER;
+        symbol [ Graphics %tmp.234 78 33 41 ];
+        %tmp.234 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.235 78 42 59 ];
+        %tmp.235 = getv %tmp.234 :COLOR_TRANSPARENT;
+        invoke %tmp.230 %tmp.231(%tmp.233, %tmp.235);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 79 8 ]
+        %tmp.236 = lgetv %dc;
+        symbol [ dc %tmp.236 79 8 10 ];
+        symbol [ drawText %tmp.237 79 11 19 ];
+        %tmp.237 = getv function %tmp.236 :drawText;
+        %tmp.238 = lgetv %cardX.5;
+        symbol [ cardX %tmp.238 79 20 25 ];
+        %tmp.239 = lgetv %cardWidth.4;
+        symbol [ cardWidth %tmp.239 79 28 37 ];
+        %tmp.240 = add %tmp.238 %tmp.239;
+        %tmp.241 = 15;
+        %tmp.242 = sub %tmp.240 %tmp.241;
+        %tmp.243 = lgetv %card3Y.9;
+        symbol [ card3Y %tmp.243 79 44 50 ];
+        %tmp.244 = 15;
+        %tmp.245 = add %tmp.243 %tmp.244;
+        symbol [ Graphics %tmp.246 79 57 65 ];
+        %tmp.246 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.247 79 66 75 ];
+        %tmp.247 = getv %tmp.246 :FONT_TINY;
+        symbol [ _app %tmp.249 79 77 81 ];
+        %tmp.249 = getv ? :_app;
+        symbol [ streak %tmp.250 79 82 88 ];
+        %tmp.250 = getv %tmp.249 :streak;
+        symbol [ toString %tmp.251 79 89 97 ];
+        %tmp.251 = getv function %tmp.250 :toString;
+        %tmp.252 = invoke %tmp.250 %tmp.251();
+        symbol [ Graphics %tmp.253 79 101 109 ];
+        %tmp.253 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_RIGHT %tmp.254 79 110 128 ];
+        %tmp.254 = getv %tmp.253 :TEXT_JUSTIFY_RIGHT;
+        symbol [ Graphics %tmp.255 79 131 139 ];
+        %tmp.255 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.256 79 140 160 ];
+        %tmp.256 = getv %tmp.255 :TEXT_JUSTIFY_VCENTER;
+        %tmp.257 = bitor %tmp.254 %tmp.256;
+        invoke %tmp.236 %tmp.237(%tmp.242, %tmp.245, %tmp.247, %tmp.252, %tmp.257);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 82 8 ]
+        %tmp.258 = lgetv %dc;
+        symbol [ dc %tmp.258 82 8 10 ];
+        symbol [ setColor %tmp.259 82 11 19 ];
+        %tmp.259 = getv function %tmp.258 :setColor;
+        symbol [ COLOR_MUTED %tmp.261 82 20 31 ];
+        %tmp.261 = getv ? :COLOR_MUTED;
+        symbol [ Graphics %tmp.262 82 33 41 ];
+        %tmp.262 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.263 82 42 59 ];
+        %tmp.263 = getv %tmp.262 :COLOR_TRANSPARENT;
+        invoke %tmp.258 %tmp.259(%tmp.261, %tmp.263);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 83 8 ]
+        %tmp.264 = lgetv %dc;
+        symbol [ dc %tmp.264 83 8 10 ];
+        symbol [ drawText %tmp.265 83 11 19 ];
+        %tmp.265 = getv function %tmp.264 :drawText;
+        %tmp.266 = lgetv %w.1;
+        symbol [ w %tmp.266 83 20 21 ];
+        %tmp.267 = 2;
+        %tmp.268 = div %tmp.266 %tmp.267;
+        %tmp.269 = lgetv %h.2;
+        symbol [ h %tmp.269 83 27 28 ];
+        %tmp.270 = 50;
+        %tmp.271 = sub %tmp.269 %tmp.270;
+        symbol [ Graphics %tmp.272 83 35 43 ];
+        %tmp.272 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.273 83 44 54 ];
+        %tmp.273 = getv %tmp.272 :FONT_XTINY;
+        %tmp.274 = "God bless.";
+        symbol [ Graphics %tmp.275 83 70 78 ];
+        %tmp.275 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.276 83 79 98 ];
+        %tmp.276 = getv %tmp.275 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.277 83 101 109 ];
+        %tmp.277 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.278 83 110 130 ];
+        %tmp.278 = getv %tmp.277 :TEXT_JUSTIFY_VCENTER;
+        %tmp.279 = bitor %tmp.276 %tmp.278;
+        invoke %tmp.264 %tmp.265(%tmp.268, %tmp.271, %tmp.273, %tmp.274, %tmp.279);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 86 8 ]
+        %tmp.280 = lgetv %dc;
+        symbol [ dc %tmp.280 86 8 10 ];
+        symbol [ setColor %tmp.281 86 11 19 ];
+        %tmp.281 = getv function %tmp.280 :setColor;
+        symbol [ COLOR_MUTED %tmp.283 86 20 31 ];
+        %tmp.283 = getv ? :COLOR_MUTED;
+        symbol [ Graphics %tmp.284 86 33 41 ];
+        %tmp.284 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.285 86 42 59 ];
+        %tmp.285 = getv %tmp.284 :COLOR_TRANSPARENT;
+        invoke %tmp.280 %tmp.281(%tmp.283, %tmp.285);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" 87 8 ]
+        %tmp.286 = lgetv %dc;
+        symbol [ dc %tmp.286 87 8 10 ];
+        symbol [ drawText %tmp.287 87 11 19 ];
+        %tmp.287 = getv function %tmp.286 :drawText;
+        %tmp.288 = lgetv %w.1;
+        symbol [ w %tmp.288 87 20 21 ];
+        %tmp.289 = 2;
+        %tmp.290 = div %tmp.288 %tmp.289;
+        %tmp.291 = lgetv %h.2;
+        symbol [ h %tmp.291 87 27 28 ];
+        %tmp.292 = 20;
+        %tmp.293 = sub %tmp.291 %tmp.292;
+        symbol [ Graphics %tmp.294 87 35 43 ];
+        %tmp.294 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.295 87 44 54 ];
+        %tmp.295 = getv %tmp.294 :FONT_XTINY;
+        %tmp.296 = "Back to go back";
+        symbol [ Graphics %tmp.297 87 75 83 ];
+        %tmp.297 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.298 87 84 103 ];
+        %tmp.298 = getv %tmp.297 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.299 87 106 114 ];
+        %tmp.299 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.300 87 115 135 ];
+        %tmp.300 = getv %tmp.299 :TEXT_JUSTIFY_VCENTER;
+        %tmp.301 = bitor %tmp.298 %tmp.300;
+        invoke %tmp.286 %tmp.287(%tmp.290, %tmp.293, %tmp.295, %tmp.296, %tmp.301);
+_Users_jeffcechinel_Github_versevault_garmin_source_SettingsView_mc_27_40_88_4_stop:
+    }
+}
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc"; @line = 1; ]
+<init> {
+}

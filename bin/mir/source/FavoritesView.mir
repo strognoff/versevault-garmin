@@ -1,0 +1,1413 @@
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Graphics,3,14,22]; ]
+import Toybox.Graphics;
+//! View for displaying favorites
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 6; @symbol_classdef = [FavoritesView,6,6,19]; @symbol_extends<0> = [WatchUi,6,28,35]; @symbol_extends<1> = [View,6,36,40]; ]
+class FavoritesView extends WatchUi.View {
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 6; ]
+    <init> {
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 9 16 ]
+        %tmp.1 = newa 0;
+        putv self :_favorites %tmp.1;
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 8; @position = 16; @symbol_vardef = [_homeView,8,16,25]; @symbol_type<0> = [HomeView,8,29,37]; ]
+    private
+    var _homeView as HomeView;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 9; @position = 16; @symbol_vardef = [_favorites,9,16,26]; @symbol_type<0> = [Array,9,30,35]; @symbol_type<1> = [Verse,9,36,41]; ]
+    private
+    var _favorites as Array<Verse>;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 10; @position = 16; @symbol_vardef = [_selectedIndex,10,16,30]; @symbol_type<0> = [Number,10,34,40]; ]
+    private
+    var _selectedIndex as Number = 0;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 11; @position = 16; @symbol_vardef = [_app,11,16,20]; @symbol_type<0> = [VerseVaultApp,11,24,37]; ]
+    private
+    var _app as VerseVaultApp;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 14; @position = 10; @symbol_constdef = [COLOR_AMBER,14,10,21]; ]
+    const COLOR_AMBER = 0xFFBF00;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 15; @position = 10; @symbol_constdef = [COLOR_SOFT_RED,15,10,24]; ]
+    const COLOR_SOFT_RED = 0xE57373;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 16; @position = 10; @symbol_constdef = [COLOR_CREAM,16,10,21]; ]
+    const COLOR_CREAM = 0xFFF8E1;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 17; @position = 10; @symbol_constdef = [COLOR_WARM_BG,17,10,23]; ]
+    const COLOR_WARM_BG = 0x2D1F1A;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 18; @position = 10; @symbol_constdef = [COLOR_CARD,18,10,20]; ]
+    const COLOR_CARD = 0x3E2B26;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 19; @position = 10; @symbol_constdef = [COLOR_MUTED,19,10,21]; ]
+    const COLOR_MUTED = 0xA89080;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 21; @symbol_functiondef = [initialize,21,13,23]; @symbol_param<0> = [homeView,21,24,32]; @symbol_param<0>_type<0> = [HomeView,21,36,44]; ]
+    function initialize(homeView as HomeView) as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_21_46_26_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 22 8 ]
+        symbol [ WatchUi %tmp.1 22 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ View %tmp.2 22 16 20 ];
+        %tmp.2 = getv %tmp.1 :View;
+        symbol [ initialize %tmp.3 22 21 31 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 23 8 ]
+        %tmp.4 = lgetv %homeView;
+        symbol [ homeView %tmp.4 23 20 28 ];
+        symbol [ _homeView ? 23 8 17 ];
+        putv self :_homeView %tmp.4;
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 24 8 ]
+        symbol [ Application %tmp.6 24 15 26 ];
+        %tmp.6 = getv ? :Application;
+        symbol [ getApp %tmp.7 24 27 33 ];
+        %tmp.7 = getv function %tmp.6 :getApp;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = as %tmp.8 VerseVaultApp;
+        symbol [ VerseVaultApp %tmp.9 24 39 52 ];
+        symbol [ _app ? 24 8 12 ];
+        putv self :_app %tmp.9;
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 25 8 ]
+        %tmp.10 = self;
+        symbol [ refreshFavorites %tmp.11 25 8 24 ];
+        %tmp.11 = getv function %tmp.10 :refreshFavorites;
+        invoke %tmp.10 %tmp.11();
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_21_46_26_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 28; @symbol_functiondef = [refreshFavorites,28,13,29]; ]
+    function refreshFavorites() as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_28_40_33_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 29 8 ]
+        symbol [ _app %tmp.2 29 21 25 ];
+        %tmp.2 = getv ? :_app;
+        symbol [ getFavorites %tmp.3 29 26 38 ];
+        %tmp.3 = getv function %tmp.2 :getFavorites;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        symbol [ _favorites ? 29 8 18 ];
+        putv self :_favorites %tmp.4;
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 30 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_30_8_32_8_if_stmt:
+        symbol [ _selectedIndex %tmp.6 30 12 26 ];
+        %tmp.6 = getv ? :_selectedIndex;
+        symbol [ _favorites %tmp.8 30 30 40 ];
+        %tmp.8 = getv ? :_favorites;
+        symbol [ size %tmp.9 30 41 45 ];
+        %tmp.9 = getv function %tmp.8 :size;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        %tmp.11 = gte %tmp.6 %tmp.10;
+        bf %tmp.11 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_30_8_32_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_30_8_32_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_30_49_32_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 31 12 ]
+        %tmp.12 = 0;
+        symbol [ _selectedIndex ? 31 12 26 ];
+        putv self :_selectedIndex %tmp.12;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_30_49_32_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_30_8_32_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_30_8_32_8_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_28_40_33_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 35; @symbol_functiondef = [onLayout,35,13,21]; @symbol_param<0> = [dc,35,22,24]; @symbol_param<0>_type<0> = [Dc,35,28,30]; ]
+    function onLayout(dc as Dc) as Void {
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 39; @symbol_functiondef = [onUpdate,39,13,21]; @symbol_param<0> = [dc,39,22,24]; @symbol_param<0>_type<0> = [Dc,39,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_39_40_69_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 40 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_39_40_69_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_39_40_69_4_stop" ]
+        %w.1 = local;
+        symbol [ w %w.1 40 12 13 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 40 16 18 ];
+        symbol [ getWidth %tmp.2 40 19 27 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %w.1 %tmp.3;
+        symbol [ w %w.1 40 12 13 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 41 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_39_40_69_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_39_40_69_4_stop" ]
+        %h.2 = local;
+        symbol [ h %h.2 41 12 13 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 41 16 18 ];
+        symbol [ getHeight %tmp.5 41 19 28 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %h.2 %tmp.6;
+        symbol [ h %h.2 41 12 13 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 44 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 44 8 10 ];
+        symbol [ setColor %tmp.8 44 11 19 ];
+        %tmp.8 = getv function %tmp.7 :setColor;
+        symbol [ COLOR_WARM_BG %tmp.10 44 20 33 ];
+        %tmp.10 = getv ? :COLOR_WARM_BG;
+        symbol [ COLOR_WARM_BG %tmp.12 44 35 48 ];
+        %tmp.12 = getv ? :COLOR_WARM_BG;
+        invoke %tmp.7 %tmp.8(%tmp.10, %tmp.12);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 45 8 ]
+        %tmp.13 = lgetv %dc;
+        symbol [ dc %tmp.13 45 8 10 ];
+        symbol [ clear %tmp.14 45 11 16 ];
+        %tmp.14 = getv function %tmp.13 :clear;
+        invoke %tmp.13 %tmp.14();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 48 8 ]
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 48 8 10 ];
+        symbol [ setColor %tmp.16 48 11 19 ];
+        %tmp.16 = getv function %tmp.15 :setColor;
+        symbol [ COLOR_AMBER %tmp.18 48 20 31 ];
+        %tmp.18 = getv ? :COLOR_AMBER;
+        symbol [ Graphics %tmp.19 48 33 41 ];
+        %tmp.19 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.20 48 42 59 ];
+        %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 49 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 49 8 10 ];
+        symbol [ fillRectangle %tmp.22 49 11 24 ];
+        %tmp.22 = getv function %tmp.21 :fillRectangle;
+        %tmp.23 = 0;
+        %tmp.24 = 0;
+        %tmp.25 = lgetv %w.1;
+        symbol [ w %tmp.25 49 31 32 ];
+        %tmp.26 = 4;
+        invoke %tmp.21 %tmp.22(%tmp.23, %tmp.24, %tmp.25, %tmp.26);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 51 8 ]
+        %tmp.27 = lgetv %dc;
+        symbol [ dc %tmp.27 51 8 10 ];
+        symbol [ setColor %tmp.28 51 11 19 ];
+        %tmp.28 = getv function %tmp.27 :setColor;
+        symbol [ COLOR_CREAM %tmp.30 51 20 31 ];
+        %tmp.30 = getv ? :COLOR_CREAM;
+        symbol [ Graphics %tmp.31 51 33 41 ];
+        %tmp.31 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.32 51 42 59 ];
+        %tmp.32 = getv %tmp.31 :COLOR_TRANSPARENT;
+        invoke %tmp.27 %tmp.28(%tmp.30, %tmp.32);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 52 8 ]
+        %tmp.33 = lgetv %dc;
+        symbol [ dc %tmp.33 52 8 10 ];
+        symbol [ drawText %tmp.34 52 11 19 ];
+        %tmp.34 = getv function %tmp.33 :drawText;
+        %tmp.35 = lgetv %w.1;
+        symbol [ w %tmp.35 52 20 21 ];
+        %tmp.36 = 2;
+        %tmp.37 = div %tmp.35 %tmp.36;
+        %tmp.38 = 25;
+        symbol [ Graphics %tmp.39 52 31 39 ];
+        %tmp.39 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.40 52 40 49 ];
+        %tmp.40 = getv %tmp.39 :FONT_TINY;
+        %tmp.41 = "Favorites";
+        symbol [ Graphics %tmp.42 52 64 72 ];
+        %tmp.42 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.43 52 73 92 ];
+        %tmp.43 = getv %tmp.42 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.44 52 95 103 ];
+        %tmp.44 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.45 52 104 124 ];
+        %tmp.45 = getv %tmp.44 :TEXT_JUSTIFY_VCENTER;
+        %tmp.46 = bitor %tmp.43 %tmp.45;
+        invoke %tmp.33 %tmp.34(%tmp.37, %tmp.38, %tmp.40, %tmp.41, %tmp.46);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 54 8 ]
+        %tmp.47 = lgetv %dc;
+        symbol [ dc %tmp.47 54 8 10 ];
+        symbol [ setColor %tmp.48 54 11 19 ];
+        %tmp.48 = getv function %tmp.47 :setColor;
+        symbol [ COLOR_MUTED %tmp.50 54 20 31 ];
+        %tmp.50 = getv ? :COLOR_MUTED;
+        symbol [ Graphics %tmp.51 54 33 41 ];
+        %tmp.51 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.52 54 42 59 ];
+        %tmp.52 = getv %tmp.51 :COLOR_TRANSPARENT;
+        invoke %tmp.47 %tmp.48(%tmp.50, %tmp.52);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 55 8 ]
+        %tmp.53 = lgetv %dc;
+        symbol [ dc %tmp.53 55 8 10 ];
+        symbol [ drawText %tmp.54 55 11 19 ];
+        %tmp.54 = getv function %tmp.53 :drawText;
+        %tmp.55 = lgetv %w.1;
+        symbol [ w %tmp.55 55 20 21 ];
+        %tmp.56 = 2;
+        %tmp.57 = div %tmp.55 %tmp.56;
+        %tmp.58 = 42;
+        symbol [ Graphics %tmp.59 55 31 39 ];
+        %tmp.59 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.60 55 40 50 ];
+        %tmp.60 = getv %tmp.59 :FONT_XTINY;
+        symbol [ _favorites %tmp.62 55 52 62 ];
+        %tmp.62 = getv ? :_favorites;
+        symbol [ size %tmp.63 55 63 67 ];
+        %tmp.63 = getv function %tmp.62 :size;
+        %tmp.64 = invoke %tmp.62 %tmp.63();
+        %tmp.65 = " verses";
+        %tmp.66 = add %tmp.64 %tmp.65;
+        symbol [ Graphics %tmp.67 55 83 91 ];
+        %tmp.67 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.68 55 92 111 ];
+        %tmp.68 = getv %tmp.67 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.69 55 114 122 ];
+        %tmp.69 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.70 55 123 143 ];
+        %tmp.70 = getv %tmp.69 :TEXT_JUSTIFY_VCENTER;
+        %tmp.71 = bitor %tmp.68 %tmp.70;
+        invoke %tmp.53 %tmp.54(%tmp.57, %tmp.58, %tmp.60, %tmp.66, %tmp.71);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 57 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_57_8_64_8_if_stmt:
+        symbol [ _favorites %tmp.73 57 12 22 ];
+        %tmp.73 = getv ? :_favorites;
+        symbol [ size %tmp.74 57 23 27 ];
+        %tmp.74 = getv function %tmp.73 :size;
+        %tmp.75 = invoke %tmp.73 %tmp.74();
+        %tmp.76 = 0;
+        %tmp.77 = eq %tmp.75 %tmp.76;
+        bf %tmp.77 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_57_8_64_8_if_else_false;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_57_8_64_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_57_36_62_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 59 12 ]
+        %tmp.78 = lgetv %dc;
+        symbol [ dc %tmp.78 59 12 14 ];
+        symbol [ setColor %tmp.79 59 15 23 ];
+        %tmp.79 = getv function %tmp.78 :setColor;
+        symbol [ COLOR_MUTED %tmp.81 59 24 35 ];
+        %tmp.81 = getv ? :COLOR_MUTED;
+        symbol [ Graphics %tmp.82 59 37 45 ];
+        %tmp.82 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.83 59 46 63 ];
+        %tmp.83 = getv %tmp.82 :COLOR_TRANSPARENT;
+        invoke %tmp.78 %tmp.79(%tmp.81, %tmp.83);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 60 12 ]
+        %tmp.84 = lgetv %dc;
+        symbol [ dc %tmp.84 60 12 14 ];
+        symbol [ drawText %tmp.85 60 15 23 ];
+        %tmp.85 = getv function %tmp.84 :drawText;
+        %tmp.86 = lgetv %w.1;
+        symbol [ w %tmp.86 60 24 25 ];
+        %tmp.87 = 2;
+        %tmp.88 = div %tmp.86 %tmp.87;
+        %tmp.89 = lgetv %h.2;
+        symbol [ h %tmp.89 60 31 32 ];
+        %tmp.90 = 2;
+        %tmp.91 = div %tmp.89 %tmp.90;
+        symbol [ Graphics %tmp.92 60 38 46 ];
+        %tmp.92 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.93 60 47 56 ];
+        %tmp.93 = getv %tmp.92 :FONT_TINY;
+        %tmp.94 = "No favorites yet";
+        symbol [ Graphics %tmp.95 60 78 86 ];
+        %tmp.95 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.96 60 87 106 ];
+        %tmp.96 = getv %tmp.95 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.97 60 109 117 ];
+        %tmp.97 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.98 60 118 138 ];
+        %tmp.98 = getv %tmp.97 :TEXT_JUSTIFY_VCENTER;
+        %tmp.99 = bitor %tmp.96 %tmp.98;
+        invoke %tmp.84 %tmp.85(%tmp.88, %tmp.91, %tmp.93, %tmp.94, %tmp.99);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 61 12 ]
+        %tmp.100 = lgetv %dc;
+        symbol [ dc %tmp.100 61 12 14 ];
+        symbol [ drawText %tmp.101 61 15 23 ];
+        %tmp.101 = getv function %tmp.100 :drawText;
+        %tmp.102 = lgetv %w.1;
+        symbol [ w %tmp.102 61 24 25 ];
+        %tmp.103 = 2;
+        %tmp.104 = div %tmp.102 %tmp.103;
+        %tmp.105 = lgetv %h.2;
+        symbol [ h %tmp.105 61 31 32 ];
+        %tmp.106 = 2;
+        %tmp.107 = div %tmp.105 %tmp.106;
+        %tmp.108 = 25;
+        %tmp.109 = add %tmp.107 %tmp.108;
+        symbol [ Graphics %tmp.110 61 43 51 ];
+        %tmp.110 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.111 61 52 62 ];
+        %tmp.111 = getv %tmp.110 :FONT_XTINY;
+        %tmp.112 = "Hold a verse to save it";
+        symbol [ Graphics %tmp.113 61 91 99 ];
+        %tmp.113 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.114 61 100 119 ];
+        %tmp.114 = getv %tmp.113 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.115 61 122 130 ];
+        %tmp.115 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.116 61 131 151 ];
+        %tmp.116 = getv %tmp.115 :TEXT_JUSTIFY_VCENTER;
+        %tmp.117 = bitor %tmp.114 %tmp.116;
+        invoke %tmp.100 %tmp.101(%tmp.104, %tmp.109, %tmp.111, %tmp.112, %tmp.117);
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_57_36_62_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_57_8_64_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_57_8_64_8_if_else_false:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_62_15_64_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 63 12 ]
+        %tmp.118 = self;
+        symbol [ drawFavoriteVerse %tmp.119 63 12 29 ];
+        %tmp.119 = getv function %tmp.118 :drawFavoriteVerse;
+        %tmp.120 = lgetv %dc;
+        symbol [ dc %tmp.120 63 30 32 ];
+        %tmp.121 = lgetv %w.1;
+        symbol [ w %tmp.121 63 34 35 ];
+        %tmp.122 = lgetv %h.2;
+        symbol [ h %tmp.122 63 37 38 ];
+        invoke %tmp.118 %tmp.119(%tmp.120, %tmp.121, %tmp.122);
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_62_15_64_8_stop:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_57_8_64_8_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 67 8 ]
+        %tmp.123 = lgetv %dc;
+        symbol [ dc %tmp.123 67 8 10 ];
+        symbol [ setColor %tmp.124 67 11 19 ];
+        %tmp.124 = getv function %tmp.123 :setColor;
+        symbol [ COLOR_MUTED %tmp.126 67 20 31 ];
+        %tmp.126 = getv ? :COLOR_MUTED;
+        symbol [ Graphics %tmp.127 67 33 41 ];
+        %tmp.127 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.128 67 42 59 ];
+        %tmp.128 = getv %tmp.127 :COLOR_TRANSPARENT;
+        invoke %tmp.123 %tmp.124(%tmp.126, %tmp.128);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 68 8 ]
+        %tmp.129 = lgetv %dc;
+        symbol [ dc %tmp.129 68 8 10 ];
+        symbol [ drawText %tmp.130 68 11 19 ];
+        %tmp.130 = getv function %tmp.129 :drawText;
+        %tmp.131 = lgetv %w.1;
+        symbol [ w %tmp.131 68 20 21 ];
+        %tmp.132 = 2;
+        %tmp.133 = div %tmp.131 %tmp.132;
+        %tmp.134 = lgetv %h.2;
+        symbol [ h %tmp.134 68 27 28 ];
+        %tmp.135 = 20;
+        %tmp.136 = sub %tmp.134 %tmp.135;
+        symbol [ Graphics %tmp.137 68 35 43 ];
+        %tmp.137 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.138 68 44 54 ];
+        %tmp.138 = getv %tmp.137 :FONT_XTINY;
+        %tmp.139 = "Back to go back";
+        symbol [ Graphics %tmp.140 68 75 83 ];
+        %tmp.140 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.141 68 84 103 ];
+        %tmp.141 = getv %tmp.140 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.142 68 106 114 ];
+        %tmp.142 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.143 68 115 135 ];
+        %tmp.143 = getv %tmp.142 :TEXT_JUSTIFY_VCENTER;
+        %tmp.144 = bitor %tmp.141 %tmp.143;
+        invoke %tmp.129 %tmp.130(%tmp.133, %tmp.136, %tmp.138, %tmp.139, %tmp.144);
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_39_40_69_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 71; @symbol_functiondef = [drawFavoriteVerse,71,13,30]; @symbol_param<0> = [dc,71,31,33]; @symbol_param<0>_type<0> = [Dc,71,37,39]; @symbol_param<1> = [w,71,41,42]; @symbol_param<1>_type<0> = [Number,71,46,52]; @symbol_param<2> = [h,71,54,55]; @symbol_param<2>_type<0> = [Number,71,59,65]; ]
+    function drawFavoriteVerse(dc as Dc, w as Number, h as Number) as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 72 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %verse.1 = local;
+        symbol [ verse %verse.1 72 12 17 ];
+        symbol [ _favorites %tmp.2 72 20 30 ];
+        %tmp.2 = getv ? :_favorites;
+        symbol [ _selectedIndex %tmp.4 72 31 45 ];
+        %tmp.4 = getv ? :_selectedIndex;
+        %tmp.5 = agetv %tmp.2 %tmp.4;
+        lputv %verse.1 %tmp.5;
+        symbol [ verse %verse.1 72 12 17 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 74 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %cardPadding.2 = local;
+        symbol [ cardPadding %cardPadding.2 74 12 23 ];
+        %tmp.6 = 15;
+        lputv %cardPadding.2 %tmp.6;
+        symbol [ cardPadding %cardPadding.2 74 12 23 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 75 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %cardWidth.3 = local;
+        symbol [ cardWidth %cardWidth.3 75 12 21 ];
+        %tmp.7 = lgetv %w;
+        symbol [ w %tmp.7 75 24 25 ];
+        %tmp.8 = lgetv %cardPadding.2;
+        symbol [ cardPadding %tmp.8 75 29 40 ];
+        %tmp.9 = 2;
+        %tmp.10 = mul %tmp.8 %tmp.9;
+        %tmp.11 = sub %tmp.7 %tmp.10;
+        lputv %cardWidth.3 %tmp.11;
+        symbol [ cardWidth %cardWidth.3 75 12 21 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 76 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %cardX.4 = local;
+        symbol [ cardX %cardX.4 76 12 17 ];
+        %tmp.12 = lgetv %cardPadding.2;
+        symbol [ cardPadding %tmp.12 76 20 31 ];
+        lputv %cardX.4 %tmp.12;
+        symbol [ cardX %cardX.4 76 12 17 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 79 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %maxTextWidth.5 = local;
+        symbol [ maxTextWidth %maxTextWidth.5 79 12 24 ];
+        %tmp.13 = lgetv %cardWidth.3;
+        symbol [ cardWidth %tmp.13 79 27 36 ];
+        %tmp.14 = 20;
+        %tmp.15 = sub %tmp.13 %tmp.14;
+        lputv %maxTextWidth.5 %tmp.15;
+        symbol [ maxTextWidth %maxTextWidth.5 79 12 24 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 82 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %font.6 = local;
+        symbol [ font %font.6 82 12 16 ];
+        symbol [ Graphics %tmp.16 82 19 27 ];
+        %tmp.16 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.17 82 28 37 ];
+        %tmp.17 = getv %tmp.16 :FONT_TINY;
+        lputv %font.6 %tmp.17;
+        symbol [ font %font.6 82 12 16 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 83 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %lineHeight.7 = local;
+        symbol [ lineHeight %lineHeight.7 83 12 22 ];
+        %tmp.18 = 18;
+        lputv %lineHeight.7 %tmp.18;
+        symbol [ lineHeight %lineHeight.7 83 12 22 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 85 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_85_8_88_8_if_stmt:
+        %tmp.19 = lgetv %verse.1;
+        symbol [ verse %tmp.19 85 12 17 ];
+        symbol [ text %tmp.20 85 18 22 ];
+        %tmp.20 = getv %tmp.19 :text;
+        symbol [ length %tmp.21 85 23 29 ];
+        %tmp.21 = getv function %tmp.20 :length;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        %tmp.23 = 200;
+        %tmp.24 = gt %tmp.22 %tmp.23;
+        bf %tmp.24 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_85_8_88_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_85_8_88_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_85_39_88_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 86 12 ]
+        symbol [ Graphics %tmp.25 86 19 27 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.26 86 28 38 ];
+        %tmp.26 = getv %tmp.25 :FONT_XTINY;
+        lputv %font.6 %tmp.26;
+        symbol [ font %font.6 86 12 16 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 87 12 ]
+        %tmp.27 = 14;
+        lputv %lineHeight.7 %tmp.27;
+        symbol [ lineHeight %lineHeight.7 87 12 22 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_85_39_88_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_85_8_88_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_85_8_88_8_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 91 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %words.8 = local;
+        symbol [ words %words.8 91 12 17 ];
+        %tmp.28 = self;
+        symbol [ wordWrap %tmp.29 91 20 28 ];
+        %tmp.29 = getv function %tmp.28 :wordWrap;
+        %tmp.30 = lgetv %verse.1;
+        symbol [ verse %tmp.30 91 29 34 ];
+        symbol [ text %tmp.31 91 35 39 ];
+        %tmp.31 = getv %tmp.30 :text;
+        %tmp.32 = lgetv %maxTextWidth.5;
+        symbol [ maxTextWidth %tmp.32 91 41 53 ];
+        %tmp.33 = lgetv %dc;
+        symbol [ dc %tmp.33 91 55 57 ];
+        %tmp.34 = lgetv %font.6;
+        symbol [ font %tmp.34 91 59 63 ];
+        %tmp.35 = invoke %tmp.28 %tmp.29(%tmp.31, %tmp.32, %tmp.33, %tmp.34);
+        lputv %words.8 %tmp.35;
+        symbol [ words %words.8 91 12 17 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 92 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %textHeight.9 = local;
+        symbol [ textHeight %textHeight.9 92 12 22 ];
+        %tmp.36 = lgetv %words.8;
+        symbol [ words %tmp.36 92 25 30 ];
+        symbol [ size %tmp.37 92 31 35 ];
+        %tmp.37 = getv function %tmp.36 :size;
+        %tmp.38 = invoke %tmp.36 %tmp.37();
+        %tmp.39 = lgetv %lineHeight.7;
+        symbol [ lineHeight %tmp.39 92 40 50 ];
+        %tmp.40 = mul %tmp.38 %tmp.39;
+        lputv %textHeight.9 %tmp.40;
+        symbol [ textHeight %textHeight.9 92 12 22 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 93 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %cardHeight.10 = local;
+        symbol [ cardHeight %cardHeight.10 93 12 22 ];
+        %tmp.41 = lgetv %textHeight.9;
+        symbol [ textHeight %tmp.41 93 25 35 ];
+        %tmp.42 = 60;
+        %tmp.43 = add %tmp.41 %tmp.42;
+        lputv %cardHeight.10 %tmp.43;
+        symbol [ cardHeight %cardHeight.10 93 12 22 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 95 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %cardY.11 = local;
+        symbol [ cardY %cardY.11 95 12 17 ];
+        %tmp.44 = 70;
+        lputv %cardY.11 %tmp.44;
+        symbol [ cardY %cardY.11 95 12 17 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 96 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %minY.12 = local;
+        symbol [ minY %minY.12 96 12 16 ];
+        %tmp.45 = 70;
+        lputv %minY.12 %tmp.45;
+        symbol [ minY %minY.12 96 12 16 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 97 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %maxY.13 = local;
+        symbol [ maxY %maxY.13 97 12 16 ];
+        %tmp.46 = lgetv %h;
+        symbol [ h %tmp.46 97 19 20 ];
+        %tmp.47 = 40;
+        %tmp.48 = sub %tmp.46 %tmp.47;
+        lputv %maxY.13 %tmp.48;
+        symbol [ maxY %maxY.13 97 12 16 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 98 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %availableHeight.14 = local;
+        symbol [ availableHeight %availableHeight.14 98 12 27 ];
+        %tmp.49 = lgetv %maxY.13;
+        symbol [ maxY %tmp.49 98 30 34 ];
+        %tmp.50 = lgetv %minY.12;
+        symbol [ minY %tmp.50 98 37 41 ];
+        %tmp.51 = sub %tmp.49 %tmp.50;
+        lputv %availableHeight.14 %tmp.51;
+        symbol [ availableHeight %availableHeight.14 98 12 27 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 101 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_101_8_107_8_if_stmt:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_101_12_101_61_begin:
+        %tmp.52 = lgetv %cardHeight.10;
+        symbol [ cardHeight %tmp.52 101 12 22 ];
+        %tmp.53 = lgetv %availableHeight.14;
+        symbol [ availableHeight %tmp.53 101 25 40 ];
+        %tmp.54 = gt %tmp.52 %tmp.53;
+        bf %tmp.54 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_101_8_107_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_101_44_101_61_true:
+        %tmp.55 = lgetv %font.6;
+        symbol [ font %tmp.55 101 44 48 ];
+        symbol [ Graphics %tmp.56 101 52 60 ];
+        %tmp.56 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.57 101 61 70 ];
+        %tmp.57 = getv %tmp.56 :FONT_TINY;
+        %tmp.58 = eq %tmp.55 %tmp.57;
+        push %tmp.58;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_101_44_101_61_end:
+        %tmp.59 = phi [%tmp.54 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_101_12_101_61_begin] [%tmp.58 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_101_44_101_61_true] [%tmp.59 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_101_44_101_61_end];
+        bf %tmp.59 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_101_8_107_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_101_8_107_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_101_72_107_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 102 12 ]
+        symbol [ Graphics %tmp.60 102 19 27 ];
+        %tmp.60 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.61 102 28 38 ];
+        %tmp.61 = getv %tmp.60 :FONT_XTINY;
+        lputv %font.6 %tmp.61;
+        symbol [ font %font.6 102 12 16 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 103 12 ]
+        %tmp.62 = 14;
+        lputv %lineHeight.7 %tmp.62;
+        symbol [ lineHeight %lineHeight.7 103 12 22 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 104 12 ]
+        %tmp.63 = self;
+        symbol [ wordWrap %tmp.64 104 20 28 ];
+        %tmp.64 = getv function %tmp.63 :wordWrap;
+        %tmp.65 = lgetv %verse.1;
+        symbol [ verse %tmp.65 104 29 34 ];
+        symbol [ text %tmp.66 104 35 39 ];
+        %tmp.66 = getv %tmp.65 :text;
+        %tmp.67 = lgetv %maxTextWidth.5;
+        symbol [ maxTextWidth %tmp.67 104 41 53 ];
+        %tmp.68 = lgetv %dc;
+        symbol [ dc %tmp.68 104 55 57 ];
+        %tmp.69 = lgetv %font.6;
+        symbol [ font %tmp.69 104 59 63 ];
+        %tmp.70 = invoke %tmp.63 %tmp.64(%tmp.66, %tmp.67, %tmp.68, %tmp.69);
+        lputv %words.8 %tmp.70;
+        symbol [ words %words.8 104 12 17 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 105 12 ]
+        %tmp.71 = lgetv %words.8;
+        symbol [ words %tmp.71 105 25 30 ];
+        symbol [ size %tmp.72 105 31 35 ];
+        %tmp.72 = getv function %tmp.71 :size;
+        %tmp.73 = invoke %tmp.71 %tmp.72();
+        %tmp.74 = lgetv %lineHeight.7;
+        symbol [ lineHeight %tmp.74 105 40 50 ];
+        %tmp.75 = mul %tmp.73 %tmp.74;
+        lputv %textHeight.9 %tmp.75;
+        symbol [ textHeight %textHeight.9 105 12 22 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 106 12 ]
+        %tmp.76 = lgetv %textHeight.9;
+        symbol [ textHeight %tmp.76 106 25 35 ];
+        %tmp.77 = 60;
+        %tmp.78 = add %tmp.76 %tmp.77;
+        lputv %cardHeight.10 %tmp.78;
+        symbol [ cardHeight %cardHeight.10 106 12 22 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_101_72_107_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_101_8_107_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_101_8_107_8_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 109 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_109_8_111_8_if_stmt:
+        %tmp.79 = lgetv %cardY.11;
+        symbol [ cardY %tmp.79 109 13 18 ];
+        %tmp.80 = lgetv %cardHeight.10;
+        symbol [ cardHeight %tmp.80 109 21 31 ];
+        %tmp.81 = add %tmp.79 %tmp.80;
+        %tmp.82 = lgetv %maxY.13;
+        symbol [ maxY %tmp.82 109 35 39 ];
+        %tmp.83 = gt %tmp.81 %tmp.82;
+        bf %tmp.83 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_109_8_111_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_109_8_111_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_109_41_111_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 110 12 ]
+        %tmp.84 = lgetv %maxY.13;
+        symbol [ maxY %tmp.84 110 25 29 ];
+        %tmp.85 = lgetv %cardY.11;
+        symbol [ cardY %tmp.85 110 32 37 ];
+        %tmp.86 = sub %tmp.84 %tmp.85;
+        lputv %cardHeight.10 %tmp.86;
+        symbol [ cardHeight %cardHeight.10 110 12 22 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_109_41_111_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_109_8_111_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_109_8_111_8_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 114 8 ]
+        %tmp.87 = lgetv %dc;
+        symbol [ dc %tmp.87 114 8 10 ];
+        symbol [ setColor %tmp.88 114 11 19 ];
+        %tmp.88 = getv function %tmp.87 :setColor;
+        symbol [ COLOR_CARD %tmp.90 114 20 30 ];
+        %tmp.90 = getv ? :COLOR_CARD;
+        symbol [ Graphics %tmp.91 114 32 40 ];
+        %tmp.91 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.92 114 41 58 ];
+        %tmp.92 = getv %tmp.91 :COLOR_TRANSPARENT;
+        invoke %tmp.87 %tmp.88(%tmp.90, %tmp.92);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 115 8 ]
+        %tmp.93 = lgetv %dc;
+        symbol [ dc %tmp.93 115 8 10 ];
+        symbol [ fillRoundedRectangle %tmp.94 115 11 31 ];
+        %tmp.94 = getv function %tmp.93 :fillRoundedRectangle;
+        %tmp.95 = lgetv %cardX.4;
+        symbol [ cardX %tmp.95 115 32 37 ];
+        %tmp.96 = lgetv %cardY.11;
+        symbol [ cardY %tmp.96 115 39 44 ];
+        %tmp.97 = lgetv %cardWidth.3;
+        symbol [ cardWidth %tmp.97 115 46 55 ];
+        %tmp.98 = lgetv %cardHeight.10;
+        symbol [ cardHeight %tmp.98 115 57 67 ];
+        %tmp.99 = 8;
+        invoke %tmp.93 %tmp.94(%tmp.95, %tmp.96, %tmp.97, %tmp.98, %tmp.99);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 118 8 ]
+        %tmp.100 = lgetv %dc;
+        symbol [ dc %tmp.100 118 8 10 ];
+        symbol [ setColor %tmp.101 118 11 19 ];
+        %tmp.101 = getv function %tmp.100 :setColor;
+        symbol [ COLOR_CREAM %tmp.103 118 20 31 ];
+        %tmp.103 = getv ? :COLOR_CREAM;
+        symbol [ Graphics %tmp.104 118 33 41 ];
+        %tmp.104 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.105 118 42 59 ];
+        %tmp.105 = getv %tmp.104 :COLOR_TRANSPARENT;
+        invoke %tmp.100 %tmp.101(%tmp.103, %tmp.105);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 119 8 ]
+        for @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_119_8_121_8_for_test @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_119_8_121_8_for_incr @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_119_8_121_8_for_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_119_8_121_8_for_init:
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_119_8_121_8_for_begin" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_119_8_121_8_for_end" ]
+        %i.15 = local;
+        symbol [ i %i.15 119 17 18 ];
+        %tmp.106 = 0;
+        lputv %i.15 %tmp.106;
+        symbol [ i %i.15 119 17 18 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_119_8_121_8_for_test:
+        %tmp.107 = lgetv %i.15;
+        symbol [ i %tmp.107 119 24 25 ];
+        %tmp.108 = lgetv %words.8;
+        symbol [ words %tmp.108 119 28 33 ];
+        symbol [ size %tmp.109 119 34 38 ];
+        %tmp.109 = getv function %tmp.108 :size;
+        %tmp.110 = invoke %tmp.108 %tmp.109();
+        %tmp.111 = lt %tmp.107 %tmp.110;
+        bf %tmp.111 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_119_8_121_8_for_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_119_8_121_8_for_begin:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_119_47_121_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 120 12 ]
+        %tmp.112 = lgetv %dc;
+        symbol [ dc %tmp.112 120 12 14 ];
+        symbol [ drawText %tmp.113 120 15 23 ];
+        %tmp.113 = getv function %tmp.112 :drawText;
+        %tmp.114 = lgetv %cardX.4;
+        symbol [ cardX %tmp.114 120 24 29 ];
+        %tmp.115 = 10;
+        %tmp.116 = add %tmp.114 %tmp.115;
+        %tmp.117 = lgetv %cardY.11;
+        symbol [ cardY %tmp.117 120 36 41 ];
+        %tmp.118 = 15;
+        %tmp.119 = add %tmp.117 %tmp.118;
+        %tmp.120 = lgetv %i.15;
+        symbol [ i %tmp.120 120 50 51 ];
+        %tmp.121 = lgetv %lineHeight.7;
+        symbol [ lineHeight %tmp.121 120 54 64 ];
+        %tmp.122 = mul %tmp.120 %tmp.121;
+        %tmp.123 = add %tmp.119 %tmp.122;
+        %tmp.124 = lgetv %font.6;
+        symbol [ font %tmp.124 120 67 71 ];
+        %tmp.125 = lgetv %words.8;
+        symbol [ words %tmp.125 120 73 78 ];
+        %tmp.126 = lgetv %i.15;
+        symbol [ i %tmp.126 120 79 80 ];
+        %tmp.127 = agetv %tmp.125 %tmp.126;
+        symbol [ Graphics %tmp.128 120 83 91 ];
+        %tmp.128 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.129 120 92 109 ];
+        %tmp.129 = getv %tmp.128 :TEXT_JUSTIFY_LEFT;
+        symbol [ Graphics %tmp.130 120 112 120 ];
+        %tmp.130 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.131 120 121 141 ];
+        %tmp.131 = getv %tmp.130 :TEXT_JUSTIFY_VCENTER;
+        %tmp.132 = bitor %tmp.129 %tmp.131;
+        invoke %tmp.112 %tmp.113(%tmp.116, %tmp.123, %tmp.124, %tmp.127, %tmp.132);
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_119_47_121_8_stop:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_119_8_121_8_for_incr:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 119 ]
+        %tmp.135 = lgetv %i.15;
+        symbol [ i %tmp.135 119 42 43 ];
+        %tmp.136 = add %tmp.135 1;
+        lputv %i.15 %tmp.136;
+        symbol [ i %i.15 119 42 43 ];
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_119_8_121_8_for_test;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_119_8_121_8_for_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 124 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %refY.16 = local;
+        symbol [ refY %refY.16 124 12 16 ];
+        %tmp.137 = lgetv %cardY.11;
+        symbol [ cardY %tmp.137 124 19 24 ];
+        %tmp.138 = lgetv %textHeight.9;
+        symbol [ textHeight %tmp.138 124 27 37 ];
+        %tmp.139 = add %tmp.137 %tmp.138;
+        %tmp.140 = 25;
+        %tmp.141 = add %tmp.139 %tmp.140;
+        lputv %refY.16 %tmp.141;
+        symbol [ refY %refY.16 124 12 16 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 125 8 ]
+        %tmp.142 = lgetv %dc;
+        symbol [ dc %tmp.142 125 8 10 ];
+        symbol [ setColor %tmp.143 125 11 19 ];
+        %tmp.143 = getv function %tmp.142 :setColor;
+        symbol [ COLOR_SOFT_RED %tmp.145 125 20 34 ];
+        %tmp.145 = getv ? :COLOR_SOFT_RED;
+        symbol [ Graphics %tmp.146 125 36 44 ];
+        %tmp.146 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.147 125 45 62 ];
+        %tmp.147 = getv %tmp.146 :COLOR_TRANSPARENT;
+        invoke %tmp.142 %tmp.143(%tmp.145, %tmp.147);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 126 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %fText.17 = local;
+        symbol [ fText %fText.17 126 12 17 ];
+        %tmp.148 = "F - ";
+        lputv %fText.17 %tmp.148;
+        symbol [ fText %fText.17 126 12 17 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 127 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %fWidth.18 = local;
+        symbol [ fWidth %fWidth.18 127 12 18 ];
+        %tmp.149 = lgetv %dc;
+        symbol [ dc %tmp.149 127 21 23 ];
+        symbol [ getTextDimensions %tmp.150 127 24 41 ];
+        %tmp.150 = getv function %tmp.149 :getTextDimensions;
+        %tmp.151 = lgetv %fText.17;
+        symbol [ fText %tmp.151 127 42 47 ];
+        symbol [ Graphics %tmp.152 127 49 57 ];
+        %tmp.152 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.153 127 58 68 ];
+        %tmp.153 = getv %tmp.152 :FONT_XTINY;
+        %tmp.154 = invoke %tmp.149 %tmp.150(%tmp.151, %tmp.153);
+        %tmp.155 = 0;
+        %tmp.156 = agetv %tmp.154 %tmp.155;
+        lputv %fWidth.18 %tmp.156;
+        symbol [ fWidth %fWidth.18 127 12 18 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 128 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %totalText.19 = local;
+        symbol [ totalText %totalText.19 128 12 21 ];
+        %tmp.157 = lgetv %fText.17;
+        symbol [ fText %tmp.157 128 24 29 ];
+        %tmp.158 = lgetv %verse.1;
+        symbol [ verse %tmp.158 128 32 37 ];
+        symbol [ reference %tmp.159 128 38 47 ];
+        %tmp.159 = getv %tmp.158 :reference;
+        %tmp.160 = add %tmp.157 %tmp.159;
+        lputv %totalText.19 %tmp.160;
+        symbol [ totalText %totalText.19 128 12 21 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 129 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %totalWidth.20 = local;
+        symbol [ totalWidth %totalWidth.20 129 12 22 ];
+        %tmp.161 = lgetv %dc;
+        symbol [ dc %tmp.161 129 25 27 ];
+        symbol [ getTextDimensions %tmp.162 129 28 45 ];
+        %tmp.162 = getv function %tmp.161 :getTextDimensions;
+        %tmp.163 = lgetv %totalText.19;
+        symbol [ totalText %tmp.163 129 46 55 ];
+        symbol [ Graphics %tmp.164 129 57 65 ];
+        %tmp.164 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.165 129 66 76 ];
+        %tmp.165 = getv %tmp.164 :FONT_XTINY;
+        %tmp.166 = invoke %tmp.161 %tmp.162(%tmp.163, %tmp.165);
+        %tmp.167 = 0;
+        %tmp.168 = agetv %tmp.166 %tmp.167;
+        lputv %totalWidth.20 %tmp.168;
+        symbol [ totalWidth %totalWidth.20 129 12 22 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 130 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop" ]
+        %startX.21 = local;
+        symbol [ startX %startX.21 130 12 18 ];
+        %tmp.169 = lgetv %w;
+        symbol [ w %tmp.169 130 22 23 ];
+        %tmp.170 = 2;
+        %tmp.171 = div %tmp.169 %tmp.170;
+        %tmp.172 = lgetv %totalWidth.20;
+        symbol [ totalWidth %tmp.172 130 32 42 ];
+        %tmp.173 = 2;
+        %tmp.174 = div %tmp.172 %tmp.173;
+        %tmp.175 = sub %tmp.171 %tmp.174;
+        lputv %startX.21 %tmp.175;
+        symbol [ startX %startX.21 130 12 18 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 132 8 ]
+        %tmp.176 = lgetv %dc;
+        symbol [ dc %tmp.176 132 8 10 ];
+        symbol [ drawText %tmp.177 132 11 19 ];
+        %tmp.177 = getv function %tmp.176 :drawText;
+        %tmp.178 = lgetv %startX.21;
+        symbol [ startX %tmp.178 132 20 26 ];
+        %tmp.179 = lgetv %refY.16;
+        symbol [ refY %tmp.179 132 28 32 ];
+        symbol [ Graphics %tmp.180 132 34 42 ];
+        %tmp.180 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.181 132 43 53 ];
+        %tmp.181 = getv %tmp.180 :FONT_XTINY;
+        %tmp.182 = lgetv %fText.17;
+        symbol [ fText %tmp.182 132 55 60 ];
+        symbol [ Graphics %tmp.183 132 62 70 ];
+        %tmp.183 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.184 132 71 88 ];
+        %tmp.184 = getv %tmp.183 :TEXT_JUSTIFY_LEFT;
+        symbol [ Graphics %tmp.185 132 91 99 ];
+        %tmp.185 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.186 132 100 120 ];
+        %tmp.186 = getv %tmp.185 :TEXT_JUSTIFY_VCENTER;
+        %tmp.187 = bitor %tmp.184 %tmp.186;
+        invoke %tmp.176 %tmp.177(%tmp.178, %tmp.179, %tmp.181, %tmp.182, %tmp.187);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 134 8 ]
+        %tmp.188 = lgetv %dc;
+        symbol [ dc %tmp.188 134 8 10 ];
+        symbol [ setColor %tmp.189 134 11 19 ];
+        %tmp.189 = getv function %tmp.188 :setColor;
+        symbol [ COLOR_AMBER %tmp.191 134 20 31 ];
+        %tmp.191 = getv ? :COLOR_AMBER;
+        symbol [ Graphics %tmp.192 134 33 41 ];
+        %tmp.192 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.193 134 42 59 ];
+        %tmp.193 = getv %tmp.192 :COLOR_TRANSPARENT;
+        invoke %tmp.188 %tmp.189(%tmp.191, %tmp.193);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 135 8 ]
+        %tmp.194 = lgetv %dc;
+        symbol [ dc %tmp.194 135 8 10 ];
+        symbol [ drawText %tmp.195 135 11 19 ];
+        %tmp.195 = getv function %tmp.194 :drawText;
+        %tmp.196 = lgetv %startX.21;
+        symbol [ startX %tmp.196 135 20 26 ];
+        %tmp.197 = lgetv %fWidth.18;
+        symbol [ fWidth %tmp.197 135 29 35 ];
+        %tmp.198 = add %tmp.196 %tmp.197;
+        %tmp.199 = lgetv %refY.16;
+        symbol [ refY %tmp.199 135 37 41 ];
+        symbol [ Graphics %tmp.200 135 43 51 ];
+        %tmp.200 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.201 135 52 62 ];
+        %tmp.201 = getv %tmp.200 :FONT_XTINY;
+        %tmp.202 = lgetv %verse.1;
+        symbol [ verse %tmp.202 135 64 69 ];
+        symbol [ reference %tmp.203 135 70 79 ];
+        %tmp.203 = getv %tmp.202 :reference;
+        symbol [ Graphics %tmp.204 135 81 89 ];
+        %tmp.204 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.205 135 90 107 ];
+        %tmp.205 = getv %tmp.204 :TEXT_JUSTIFY_LEFT;
+        symbol [ Graphics %tmp.206 135 110 118 ];
+        %tmp.206 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.207 135 119 139 ];
+        %tmp.207 = getv %tmp.206 :TEXT_JUSTIFY_VCENTER;
+        %tmp.208 = bitor %tmp.205 %tmp.207;
+        invoke %tmp.194 %tmp.195(%tmp.198, %tmp.199, %tmp.201, %tmp.203, %tmp.208);
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_71_75_136_4_stop:
+    }
+    //! Manual word wrap function
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 139; @symbol_functiondef = [wordWrap,139,21,29]; @symbol_param<0> = [text,139,30,34]; @symbol_param<0>_type<0> = [String,139,38,44]; @symbol_param<1> = [maxWidth,139,46,54]; @symbol_param<1>_type<0> = [Number,139,58,64]; @symbol_param<2> = [dc,139,66,68]; @symbol_param<2>_type<0> = [Dc,139,72,74]; @symbol_param<3> = [font,139,76,80]; @symbol_param<3>_type<0> = [Graphics,139,84,92]; @symbol_param<3>_type<1> = [FontDefinition,139,93,107]; @symbol_return<0> = [Array,139,112,117]; @symbol_return<1> = [String,139,118,124]; ]
+    private
+    function wordWrap(text as String, maxWidth as Number, dc as Dc, font as Graphics.FontDefinition) as Array<String> {
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_139_126_181_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 140 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_139_126_181_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_139_126_181_4_stop" ]
+        %lines.1 = local;
+        symbol [ lines %lines.1 140 12 17 ];
+        %tmp.1 = newa 0 Array<String>;
+        symbol [ Array %tmp.1 140 26 31 ];
+        symbol [ String %tmp.1 140 32 38 ];
+        lputv %lines.1 %tmp.1;
+        symbol [ lines %lines.1 140 12 17 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 141 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_139_126_181_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_139_126_181_4_stop" ]
+        %line.2 = local;
+        symbol [ line %line.2 141 12 16 ];
+        %tmp.2 = "";
+        lputv %line.2 %tmp.2;
+        symbol [ line %line.2 141 12 16 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 142 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_139_126_181_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_139_126_181_4_stop" ]
+        %space.3 = local;
+        symbol [ space %space.3 142 12 17 ];
+        %tmp.3 = " ";
+        lputv %space.3 %tmp.3;
+        symbol [ space %space.3 142 12 17 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 145 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_139_126_181_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_139_126_181_4_stop" ]
+        %idx.4 = local;
+        symbol [ idx %idx.4 145 12 15 ];
+        %tmp.4 = 0;
+        lputv %idx.4 %tmp.4;
+        symbol [ idx %idx.4 145 12 15 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 146 8 ]
+        while @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_146_8_174_8_while_test @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_146_8_174_8_while_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_146_8_174_8_while_test:
+        %tmp.5 = lgetv %idx.4;
+        symbol [ idx %tmp.5 146 15 18 ];
+        %tmp.6 = lgetv %text;
+        symbol [ text %tmp.6 146 21 25 ];
+        symbol [ length %tmp.7 146 26 32 ];
+        %tmp.7 = getv function %tmp.6 :length;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = lt %tmp.5 %tmp.8;
+        bf %tmp.9 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_146_8_174_8_while_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_146_8_174_8_while_begin:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_146_36_174_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 147 12 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_146_36_174_8_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_146_36_174_8_stop" ]
+        %c.5 = local;
+        symbol [ c %c.5 147 16 17 ];
+        %tmp.10 = lgetv %text;
+        symbol [ text %tmp.10 147 20 24 ];
+        symbol [ substring %tmp.11 147 25 34 ];
+        %tmp.11 = getv function %tmp.10 :substring;
+        %tmp.12 = lgetv %idx.4;
+        symbol [ idx %tmp.12 147 35 38 ];
+        %tmp.13 = lgetv %idx.4;
+        symbol [ idx %tmp.13 147 40 43 ];
+        %tmp.14 = 1;
+        %tmp.15 = add %tmp.13 %tmp.14;
+        %tmp.16 = invoke %tmp.10 %tmp.11(%tmp.12, %tmp.15);
+        lputv %c.5 %tmp.16;
+        symbol [ c %c.5 147 16 17 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 149 12 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_149_12_173_12_if_stmt:
+        %tmp.17 = lgetv %c.5;
+        symbol [ c %tmp.17 149 16 17 ];
+        symbol [ equals %tmp.18 149 18 24 ];
+        %tmp.18 = getv function %tmp.17 :equals;
+        %tmp.19 = lgetv %space.3;
+        symbol [ space %tmp.19 149 25 30 ];
+        %tmp.20 = invoke %tmp.17 %tmp.18(%tmp.19);
+        bf %tmp.20 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_149_12_173_12_if_else_false;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_149_12_173_12_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_149_33_161_12_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 151 16 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_149_33_161_12_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_149_33_161_12_stop" ]
+        %testLine.6 = local;
+        symbol [ testLine %testLine.6 151 20 28 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_151_31_151_67_begin:
+        %tmp.21 = lgetv %line.2;
+        symbol [ line %tmp.21 151 31 35 ];
+        symbol [ equals %tmp.22 151 36 42 ];
+        %tmp.22 = getv function %tmp.21 :equals;
+        %tmp.23 = "";
+        %tmp.24 = invoke %tmp.21 %tmp.22(%tmp.23);
+        bf %tmp.24 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_151_31_151_67_else_false;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_151_31_151_67_true:
+        %tmp.25 = lgetv %line.2;
+        symbol [ line %tmp.25 151 49 53 ];
+        %tmp.26 = lgetv %c.5;
+        symbol [ c %tmp.26 151 56 57 ];
+        %tmp.27 = add %tmp.25 %tmp.26;
+        push %tmp.27;
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_151_31_151_67_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_151_31_151_67_else_false:
+        %tmp.28 = lgetv %line.2;
+        symbol [ line %tmp.28 151 60 64 ];
+        %tmp.29 = lgetv %space.3;
+        symbol [ space %tmp.29 151 67 72 ];
+        %tmp.30 = add %tmp.28 %tmp.29;
+        push %tmp.30;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_151_31_151_67_end:
+        %tmp.31 = phi [%tmp.24 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_151_31_151_67_begin] [%tmp.27 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_151_31_151_67_true] [%tmp.30 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_151_31_151_67_else_false] [%tmp.31 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_151_31_151_67_end];
+        lputv %testLine.6 %tmp.31;
+        symbol [ testLine %testLine.6 151 20 28 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 152 16 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_149_33_161_12_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_149_33_161_12_stop" ]
+        %testDims.7 = local;
+        symbol [ testDims %testDims.7 152 20 28 ];
+        %tmp.32 = lgetv %dc;
+        symbol [ dc %tmp.32 152 31 33 ];
+        symbol [ getTextDimensions %tmp.33 152 34 51 ];
+        %tmp.33 = getv function %tmp.32 :getTextDimensions;
+        %tmp.34 = lgetv %testLine.6;
+        symbol [ testLine %tmp.34 152 52 60 ];
+        %tmp.35 = lgetv %font;
+        symbol [ font %tmp.35 152 62 66 ];
+        %tmp.36 = invoke %tmp.32 %tmp.33(%tmp.34, %tmp.35);
+        lputv %testDims.7 %tmp.36;
+        symbol [ testDims %testDims.7 152 20 28 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 154 16 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_154_16_159_16_if_stmt:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_154_20_154_61_begin:
+        %tmp.37 = lgetv %testDims.7;
+        symbol [ testDims %tmp.37 154 20 28 ];
+        %tmp.38 = 0;
+        %tmp.39 = agetv %tmp.37 %tmp.38;
+        %tmp.40 = lgetv %maxWidth;
+        symbol [ maxWidth %tmp.40 154 34 42 ];
+        %tmp.41 = gt %tmp.39 %tmp.40;
+        bf %tmp.41 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_154_16_159_16_if_else_false;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_154_46_154_61_true:
+        %tmp.42 = lgetv %line.2;
+        symbol [ line %tmp.42 154 47 51 ];
+        symbol [ equals %tmp.43 154 52 58 ];
+        %tmp.43 = getv function %tmp.42 :equals;
+        %tmp.44 = "";
+        %tmp.45 = invoke %tmp.42 %tmp.43(%tmp.44);
+        %tmp.46 = not %tmp.45;
+        push %tmp.46;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_154_46_154_61_end:
+        %tmp.47 = phi [%tmp.41 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_154_20_154_61_begin] [%tmp.46 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_154_46_154_61_true] [%tmp.47 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_154_46_154_61_end];
+        bf %tmp.47 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_154_16_159_16_if_else_false;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_154_16_159_16_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_154_64_157_16_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 155 20 ]
+        %tmp.48 = lgetv %lines.1;
+        symbol [ lines %tmp.48 155 20 25 ];
+        symbol [ add %tmp.49 155 26 29 ];
+        %tmp.49 = getv function %tmp.48 :add;
+        %tmp.50 = lgetv %line.2;
+        symbol [ line %tmp.50 155 30 34 ];
+        invoke %tmp.48 %tmp.49(%tmp.50);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 156 20 ]
+        %tmp.51 = "";
+        lputv %line.2 %tmp.51;
+        symbol [ line %line.2 156 20 24 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_154_64_157_16_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_154_16_159_16_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_154_16_159_16_if_else_false:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_157_23_159_16_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 158 20 ]
+        %tmp.52 = lgetv %testLine.6;
+        symbol [ testLine %tmp.52 158 27 35 ];
+        lputv %line.2 %tmp.52;
+        symbol [ line %line.2 158 20 24 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_157_23_159_16_stop:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_154_16_159_16_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 160 16 ]
+        %tmp.55 = lgetv %idx.4;
+        symbol [ idx %tmp.55 160 16 19 ];
+        %tmp.56 = add %tmp.55 1;
+        lputv %idx.4 %tmp.56;
+        symbol [ idx %idx.4 160 16 19 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_149_33_161_12_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_149_12_173_12_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_149_12_173_12_if_else_false:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_161_19_173_12_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 163 16 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_161_19_173_12_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_161_19_173_12_stop" ]
+        %testLine.8 = local;
+        symbol [ testLine %testLine.8 163 20 28 ];
+        %tmp.57 = lgetv %line.2;
+        symbol [ line %tmp.57 163 31 35 ];
+        %tmp.58 = lgetv %c.5;
+        symbol [ c %tmp.58 163 38 39 ];
+        %tmp.59 = add %tmp.57 %tmp.58;
+        lputv %testLine.8 %tmp.59;
+        symbol [ testLine %testLine.8 163 20 28 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 164 16 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_161_19_173_12_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_161_19_173_12_stop" ]
+        %testDims.9 = local;
+        symbol [ testDims %testDims.9 164 20 28 ];
+        %tmp.60 = lgetv %dc;
+        symbol [ dc %tmp.60 164 31 33 ];
+        symbol [ getTextDimensions %tmp.61 164 34 51 ];
+        %tmp.61 = getv function %tmp.60 :getTextDimensions;
+        %tmp.62 = lgetv %testLine.8;
+        symbol [ testLine %tmp.62 164 52 60 ];
+        %tmp.63 = lgetv %font;
+        symbol [ font %tmp.63 164 62 66 ];
+        %tmp.64 = invoke %tmp.60 %tmp.61(%tmp.62, %tmp.63);
+        lputv %testDims.9 %tmp.64;
+        symbol [ testDims %testDims.9 164 20 28 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 166 16 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_166_16_171_16_if_stmt:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_166_20_166_61_begin:
+        %tmp.65 = lgetv %testDims.9;
+        symbol [ testDims %tmp.65 166 20 28 ];
+        %tmp.66 = 0;
+        %tmp.67 = agetv %tmp.65 %tmp.66;
+        %tmp.68 = lgetv %maxWidth;
+        symbol [ maxWidth %tmp.68 166 34 42 ];
+        %tmp.69 = gt %tmp.67 %tmp.68;
+        bf %tmp.69 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_166_16_171_16_if_else_false;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_166_46_166_61_true:
+        %tmp.70 = lgetv %line.2;
+        symbol [ line %tmp.70 166 47 51 ];
+        symbol [ equals %tmp.71 166 52 58 ];
+        %tmp.71 = getv function %tmp.70 :equals;
+        %tmp.72 = "";
+        %tmp.73 = invoke %tmp.70 %tmp.71(%tmp.72);
+        %tmp.74 = not %tmp.73;
+        push %tmp.74;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_166_46_166_61_end:
+        %tmp.75 = phi [%tmp.69 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_166_20_166_61_begin] [%tmp.74 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_166_46_166_61_true] [%tmp.75 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_166_46_166_61_end];
+        bf %tmp.75 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_166_16_171_16_if_else_false;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_166_16_171_16_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_166_64_169_16_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 167 20 ]
+        %tmp.76 = lgetv %lines.1;
+        symbol [ lines %tmp.76 167 20 25 ];
+        symbol [ add %tmp.77 167 26 29 ];
+        %tmp.77 = getv function %tmp.76 :add;
+        %tmp.78 = lgetv %line.2;
+        symbol [ line %tmp.78 167 30 34 ];
+        invoke %tmp.76 %tmp.77(%tmp.78);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 168 20 ]
+        %tmp.79 = lgetv %c.5;
+        symbol [ c %tmp.79 168 27 28 ];
+        lputv %line.2 %tmp.79;
+        symbol [ line %line.2 168 20 24 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_166_64_169_16_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_166_16_171_16_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_166_16_171_16_if_else_false:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_169_23_171_16_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 170 20 ]
+        %tmp.80 = lgetv %testLine.8;
+        symbol [ testLine %tmp.80 170 27 35 ];
+        lputv %line.2 %tmp.80;
+        symbol [ line %line.2 170 20 24 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_169_23_171_16_stop:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_166_16_171_16_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 172 16 ]
+        %tmp.83 = lgetv %idx.4;
+        symbol [ idx %tmp.83 172 16 19 ];
+        %tmp.84 = add %tmp.83 1;
+        lputv %idx.4 %tmp.84;
+        symbol [ idx %idx.4 172 16 19 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_161_19_173_12_stop:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_149_12_173_12_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_146_36_174_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_146_8_174_8_while_test;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_146_8_174_8_while_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 176 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_176_8_178_8_if_stmt:
+        %tmp.85 = lgetv %line.2;
+        symbol [ line %tmp.85 176 13 17 ];
+        symbol [ equals %tmp.86 176 18 24 ];
+        %tmp.86 = getv function %tmp.85 :equals;
+        %tmp.87 = "";
+        %tmp.88 = invoke %tmp.85 %tmp.86(%tmp.87);
+        %tmp.89 = not %tmp.88;
+        bf %tmp.89 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_176_8_178_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_176_8_178_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_176_30_178_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 177 12 ]
+        %tmp.90 = lgetv %lines.1;
+        symbol [ lines %tmp.90 177 12 17 ];
+        symbol [ add %tmp.91 177 18 21 ];
+        %tmp.91 = getv function %tmp.90 :add;
+        %tmp.92 = lgetv %line.2;
+        symbol [ line %tmp.92 177 22 26 ];
+        invoke %tmp.90 %tmp.91(%tmp.92);
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_176_30_178_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_176_8_178_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_176_8_178_8_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 180 8 ]
+        %tmp.93 = lgetv %lines.1;
+        symbol [ lines %tmp.93 180 15 20 ];
+        ret %tmp.93;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_139_126_181_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 183; @symbol_functiondef = [selectNext,183,13,23]; ]
+    function selectNext() as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_183_34_188_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 184 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_184_8_187_8_if_stmt:
+        symbol [ _favorites %tmp.2 184 12 22 ];
+        %tmp.2 = getv ? :_favorites;
+        symbol [ size %tmp.3 184 23 27 ];
+        %tmp.3 = getv function %tmp.2 :size;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        %tmp.5 = 0;
+        %tmp.6 = gt %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_184_8_187_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_184_8_187_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_184_35_187_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 185 12 ]
+        symbol [ _selectedIndex %tmp.8 185 30 44 ];
+        %tmp.8 = getv ? :_selectedIndex;
+        %tmp.9 = 1;
+        %tmp.10 = add %tmp.8 %tmp.9;
+        symbol [ _favorites %tmp.12 185 52 62 ];
+        %tmp.12 = getv ? :_favorites;
+        symbol [ size %tmp.13 185 63 67 ];
+        %tmp.13 = getv function %tmp.12 :size;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = mod %tmp.10 %tmp.14;
+        symbol [ _selectedIndex ? 185 12 26 ];
+        putv self :_selectedIndex %tmp.15;
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 186 12 ]
+        symbol [ WatchUi %tmp.16 186 12 19 ];
+        %tmp.16 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.17 186 20 33 ];
+        %tmp.17 = getv function %tmp.16 :requestUpdate;
+        invoke %tmp.16 %tmp.17();
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_184_35_187_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_184_8_187_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_184_8_187_8_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_183_34_188_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 190; @symbol_functiondef = [selectPrevious,190,13,27]; ]
+    function selectPrevious() as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_190_38_195_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 191 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_191_8_194_8_if_stmt:
+        symbol [ _favorites %tmp.2 191 12 22 ];
+        %tmp.2 = getv ? :_favorites;
+        symbol [ size %tmp.3 191 23 27 ];
+        %tmp.3 = getv function %tmp.2 :size;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        %tmp.5 = 0;
+        %tmp.6 = gt %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_191_8_194_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_191_8_194_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_191_35_194_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 192 12 ]
+        symbol [ _selectedIndex %tmp.8 192 30 44 ];
+        %tmp.8 = getv ? :_selectedIndex;
+        %tmp.9 = 1;
+        %tmp.10 = sub %tmp.8 %tmp.9;
+        symbol [ _favorites %tmp.12 192 51 61 ];
+        %tmp.12 = getv ? :_favorites;
+        symbol [ size %tmp.13 192 62 66 ];
+        %tmp.13 = getv function %tmp.12 :size;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = add %tmp.10 %tmp.14;
+        symbol [ _favorites %tmp.17 192 72 82 ];
+        %tmp.17 = getv ? :_favorites;
+        symbol [ size %tmp.18 192 83 87 ];
+        %tmp.18 = getv function %tmp.17 :size;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = mod %tmp.15 %tmp.19;
+        symbol [ _selectedIndex ? 192 12 26 ];
+        putv self :_selectedIndex %tmp.20;
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 193 12 ]
+        symbol [ WatchUi %tmp.21 193 12 19 ];
+        %tmp.21 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.22 193 20 33 ];
+        %tmp.22 = getv function %tmp.21 :requestUpdate;
+        invoke %tmp.21 %tmp.22();
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_191_35_194_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_191_8_194_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_191_8_194_8_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_190_38_195_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 197; @symbol_functiondef = [removeSelected,197,13,27]; ]
+    function removeSelected() as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_197_38_204_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 198 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_198_8_203_8_if_stmt:
+        symbol [ _favorites %tmp.2 198 12 22 ];
+        %tmp.2 = getv ? :_favorites;
+        symbol [ size %tmp.3 198 23 27 ];
+        %tmp.3 = getv function %tmp.2 :size;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        %tmp.5 = 0;
+        %tmp.6 = gt %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_198_8_203_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_198_8_203_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_198_35_203_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 199 12 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_198_35_203_8_start" "_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_198_35_203_8_stop" ]
+        %verse.1 = local;
+        symbol [ verse %verse.1 199 16 21 ];
+        symbol [ _favorites %tmp.8 199 24 34 ];
+        %tmp.8 = getv ? :_favorites;
+        symbol [ _selectedIndex %tmp.10 199 35 49 ];
+        %tmp.10 = getv ? :_selectedIndex;
+        %tmp.11 = agetv %tmp.8 %tmp.10;
+        lputv %verse.1 %tmp.11;
+        symbol [ verse %verse.1 199 16 21 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 200 12 ]
+        symbol [ _app %tmp.13 200 12 16 ];
+        %tmp.13 = getv ? :_app;
+        symbol [ removeFavorite %tmp.14 200 17 31 ];
+        %tmp.14 = getv function %tmp.13 :removeFavorite;
+        %tmp.15 = lgetv %verse.1;
+        symbol [ verse %tmp.15 200 32 37 ];
+        invoke %tmp.13 %tmp.14(%tmp.15);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 201 12 ]
+        %tmp.16 = self;
+        symbol [ refreshFavorites %tmp.17 201 12 28 ];
+        %tmp.17 = getv function %tmp.16 :refreshFavorites;
+        invoke %tmp.16 %tmp.17();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 202 12 ]
+        symbol [ WatchUi %tmp.18 202 12 19 ];
+        %tmp.18 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.19 202 20 33 ];
+        %tmp.19 = getv function %tmp.18 :requestUpdate;
+        invoke %tmp.18 %tmp.19();
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_198_35_203_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_198_8_203_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_198_8_203_8_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_197_38_204_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 206; @symbol_functiondef = [viewSelected,206,13,25]; ]
+    function viewSelected() as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_206_36_212_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 207 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_207_8_211_8_if_stmt:
+        symbol [ _favorites %tmp.2 207 12 22 ];
+        %tmp.2 = getv ? :_favorites;
+        symbol [ size %tmp.3 207 23 27 ];
+        %tmp.3 = getv function %tmp.2 :size;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        %tmp.5 = 0;
+        %tmp.6 = gt %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_207_8_211_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_207_8_211_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_207_35_211_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 209 12 ]
+        symbol [ _homeView %tmp.8 209 12 21 ];
+        %tmp.8 = getv ? :_homeView;
+        symbol [ showFavoriteVerse %tmp.9 209 22 39 ];
+        %tmp.9 = getv function %tmp.8 :showFavoriteVerse;
+        invoke %tmp.8 %tmp.9();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc" 210 12 ]
+        symbol [ WatchUi %tmp.10 210 12 19 ];
+        %tmp.10 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.11 210 20 27 ];
+        %tmp.11 = getv function %tmp.10 :popView;
+        symbol [ WatchUi %tmp.12 210 28 35 ];
+        %tmp.12 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.13 210 36 46 ];
+        %tmp.13 = getv %tmp.12 :SLIDE_DOWN;
+        invoke %tmp.10 %tmp.11(%tmp.13);
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_207_35_211_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_207_8_211_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_207_8_211_8_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_FavoritesView_mc_206_36_212_4_stop:
+    }
+}
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/FavoritesView.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,697 @@
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Graphics,3,14,22]; ]
+import Toybox.Graphics;
+//! View for displaying theme selection
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 6; @symbol_classdef = [ThemesView,6,6,16]; @symbol_extends<0> = [WatchUi,6,25,32]; @symbol_extends<1> = [View,6,33,37]; ]
+class ThemesView extends WatchUi.View {
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 6; ]
+    <init> {
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 10 16 ]
+        %tmp.1 = newa 0;
+        putv self :_themes %tmp.1;
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 8; @position = 16; @symbol_vardef = [_homeView,8,16,25]; @symbol_type<0> = [HomeView,8,29,37]; ]
+    private
+    var _homeView as HomeView;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 9; @position = 16; @symbol_vardef = [_app,9,16,20]; @symbol_type<0> = [VerseVaultApp,9,24,37]; ]
+    private
+    var _app as VerseVaultApp;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 10; @position = 16; @symbol_vardef = [_themes,10,16,23]; @symbol_type<0> = [Array,10,27,32]; @symbol_type<1> = [String,10,33,39]; ]
+    private
+    var _themes as Array<String>;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 11; @position = 16; @symbol_vardef = [_selectedIndex,11,16,30]; @symbol_type<0> = [Number,11,34,40]; ]
+    private
+    var _selectedIndex as Number = 0;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 14; @position = 10; @symbol_constdef = [COLOR_AMBER,14,10,21]; ]
+    const COLOR_AMBER = 0xFFBF00;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 15; @position = 10; @symbol_constdef = [COLOR_SOFT_RED,15,10,24]; ]
+    const COLOR_SOFT_RED = 0xE57373;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 16; @position = 10; @symbol_constdef = [COLOR_CREAM,16,10,21]; ]
+    const COLOR_CREAM = 0xFFF8E1;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 17; @position = 10; @symbol_constdef = [COLOR_WARM_BG,17,10,23]; ]
+    const COLOR_WARM_BG = 0x2D1F1A;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 18; @position = 10; @symbol_constdef = [COLOR_CARD,18,10,20]; ]
+    const COLOR_CARD = 0x3E2B26;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 19; @position = 10; @symbol_constdef = [COLOR_MUTED,19,10,21]; ]
+    const COLOR_MUTED = 0xA89080;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 21; @symbol_functiondef = [initialize,21,13,23]; @symbol_param<0> = [homeView,21,24,32]; @symbol_param<0>_type<0> = [HomeView,21,36,44]; ]
+    function initialize(homeView as HomeView) as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_21_46_26_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 22 8 ]
+        symbol [ WatchUi %tmp.1 22 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ View %tmp.2 22 16 20 ];
+        %tmp.2 = getv %tmp.1 :View;
+        symbol [ initialize %tmp.3 22 21 31 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 23 8 ]
+        %tmp.4 = lgetv %homeView;
+        symbol [ homeView %tmp.4 23 20 28 ];
+        symbol [ _homeView ? 23 8 17 ];
+        putv self :_homeView %tmp.4;
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 24 8 ]
+        symbol [ Application %tmp.6 24 15 26 ];
+        %tmp.6 = getv ? :Application;
+        symbol [ getApp %tmp.7 24 27 33 ];
+        %tmp.7 = getv function %tmp.6 :getApp;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = as %tmp.8 VerseVaultApp;
+        symbol [ VerseVaultApp %tmp.9 24 39 52 ];
+        symbol [ _app ? 24 8 12 ];
+        putv self :_app %tmp.9;
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 25 8 ]
+        symbol [ Verses %tmp.11 25 18 24 ];
+        %tmp.11 = getv ? :Verses;
+        symbol [ getThemes %tmp.12 25 25 34 ];
+        %tmp.12 = getv function %tmp.11 :getThemes;
+        %tmp.13 = invoke %tmp.11 %tmp.12();
+        symbol [ _themes ? 25 8 15 ];
+        putv self :_themes %tmp.13;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_21_46_26_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 28; @symbol_functiondef = [onLayout,28,13,21]; @symbol_param<0> = [dc,28,22,24]; @symbol_param<0>_type<0> = [Dc,28,28,30]; ]
+    function onLayout(dc as Dc) as Void {
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 32; @symbol_functiondef = [onUpdate,32,13,21]; @symbol_param<0> = [dc,32,22,24]; @symbol_param<0>_type<0> = [Dc,32,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_32_40_52_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 33 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_32_40_52_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_32_40_52_4_stop" ]
+        %w.1 = local;
+        symbol [ w %w.1 33 12 13 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 33 16 18 ];
+        symbol [ getWidth %tmp.2 33 19 27 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %w.1 %tmp.3;
+        symbol [ w %w.1 33 12 13 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 34 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_32_40_52_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_32_40_52_4_stop" ]
+        %h.2 = local;
+        symbol [ h %h.2 34 12 13 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 34 16 18 ];
+        symbol [ getHeight %tmp.5 34 19 28 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %h.2 %tmp.6;
+        symbol [ h %h.2 34 12 13 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 37 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 37 8 10 ];
+        symbol [ setColor %tmp.8 37 11 19 ];
+        %tmp.8 = getv function %tmp.7 :setColor;
+        symbol [ COLOR_WARM_BG %tmp.10 37 20 33 ];
+        %tmp.10 = getv ? :COLOR_WARM_BG;
+        symbol [ COLOR_WARM_BG %tmp.12 37 35 48 ];
+        %tmp.12 = getv ? :COLOR_WARM_BG;
+        invoke %tmp.7 %tmp.8(%tmp.10, %tmp.12);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 38 8 ]
+        %tmp.13 = lgetv %dc;
+        symbol [ dc %tmp.13 38 8 10 ];
+        symbol [ clear %tmp.14 38 11 16 ];
+        %tmp.14 = getv function %tmp.13 :clear;
+        invoke %tmp.13 %tmp.14();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 41 8 ]
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 41 8 10 ];
+        symbol [ setColor %tmp.16 41 11 19 ];
+        %tmp.16 = getv function %tmp.15 :setColor;
+        symbol [ COLOR_AMBER %tmp.18 41 20 31 ];
+        %tmp.18 = getv ? :COLOR_AMBER;
+        symbol [ Graphics %tmp.19 41 33 41 ];
+        %tmp.19 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.20 41 42 59 ];
+        %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 42 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 42 8 10 ];
+        symbol [ fillRectangle %tmp.22 42 11 24 ];
+        %tmp.22 = getv function %tmp.21 :fillRectangle;
+        %tmp.23 = 0;
+        %tmp.24 = 0;
+        %tmp.25 = lgetv %w.1;
+        symbol [ w %tmp.25 42 31 32 ];
+        %tmp.26 = 4;
+        invoke %tmp.21 %tmp.22(%tmp.23, %tmp.24, %tmp.25, %tmp.26);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 44 8 ]
+        %tmp.27 = lgetv %dc;
+        symbol [ dc %tmp.27 44 8 10 ];
+        symbol [ setColor %tmp.28 44 11 19 ];
+        %tmp.28 = getv function %tmp.27 :setColor;
+        symbol [ COLOR_CREAM %tmp.30 44 20 31 ];
+        %tmp.30 = getv ? :COLOR_CREAM;
+        symbol [ Graphics %tmp.31 44 33 41 ];
+        %tmp.31 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.32 44 42 59 ];
+        %tmp.32 = getv %tmp.31 :COLOR_TRANSPARENT;
+        invoke %tmp.27 %tmp.28(%tmp.30, %tmp.32);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 45 8 ]
+        %tmp.33 = lgetv %dc;
+        symbol [ dc %tmp.33 45 8 10 ];
+        symbol [ drawText %tmp.34 45 11 19 ];
+        %tmp.34 = getv function %tmp.33 :drawText;
+        %tmp.35 = lgetv %w.1;
+        symbol [ w %tmp.35 45 20 21 ];
+        %tmp.36 = 2;
+        %tmp.37 = div %tmp.35 %tmp.36;
+        %tmp.38 = 25;
+        symbol [ Graphics %tmp.39 45 31 39 ];
+        %tmp.39 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.40 45 40 49 ];
+        %tmp.40 = getv %tmp.39 :FONT_TINY;
+        %tmp.41 = "Themes";
+        symbol [ Graphics %tmp.42 45 61 69 ];
+        %tmp.42 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.43 45 70 89 ];
+        %tmp.43 = getv %tmp.42 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.44 45 92 100 ];
+        %tmp.44 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.45 45 101 121 ];
+        %tmp.45 = getv %tmp.44 :TEXT_JUSTIFY_VCENTER;
+        %tmp.46 = bitor %tmp.43 %tmp.45;
+        invoke %tmp.33 %tmp.34(%tmp.37, %tmp.38, %tmp.40, %tmp.41, %tmp.46);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 47 8 ]
+        %tmp.47 = lgetv %dc;
+        symbol [ dc %tmp.47 47 8 10 ];
+        symbol [ setColor %tmp.48 47 11 19 ];
+        %tmp.48 = getv function %tmp.47 :setColor;
+        symbol [ COLOR_MUTED %tmp.50 47 20 31 ];
+        %tmp.50 = getv ? :COLOR_MUTED;
+        symbol [ Graphics %tmp.51 47 33 41 ];
+        %tmp.51 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.52 47 42 59 ];
+        %tmp.52 = getv %tmp.51 :COLOR_TRANSPARENT;
+        invoke %tmp.47 %tmp.48(%tmp.50, %tmp.52);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 48 8 ]
+        %tmp.53 = lgetv %dc;
+        symbol [ dc %tmp.53 48 8 10 ];
+        symbol [ drawText %tmp.54 48 11 19 ];
+        %tmp.54 = getv function %tmp.53 :drawText;
+        %tmp.55 = lgetv %w.1;
+        symbol [ w %tmp.55 48 20 21 ];
+        %tmp.56 = 2;
+        %tmp.57 = div %tmp.55 %tmp.56;
+        %tmp.58 = 42;
+        symbol [ Graphics %tmp.59 48 31 39 ];
+        %tmp.59 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.60 48 40 50 ];
+        %tmp.60 = getv %tmp.59 :FONT_XTINY;
+        %tmp.61 = "Choose a theme";
+        symbol [ Graphics %tmp.62 48 70 78 ];
+        %tmp.62 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.63 48 79 98 ];
+        %tmp.63 = getv %tmp.62 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.64 48 101 109 ];
+        %tmp.64 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.65 48 110 130 ];
+        %tmp.65 = getv %tmp.64 :TEXT_JUSTIFY_VCENTER;
+        %tmp.66 = bitor %tmp.63 %tmp.65;
+        invoke %tmp.53 %tmp.54(%tmp.57, %tmp.58, %tmp.60, %tmp.61, %tmp.66);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 51 8 ]
+        %tmp.67 = self;
+        symbol [ drawThemesGrid %tmp.68 51 8 22 ];
+        %tmp.68 = getv function %tmp.67 :drawThemesGrid;
+        %tmp.69 = lgetv %dc;
+        symbol [ dc %tmp.69 51 23 25 ];
+        %tmp.70 = lgetv %w.1;
+        symbol [ w %tmp.70 51 27 28 ];
+        %tmp.71 = lgetv %h.2;
+        symbol [ h %tmp.71 51 30 31 ];
+        invoke %tmp.67 %tmp.68(%tmp.69, %tmp.70, %tmp.71);
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_32_40_52_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 54; @symbol_functiondef = [drawThemesGrid,54,13,27]; @symbol_param<0> = [dc,54,28,30]; @symbol_param<0>_type<0> = [Dc,54,34,36]; @symbol_param<1> = [w,54,38,39]; @symbol_param<1>_type<0> = [Number,54,43,49]; @symbol_param<2> = [h,54,51,52]; @symbol_param<2>_type<0> = [Number,54,56,62]; ]
+    function drawThemesGrid(dc as Dc, w as Number, h as Number) as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_54_72_92_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 55 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_54_72_92_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_54_72_92_4_stop" ]
+        %padding.1 = local;
+        symbol [ padding %padding.1 55 12 19 ];
+        %tmp.1 = 10;
+        lputv %padding.1 %tmp.1;
+        symbol [ padding %padding.1 55 12 19 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 56 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_54_72_92_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_54_72_92_4_stop" ]
+        %gap.2 = local;
+        symbol [ gap %gap.2 56 12 15 ];
+        %tmp.2 = 6;
+        lputv %gap.2 %tmp.2;
+        symbol [ gap %gap.2 56 12 15 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 57 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_54_72_92_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_54_72_92_4_stop" ]
+        %cols.3 = local;
+        symbol [ cols %cols.3 57 12 16 ];
+        %tmp.3 = 2;
+        lputv %cols.3 %tmp.3;
+        symbol [ cols %cols.3 57 12 16 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 58 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_54_72_92_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_54_72_92_4_stop" ]
+        %cardWidth.4 = local;
+        symbol [ cardWidth %cardWidth.4 58 12 21 ];
+        %tmp.4 = lgetv %w;
+        symbol [ w %tmp.4 58 25 26 ];
+        %tmp.5 = lgetv %padding.1;
+        symbol [ padding %tmp.5 58 30 37 ];
+        %tmp.6 = 2;
+        %tmp.7 = mul %tmp.5 %tmp.6;
+        %tmp.8 = sub %tmp.4 %tmp.7;
+        %tmp.9 = lgetv %gap.2;
+        symbol [ gap %tmp.9 58 45 48 ];
+        %tmp.10 = sub %tmp.8 %tmp.9;
+        %tmp.11 = lgetv %cols.3;
+        symbol [ cols %tmp.11 58 52 56 ];
+        %tmp.12 = div %tmp.10 %tmp.11;
+        lputv %cardWidth.4 %tmp.12;
+        symbol [ cardWidth %cardWidth.4 58 12 21 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 59 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_54_72_92_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_54_72_92_4_stop" ]
+        %cardHeight.5 = local;
+        symbol [ cardHeight %cardHeight.5 59 12 22 ];
+        %tmp.13 = 35;
+        lputv %cardHeight.5 %tmp.13;
+        symbol [ cardHeight %cardHeight.5 59 12 22 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 61 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_54_72_92_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_54_72_92_4_stop" ]
+        %startY.6 = local;
+        symbol [ startY %startY.6 61 12 18 ];
+        %tmp.14 = 55;
+        lputv %startY.6 %tmp.14;
+        symbol [ startY %startY.6 61 12 18 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 63 8 ]
+        for @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_8_91_8_for_test @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_8_91_8_for_incr @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_8_91_8_for_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_8_91_8_for_init:
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_8_91_8_for_begin" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_8_91_8_for_end" ]
+        %i.7 = local;
+        symbol [ i %i.7 63 17 18 ];
+        %tmp.15 = 0;
+        lputv %i.7 %tmp.15;
+        symbol [ i %i.7 63 17 18 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_8_91_8_for_test:
+        %tmp.16 = lgetv %i.7;
+        symbol [ i %tmp.16 63 24 25 ];
+        symbol [ _themes %tmp.18 63 28 35 ];
+        %tmp.18 = getv ? :_themes;
+        symbol [ size %tmp.19 63 36 40 ];
+        %tmp.19 = getv function %tmp.18 :size;
+        %tmp.20 = invoke %tmp.18 %tmp.19();
+        %tmp.21 = lt %tmp.16 %tmp.20;
+        bf %tmp.21 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_8_91_8_for_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_8_91_8_for_begin:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_49_91_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 64 12 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_49_91_8_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_49_91_8_stop" ]
+        %col.8 = local;
+        symbol [ col %col.8 64 16 19 ];
+        %tmp.22 = lgetv %i.7;
+        symbol [ i %tmp.22 64 22 23 ];
+        %tmp.23 = lgetv %cols.3;
+        symbol [ cols %tmp.23 64 26 30 ];
+        %tmp.24 = mod %tmp.22 %tmp.23;
+        lputv %col.8 %tmp.24;
+        symbol [ col %col.8 64 16 19 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 65 12 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_49_91_8_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_49_91_8_stop" ]
+        %row.9 = local;
+        symbol [ row %row.9 65 16 19 ];
+        %tmp.25 = lgetv %i.7;
+        symbol [ i %tmp.25 65 22 23 ];
+        %tmp.26 = lgetv %cols.3;
+        symbol [ cols %tmp.26 65 26 30 ];
+        %tmp.27 = div %tmp.25 %tmp.26;
+        lputv %row.9 %tmp.27;
+        symbol [ row %row.9 65 16 19 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 67 12 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_49_91_8_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_49_91_8_stop" ]
+        %x.10 = local;
+        symbol [ x %x.10 67 16 17 ];
+        %tmp.28 = lgetv %padding.1;
+        symbol [ padding %tmp.28 67 20 27 ];
+        %tmp.29 = lgetv %col.8;
+        symbol [ col %tmp.29 67 31 34 ];
+        %tmp.30 = lgetv %cardWidth.4;
+        symbol [ cardWidth %tmp.30 67 38 47 ];
+        %tmp.31 = lgetv %gap.2;
+        symbol [ gap %tmp.31 67 50 53 ];
+        %tmp.32 = add %tmp.30 %tmp.31;
+        %tmp.33 = mul %tmp.29 %tmp.32;
+        %tmp.34 = add %tmp.28 %tmp.33;
+        lputv %x.10 %tmp.34;
+        symbol [ x %x.10 67 16 17 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 68 12 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_49_91_8_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_49_91_8_stop" ]
+        %y.11 = local;
+        symbol [ y %y.11 68 16 17 ];
+        %tmp.35 = lgetv %startY.6;
+        symbol [ startY %tmp.35 68 20 26 ];
+        %tmp.36 = lgetv %row.9;
+        symbol [ row %tmp.36 68 30 33 ];
+        %tmp.37 = lgetv %cardHeight.5;
+        symbol [ cardHeight %tmp.37 68 37 47 ];
+        %tmp.38 = lgetv %gap.2;
+        symbol [ gap %tmp.38 68 50 53 ];
+        %tmp.39 = add %tmp.37 %tmp.38;
+        %tmp.40 = mul %tmp.36 %tmp.39;
+        %tmp.41 = add %tmp.35 %tmp.40;
+        lputv %y.11 %tmp.41;
+        symbol [ y %y.11 68 16 17 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 70 12 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_49_91_8_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_49_91_8_stop" ]
+        %isSelected.12 = local;
+        symbol [ isSelected %isSelected.12 70 16 26 ];
+        %tmp.42 = lgetv %i.7;
+        symbol [ i %tmp.42 70 30 31 ];
+        symbol [ _selectedIndex %tmp.44 70 35 49 ];
+        %tmp.44 = getv ? :_selectedIndex;
+        %tmp.45 = eq %tmp.42 %tmp.44;
+        lputv %isSelected.12 %tmp.45;
+        symbol [ isSelected %isSelected.12 70 16 26 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 73 12 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_73_12_83_12_if_stmt:
+        %tmp.46 = lgetv %isSelected.12;
+        symbol [ isSelected %tmp.46 73 16 26 ];
+        bf %tmp.46 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_73_12_83_12_if_else_false;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_73_12_83_12_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_73_28_80_12_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 74 16 ]
+        %tmp.47 = lgetv %dc;
+        symbol [ dc %tmp.47 74 16 18 ];
+        symbol [ setColor %tmp.48 74 19 27 ];
+        %tmp.48 = getv function %tmp.47 :setColor;
+        symbol [ COLOR_CARD %tmp.50 74 28 38 ];
+        %tmp.50 = getv ? :COLOR_CARD;
+        symbol [ Graphics %tmp.51 74 40 48 ];
+        %tmp.51 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.52 74 49 66 ];
+        %tmp.52 = getv %tmp.51 :COLOR_TRANSPARENT;
+        invoke %tmp.47 %tmp.48(%tmp.50, %tmp.52);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 75 16 ]
+        %tmp.53 = lgetv %dc;
+        symbol [ dc %tmp.53 75 16 18 ];
+        symbol [ fillRoundedRectangle %tmp.54 75 19 39 ];
+        %tmp.54 = getv function %tmp.53 :fillRoundedRectangle;
+        %tmp.55 = lgetv %x.10;
+        symbol [ x %tmp.55 75 40 41 ];
+        %tmp.56 = lgetv %y.11;
+        symbol [ y %tmp.56 75 43 44 ];
+        %tmp.57 = lgetv %cardWidth.4;
+        symbol [ cardWidth %tmp.57 75 46 55 ];
+        %tmp.58 = lgetv %cardHeight.5;
+        symbol [ cardHeight %tmp.58 75 57 67 ];
+        %tmp.59 = 6;
+        invoke %tmp.53 %tmp.54(%tmp.55, %tmp.56, %tmp.57, %tmp.58, %tmp.59);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 78 16 ]
+        %tmp.60 = lgetv %dc;
+        symbol [ dc %tmp.60 78 16 18 ];
+        symbol [ setColor %tmp.61 78 19 27 ];
+        %tmp.61 = getv function %tmp.60 :setColor;
+        symbol [ COLOR_AMBER %tmp.63 78 28 39 ];
+        %tmp.63 = getv ? :COLOR_AMBER;
+        symbol [ Graphics %tmp.64 78 41 49 ];
+        %tmp.64 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.65 78 50 67 ];
+        %tmp.65 = getv %tmp.64 :COLOR_TRANSPARENT;
+        invoke %tmp.60 %tmp.61(%tmp.63, %tmp.65);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 79 16 ]
+        %tmp.66 = lgetv %dc;
+        symbol [ dc %tmp.66 79 16 18 ];
+        symbol [ fillRoundedRectangle %tmp.67 79 19 39 ];
+        %tmp.67 = getv function %tmp.66 :fillRoundedRectangle;
+        %tmp.68 = lgetv %x.10;
+        symbol [ x %tmp.68 79 40 41 ];
+        %tmp.69 = lgetv %y.11;
+        symbol [ y %tmp.69 79 43 44 ];
+        %tmp.70 = 4;
+        %tmp.71 = lgetv %cardHeight.5;
+        symbol [ cardHeight %tmp.71 79 49 59 ];
+        %tmp.72 = 6;
+        invoke %tmp.66 %tmp.67(%tmp.68, %tmp.69, %tmp.70, %tmp.71, %tmp.72);
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_73_28_80_12_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_73_12_83_12_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_73_12_83_12_if_else_false:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_80_19_83_12_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 81 16 ]
+        %tmp.73 = lgetv %dc;
+        symbol [ dc %tmp.73 81 16 18 ];
+        symbol [ setColor %tmp.74 81 19 27 ];
+        %tmp.74 = getv function %tmp.73 :setColor;
+        %tmp.75 = 0x2A201C;
+        symbol [ Graphics %tmp.76 81 38 46 ];
+        %tmp.76 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.77 81 47 64 ];
+        %tmp.77 = getv %tmp.76 :COLOR_TRANSPARENT;
+        invoke %tmp.73 %tmp.74(%tmp.75, %tmp.77);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 82 16 ]
+        %tmp.78 = lgetv %dc;
+        symbol [ dc %tmp.78 82 16 18 ];
+        symbol [ fillRoundedRectangle %tmp.79 82 19 39 ];
+        %tmp.79 = getv function %tmp.78 :fillRoundedRectangle;
+        %tmp.80 = lgetv %x.10;
+        symbol [ x %tmp.80 82 40 41 ];
+        %tmp.81 = lgetv %y.11;
+        symbol [ y %tmp.81 82 43 44 ];
+        %tmp.82 = lgetv %cardWidth.4;
+        symbol [ cardWidth %tmp.82 82 46 55 ];
+        %tmp.83 = lgetv %cardHeight.5;
+        symbol [ cardHeight %tmp.83 82 57 67 ];
+        %tmp.84 = 6;
+        invoke %tmp.78 %tmp.79(%tmp.80, %tmp.81, %tmp.82, %tmp.83, %tmp.84);
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_80_19_83_12_stop:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_73_12_83_12_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 86 12 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_49_91_8_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_49_91_8_stop" ]
+        %textColor.13 = local;
+        symbol [ textColor %textColor.13 86 16 25 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_86_28_86_55_begin:
+        %tmp.85 = lgetv %isSelected.12;
+        symbol [ isSelected %tmp.85 86 28 38 ];
+        bf %tmp.85 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_86_28_86_55_else_false;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_86_28_86_55_true:
+        symbol [ COLOR_CREAM %tmp.87 86 41 52 ];
+        %tmp.87 = getv ? :COLOR_CREAM;
+        push %tmp.87;
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_86_28_86_55_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_86_28_86_55_else_false:
+        symbol [ COLOR_MUTED %tmp.89 86 55 66 ];
+        %tmp.89 = getv ? :COLOR_MUTED;
+        push %tmp.89;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_86_28_86_55_end:
+        %tmp.90 = phi [%tmp.85 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_86_28_86_55_begin] [%tmp.87 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_86_28_86_55_true] [%tmp.89 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_86_28_86_55_else_false] [%tmp.90 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_86_28_86_55_end];
+        lputv %textColor.13 %tmp.90;
+        symbol [ textColor %textColor.13 86 16 25 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 87 12 ]
+        %tmp.91 = lgetv %dc;
+        symbol [ dc %tmp.91 87 12 14 ];
+        symbol [ setColor %tmp.92 87 15 23 ];
+        %tmp.92 = getv function %tmp.91 :setColor;
+        %tmp.93 = lgetv %textColor.13;
+        symbol [ textColor %tmp.93 87 24 33 ];
+        symbol [ Graphics %tmp.94 87 35 43 ];
+        %tmp.94 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.95 87 44 61 ];
+        %tmp.95 = getv %tmp.94 :COLOR_TRANSPARENT;
+        invoke %tmp.91 %tmp.92(%tmp.93, %tmp.95);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 89 12 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_49_91_8_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_49_91_8_stop" ]
+        %themeLabel.14 = local;
+        symbol [ themeLabel %themeLabel.14 89 16 26 ];
+        symbol [ _themes %tmp.97 89 29 36 ];
+        %tmp.97 = getv ? :_themes;
+        %tmp.98 = lgetv %i.7;
+        symbol [ i %tmp.98 89 37 38 ];
+        %tmp.99 = agetv %tmp.97 %tmp.98;
+        symbol [ toUpper %tmp.100 89 40 47 ];
+        %tmp.100 = getv function %tmp.99 :toUpper;
+        %tmp.101 = invoke %tmp.99 %tmp.100();
+        lputv %themeLabel.14 %tmp.101;
+        symbol [ themeLabel %themeLabel.14 89 16 26 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 90 12 ]
+        %tmp.102 = lgetv %dc;
+        symbol [ dc %tmp.102 90 12 14 ];
+        symbol [ drawText %tmp.103 90 15 23 ];
+        %tmp.103 = getv function %tmp.102 :drawText;
+        %tmp.104 = lgetv %x.10;
+        symbol [ x %tmp.104 90 24 25 ];
+        %tmp.105 = lgetv %cardWidth.4;
+        symbol [ cardWidth %tmp.105 90 28 37 ];
+        %tmp.106 = 2;
+        %tmp.107 = div %tmp.105 %tmp.106;
+        %tmp.108 = add %tmp.104 %tmp.107;
+        %tmp.109 = lgetv %y.11;
+        symbol [ y %tmp.109 90 43 44 ];
+        %tmp.110 = lgetv %cardHeight.5;
+        symbol [ cardHeight %tmp.110 90 47 57 ];
+        %tmp.111 = 2;
+        %tmp.112 = div %tmp.110 %tmp.111;
+        %tmp.113 = add %tmp.109 %tmp.112;
+        symbol [ Graphics %tmp.114 90 63 71 ];
+        %tmp.114 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.115 90 72 82 ];
+        %tmp.115 = getv %tmp.114 :FONT_XTINY;
+        %tmp.116 = lgetv %themeLabel.14;
+        symbol [ themeLabel %tmp.116 90 84 94 ];
+        symbol [ Graphics %tmp.117 90 96 104 ];
+        %tmp.117 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.118 90 105 124 ];
+        %tmp.118 = getv %tmp.117 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.119 90 127 135 ];
+        %tmp.119 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.120 90 136 156 ];
+        %tmp.120 = getv %tmp.119 :TEXT_JUSTIFY_VCENTER;
+        %tmp.121 = bitor %tmp.118 %tmp.120;
+        invoke %tmp.102 %tmp.103(%tmp.108, %tmp.113, %tmp.115, %tmp.116, %tmp.121);
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_49_91_8_stop:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_8_91_8_for_incr:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 63 ]
+        %tmp.124 = lgetv %i.7;
+        symbol [ i %tmp.124 63 44 45 ];
+        %tmp.125 = add %tmp.124 1;
+        lputv %i.7 %tmp.125;
+        symbol [ i %i.7 63 44 45 ];
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_8_91_8_for_test;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_63_8_91_8_for_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_54_72_92_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 94; @symbol_functiondef = [selectNext,94,13,23]; ]
+    function selectNext() as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_94_34_97_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 95 8 ]
+        symbol [ _selectedIndex %tmp.2 95 26 40 ];
+        %tmp.2 = getv ? :_selectedIndex;
+        %tmp.3 = 1;
+        %tmp.4 = add %tmp.2 %tmp.3;
+        symbol [ _themes %tmp.6 95 48 55 ];
+        %tmp.6 = getv ? :_themes;
+        symbol [ size %tmp.7 95 56 60 ];
+        %tmp.7 = getv function %tmp.6 :size;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = mod %tmp.4 %tmp.8;
+        symbol [ _selectedIndex ? 95 8 22 ];
+        putv self :_selectedIndex %tmp.9;
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 96 8 ]
+        symbol [ WatchUi %tmp.10 96 8 15 ];
+        %tmp.10 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.11 96 16 29 ];
+        %tmp.11 = getv function %tmp.10 :requestUpdate;
+        invoke %tmp.10 %tmp.11();
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_94_34_97_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 99; @symbol_functiondef = [selectPrevious,99,13,27]; ]
+    function selectPrevious() as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_99_38_102_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 100 8 ]
+        symbol [ _selectedIndex %tmp.2 100 26 40 ];
+        %tmp.2 = getv ? :_selectedIndex;
+        %tmp.3 = 1;
+        %tmp.4 = sub %tmp.2 %tmp.3;
+        symbol [ _themes %tmp.6 100 47 54 ];
+        %tmp.6 = getv ? :_themes;
+        symbol [ size %tmp.7 100 55 59 ];
+        %tmp.7 = getv function %tmp.6 :size;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = add %tmp.4 %tmp.8;
+        symbol [ _themes %tmp.11 100 65 72 ];
+        %tmp.11 = getv ? :_themes;
+        symbol [ size %tmp.12 100 73 77 ];
+        %tmp.12 = getv function %tmp.11 :size;
+        %tmp.13 = invoke %tmp.11 %tmp.12();
+        %tmp.14 = mod %tmp.9 %tmp.13;
+        symbol [ _selectedIndex ? 100 8 22 ];
+        putv self :_selectedIndex %tmp.14;
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 101 8 ]
+        symbol [ WatchUi %tmp.15 101 8 15 ];
+        %tmp.15 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.16 101 16 29 ];
+        %tmp.16 = getv function %tmp.15 :requestUpdate;
+        invoke %tmp.15 %tmp.16();
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_99_38_102_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 104; @symbol_functiondef = [selectTheme,104,13,24]; ]
+    function selectTheme() as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_104_35_113_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 105 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_104_35_113_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_104_35_113_4_stop" ]
+        %theme.1 = local;
+        symbol [ theme %theme.1 105 12 17 ];
+        symbol [ _themes %tmp.2 105 20 27 ];
+        %tmp.2 = getv ? :_themes;
+        symbol [ _selectedIndex %tmp.4 105 28 42 ];
+        %tmp.4 = getv ? :_selectedIndex;
+        %tmp.5 = agetv %tmp.2 %tmp.4;
+        lputv %theme.1 %tmp.5;
+        symbol [ theme %theme.1 105 12 17 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 107 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_104_35_113_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_104_35_113_4_stop" ]
+        %verses.2 = local;
+        symbol [ verses %verses.2 107 12 18 ];
+        symbol [ _app %tmp.7 107 21 25 ];
+        %tmp.7 = getv ? :_app;
+        symbol [ getVersesByTheme %tmp.8 107 26 42 ];
+        %tmp.8 = getv function %tmp.7 :getVersesByTheme;
+        %tmp.9 = lgetv %theme.1;
+        symbol [ theme %tmp.9 107 43 48 ];
+        %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
+        lputv %verses.2 %tmp.10;
+        symbol [ verses %verses.2 107 12 18 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 108 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_108_8_111_8_if_stmt:
+        %tmp.11 = lgetv %verses.2;
+        symbol [ verses %tmp.11 108 12 18 ];
+        symbol [ size %tmp.12 108 19 23 ];
+        %tmp.12 = getv function %tmp.11 :size;
+        %tmp.13 = invoke %tmp.11 %tmp.12();
+        %tmp.14 = 0;
+        %tmp.15 = gt %tmp.13 %tmp.14;
+        bf %tmp.15 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_108_8_111_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_108_8_111_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_108_31_111_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 109 12 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_108_31_111_8_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_108_31_111_8_stop" ]
+        %randomVerse.3 = local;
+        symbol [ randomVerse %randomVerse.3 109 16 27 ];
+        symbol [ Verses %tmp.17 109 30 36 ];
+        %tmp.17 = getv ? :Verses;
+        symbol [ getRandomFrom %tmp.18 109 37 50 ];
+        %tmp.18 = getv function %tmp.17 :getRandomFrom;
+        %tmp.19 = lgetv %verses.2;
+        symbol [ verses %tmp.19 109 51 57 ];
+        %tmp.20 = invoke %tmp.17 %tmp.18(%tmp.19);
+        lputv %randomVerse.3 %tmp.20;
+        symbol [ randomVerse %randomVerse.3 109 16 27 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 110 12 ]
+        symbol [ _homeView %tmp.22 110 12 21 ];
+        %tmp.22 = getv ? :_homeView;
+        symbol [ setCurrentVerse %tmp.23 110 22 37 ];
+        %tmp.23 = getv function %tmp.22 :setCurrentVerse;
+        %tmp.24 = lgetv %randomVerse.3;
+        symbol [ randomVerse %tmp.24 110 38 49 ];
+        invoke %tmp.22 %tmp.23(%tmp.24);
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_108_31_111_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_108_8_111_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_108_8_111_8_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc" 112 8 ]
+        symbol [ WatchUi %tmp.25 112 8 15 ];
+        %tmp.25 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.26 112 16 23 ];
+        %tmp.26 = getv function %tmp.25 :popView;
+        symbol [ WatchUi %tmp.27 112 24 31 ];
+        %tmp.27 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_UP %tmp.28 112 32 40 ];
+        %tmp.28 = getv %tmp.27 :SLIDE_UP;
+        invoke %tmp.25 %tmp.26(%tmp.28);
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesView_mc_104_35_113_4_stop:
+    }
+}
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesView.mc"; @line = 1; ]
+<init> {
+}

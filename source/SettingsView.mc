@@ -80,8 +80,7 @@ class SettingsView extends WatchUi.View {
         
         // App info
         dc.setColor(COLOR_MUTED, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(w / 2, h - 50, Graphics.FONT_XTINY, "VerseVault v1.0", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(w / 2, h - 35, Graphics.FONT_XTINY, "KJV Scripture", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(w / 2, h - 50, Graphics.FONT_XTINY, "God bless.", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         
         // Back hint
         dc.setColor(COLOR_MUTED, Graphics.COLOR_TRANSPARENT);

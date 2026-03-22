@@ -26,7 +26,8 @@ class HomeView extends WatchUi.View {
     }
     
     function onLayout(dc as Dc) as Void {
-        // Draw everything in onUpdate
+        // Set up input for swipe gestures
+        WatchUi.View.setLayout(null);
     }
     
     function onUpdate(dc as Dc) as Void {
@@ -52,8 +53,9 @@ class HomeView extends WatchUi.View {
         // Hint text at bottom
         if (_showHint && _hintTimer < 3) {
             dc.setColor(COLOR_MUTED, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(w / 2, h - 30, Graphics.FONT_XTINY, "Tap for new verse", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-            dc.drawText(w / 2, h - 15, Graphics.FONT_XTINY, "Hold to save", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText(w / 2, h - 45, Graphics.FONT_XTINY, "T=new | H = save", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText(w / 2, h - 30, Graphics.FONT_XTINY, "U=Fav", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText(w / 2, h - 15, Graphics.FONT_XTINY, "D=Themes", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         }
     }
     
@@ -76,22 +78,44 @@ class HomeView extends WatchUi.View {
         // Calculate text dimensions
         var maxTextWidth = cardWidth - 20;
         
+        // Choose font based on verse length - use smaller font for longer verses
+        var font = Graphics.FONT_TINY;
+        var lineHeight = 18;
+        
+        if (verse.text.length() > 200) {
+            font = Graphics.FONT_XTINY;
+            lineHeight = 14;
+        }
+        
         // Word wrap the text manually
-        var words = wordWrap(verse.text, maxTextWidth, dc);
+        var words = wordWrap(verse.text, maxTextWidth, dc, font);
         
-        var textHeight = words.size() * 18;
-        
+        var textHeight = words.size() * lineHeight;
         var cardHeight = textHeight + 60; // Extra space for reference
+        
+        // Check if card would overflow with current font
+        var minY = 35;
+        var maxY = h - 50;
+        var availableHeight = maxY - minY;
+        
+        // If card is too tall, switch to smaller font
+        if (cardHeight > availableHeight && font == Graphics.FONT_TINY) {
+            font = Graphics.FONT_XTINY;
+            lineHeight = 14;
+            words = wordWrap(verse.text, maxTextWidth, dc, font);
+            textHeight = words.size() * lineHeight;
+            cardHeight = textHeight + 60;
+        }
         
         // Center the card
         var cardY = centerY - (cardHeight / 2);
         
         // Make sure card stays in bounds
-        if (cardY < 35) {
-            cardY = 35;
+        if (cardY < minY) {
+            cardY = minY;
         }
-        if ((cardY + cardHeight) > (h - 50)) {
-            cardY = h - 50 - cardHeight;
+        if ((cardY + cardHeight) > maxY) {
+            cardY = maxY - cardHeight;
         }
         
         // Draw card background
@@ -105,23 +129,34 @@ class HomeView extends WatchUi.View {
         
         // Draw each line
         for (var i = 0; i < words.size(); i++) {
-            dc.drawText(textX, textY + (i * 18), Graphics.FONT_TINY, words[i], Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText(textX, textY + (i * lineHeight), font, words[i], Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
         }
         
-        // Draw reference
-        var refY = textY + (words.size() * 18) + 10;
-        dc.setColor(COLOR_AMBER, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX, refY, Graphics.FONT_XTINY, "— " + verse.reference, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        // Draw reference with favorite indicator
+        var refY = textY + (words.size() * lineHeight) + 10;
         
-        // Draw favorite indicator if is favorite
         if (_app.isFavorite(verse)) {
+            // Draw "F - " in red, then reference in amber
             dc.setColor(COLOR_SOFT_RED, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(w - cardPadding - 10, cardY + 10, Graphics.FONT_XTINY, "♥", Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+            var fText = "F - ";
+            var fWidth = dc.getTextDimensions(fText, Graphics.FONT_XTINY)[0];
+            var totalText = fText + verse.reference;
+            var totalWidth = dc.getTextDimensions(totalText, Graphics.FONT_XTINY)[0];
+            var startX = centerX - (totalWidth / 2);
+            
+            dc.drawText(startX, refY, Graphics.FONT_XTINY, fText, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+            
+            dc.setColor(COLOR_AMBER, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(startX + fWidth, refY, Graphics.FONT_XTINY, verse.reference, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+        } else {
+            // Just draw reference normally
+            dc.setColor(COLOR_AMBER, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(centerX, refY, Graphics.FONT_XTINY, verse.reference, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         }
     }
     
     //! Manual word wrap function
-    private function wordWrap(text as String, maxWidth as Number, dc as Dc) as Array<String> {
+    private function wordWrap(text as String, maxWidth as Number, dc as Dc, font as Graphics.FontDefinition) as Array<String> {
         var lines = [] as Array<String>;
         var line = "";
         var space = " ";
@@ -134,7 +169,7 @@ class HomeView extends WatchUi.View {
             if (c.equals(space)) {
                 // Check if adding this word would exceed width
                 var testLine = line.equals("") ? line + c : line + space;
-                var testDims = dc.getTextDimensions(testLine, Graphics.FONT_TINY);
+                var testDims = dc.getTextDimensions(testLine, font);
                 
                 if (testDims[0] > maxWidth && !line.equals("")) {
                     lines.add(line);
@@ -146,7 +181,7 @@ class HomeView extends WatchUi.View {
             } else {
                 // Add character to line
                 var testLine = line + c;
-                var testDims = dc.getTextDimensions(testLine, Graphics.FONT_TINY);
+                var testDims = dc.getTextDimensions(testLine, font);
                 
                 if (testDims[0] > maxWidth && !line.equals("")) {
                     lines.add(line);

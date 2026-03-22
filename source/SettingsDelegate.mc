@@ -2,13 +2,14 @@ import Toybox.Lang;
 import Toybox.WatchUi;
 
 //! Input delegate for SettingsView
-class SettingsDelegate extends WatchUi.InputDelegate {
+class SettingsDelegate extends WatchUi.BehaviorDelegate {
     
     function initialize() {
-        InputDelegate.initialize();
+        BehaviorDelegate.initialize();
     }
     
-    function onBack() as Void {
+    function onBack() as Boolean {
         WatchUi.popView(WatchUi.SLIDE_RIGHT);
+        return true;
     }
 }
