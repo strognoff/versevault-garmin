@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string id="VERSEVAULT">VerseVault</string>
+    <string id="RANDOM_VERSE">Tap for Verse</string>
+    <string id="HOLD_TO_SAVE">Hold to Save</string>
+    <string id="FAVORITES">Favorites</string>
+    <string id="THEMES">Themes</string>
+    <string id="DAILY_DEVOTIONAL">Daily Devotional</string>
+    <string id="SETTINGS">Settings</string>
+    <string id="STATS">Stats</string>
+    <string id="NO_FAVORITES">No favorites yet</string>
+    <string id="ADDED_TO_FAVORITES">Added to Favorites</string>
+    <string id="ALREADY_FAVORITE">Already in Favorites</string>
+    <string id="VERSE_SAVED">Verse Saved</string>
+    <string id="PEACE">Peace</string>
+    <string id="STRENGTH">Strength</string>
+    <string id="FAITH">Faith</string>
+    <string id="HOPE">Hope</string>
+    <string id="LOVE">Love</string>
+    <string id="WISDOM">Wisdom</string>
+    <string id="COURAGE">Courage</string>
+    <string id="COMFORT">Comfort</string>
+    <string id="BACK">Back</string>
+    <string id="VERSES_READ">Verses Read</string>
+    <string id="FAVORITES_COUNT">Favorites</string>
+    <string id="STREAK">Day Streak</string>
+</resources>

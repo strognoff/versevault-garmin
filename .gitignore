@@ -1,0 +1,19 @@
+# Build outputs
+*.prg
+*.prg.debug
+*.iq
+*.iq.debug
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Monkey C build
+gen/
+internal-mir/
+external-mir/

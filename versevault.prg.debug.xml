@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/home/cechinel/.openclaw/workspace/versevault-garmin/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="1" lineNum="6" parent="globals/HomeView" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/gen/no-device/source/Rez.mcgen" id="2" lineNum="7" parent="globals/Rez" pc="268435472" symbol="&lt;init&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="3" lineNum="6" parent="globals/SettingsView" pc="268435492" symbol="&lt;init&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeDelegate.mc" id="4" lineNum="5" parent="globals/HomeDelegate" pc="268435504" symbol="&lt;init&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="5" lineNum="5" parent="globals/ThemesDelegate" pc="268435516" symbol="&lt;init&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="6" lineNum="7" parent="globals/Storage" pc="268435528" symbol="&lt;init&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="7" lineNum="6" parent="globals/ThemesView" pc="268435538" symbol="&lt;init&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="7" lineNum="10" parent="globals/ThemesView" pc="268435549" symbol="&lt;init&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="8" lineNum="6" parent="globals/FavoritesView" pc="268435559" symbol="&lt;init&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="8" lineNum="9" parent="globals/FavoritesView" pc="268435570" symbol="&lt;init&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="9" lineNum="6" parent="globals/VerseVaultApp" pc="268435580" symbol="&lt;init&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="10" lineNum="41" parent="globals/Verses/&lt;statics&gt;" pc="268435592" symbol="&lt;init&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsDelegate.mc" id="11" lineNum="5" parent="globals/SettingsDelegate" pc="268438916" symbol="&lt;init&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesDelegate.mc" id="12" lineNum="5" parent="globals/FavoritesDelegate" pc="268438928" symbol="&lt;init&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="13" lineNum="176" parent="globals/HomeView" pc="268438940" symbol="showFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="13" lineNum="177" parent="globals/HomeView" pc="268438943" symbol="showFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="13" lineNum="178" parent="globals/HomeView" pc="268438956" symbol="showFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="13" lineNum="179" parent="globals/HomeView" pc="268438968" symbol="showFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="13" lineNum="182" parent="globals/HomeView" pc="268438993" symbol="showFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="14" lineNum="197" parent="globals/HomeView" pc="268439001" symbol="onHold"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="14" lineNum="198" parent="globals/HomeView" pc="268439003" symbol="onHold"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="14" lineNum="199" parent="globals/HomeView" pc="268439012" symbol="onHold"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="14" lineNum="200" parent="globals/HomeView" pc="268439033" symbol="onHold"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="14" lineNum="202" parent="globals/HomeView" pc="268439055" symbol="onHold"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="14" lineNum="204" parent="globals/HomeView" pc="268439074" symbol="onHold"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="15" lineNum="28" parent="globals/HomeView" pc="268439089" symbol="onLayout"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="124" parent="globals/HomeView" pc="268439092" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="125" parent="globals/HomeView" pc="268439095" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="126" parent="globals/HomeView" pc="268439099" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="127" parent="globals/HomeView" pc="268439106" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="130" parent="globals/HomeView" pc="268439113" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="131" parent="globals/HomeView" pc="268439116" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="132" parent="globals/HomeView" pc="268439129" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="134" parent="globals/HomeView" pc="268439147" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="136" parent="globals/HomeView" pc="268439161" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="137" parent="globals/HomeView" pc="268439193" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="139" parent="globals/HomeView" pc="268439208" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="140" parent="globals/HomeView" pc="268439236" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="141" parent="globals/HomeView" pc="268439248" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="143" parent="globals/HomeView" pc="268439258" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="145" parent="globals/HomeView" pc="268439262" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="148" parent="globals/HomeView" pc="268439272" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="149" parent="globals/HomeView" pc="268439279" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="151" parent="globals/HomeView" pc="268439294" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="152" parent="globals/HomeView" pc="268439322" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="153" parent="globals/HomeView" pc="268439334" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="155" parent="globals/HomeView" pc="268439341" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="157" parent="globals/HomeView" pc="268439345" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="161" parent="globals/HomeView" pc="268439355" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="162" parent="globals/HomeView" pc="268439373" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="16" lineNum="165" parent="globals/HomeView" pc="268439388" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="17" lineNum="208" parent="globals/HomeView" pc="268439391" symbol="incrementHintTimer"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="17" lineNum="209" parent="globals/HomeView" pc="268439393" symbol="incrementHintTimer"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="60" parent="globals/HomeView" pc="268439409" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="61" parent="globals/HomeView" pc="268439412" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="62" parent="globals/HomeView" pc="268439421" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="65" parent="globals/HomeView" pc="268439425" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="68" parent="globals/HomeView" pc="268439432" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="69" parent="globals/HomeView" pc="268439439" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="72" parent="globals/HomeView" pc="268439446" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="73" parent="globals/HomeView" pc="268439450" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="74" parent="globals/HomeView" pc="268439460" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="77" parent="globals/HomeView" pc="268439464" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="80" parent="globals/HomeView" pc="268439471" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="82" parent="globals/HomeView" pc="268439491" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="84" parent="globals/HomeView" pc="268439503" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="87" parent="globals/HomeView" pc="268439510" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="90" parent="globals/HomeView" pc="268439520" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="91" parent="globals/HomeView" pc="268439528" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="93" parent="globals/HomeView" pc="268439535" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="94" parent="globals/HomeView" pc="268439549" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="98" parent="globals/HomeView" pc="268439562" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="99" parent="globals/HomeView" pc="268439578" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="102" parent="globals/HomeView" pc="268439598" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="103" parent="globals/HomeView" pc="268439615" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="104" parent="globals/HomeView" pc="268439622" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="107" parent="globals/HomeView" pc="268439629" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="108" parent="globals/HomeView" pc="268439645" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="112" parent="globals/HomeView" pc="268439684" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="113" parent="globals/HomeView" pc="268439702" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="114" parent="globals/HomeView" pc="268439719" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="117" parent="globals/HomeView" pc="268439748" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="118" parent="globals/HomeView" pc="268439766" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="18" lineNum="119" parent="globals/HomeView" pc="268439783" symbol="drawVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="19" lineNum="191" parent="globals/HomeView" pc="268439818" symbol="onTap"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="19" lineNum="192" parent="globals/HomeView" pc="268439820" symbol="onTap"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="19" lineNum="193" parent="globals/HomeView" pc="268439832" symbol="onTap"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="19" lineNum="194" parent="globals/HomeView" pc="268439839" symbol="onTap"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="20" lineNum="168" parent="globals/HomeView" pc="268439851" symbol="showNewVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="20" lineNum="169" parent="globals/HomeView" pc="268439854" symbol="showNewVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="20" lineNum="170" parent="globals/HomeView" pc="268439867" symbol="showNewVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="20" lineNum="171" parent="globals/HomeView" pc="268439879" symbol="showNewVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="20" lineNum="173" parent="globals/HomeView" pc="268439904" symbol="showNewVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="21" lineNum="22" parent="globals/HomeView" pc="268439913" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="21" lineNum="23" parent="globals/HomeView" pc="268439915" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="21" lineNum="24" parent="globals/HomeView" pc="268439931" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="21" lineNum="25" parent="globals/HomeView" pc="268439940" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="22" lineNum="32" parent="globals/HomeView" pc="268439948" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="22" lineNum="33" parent="globals/HomeView" pc="268439951" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="22" lineNum="34" parent="globals/HomeView" pc="268439960" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="22" lineNum="37" parent="globals/HomeView" pc="268439969" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="22" lineNum="38" parent="globals/HomeView" pc="268439987" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="22" lineNum="41" parent="globals/HomeView" pc="268439995" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="22" lineNum="42" parent="globals/HomeView" pc="268440012" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="22" lineNum="45" parent="globals/HomeView" pc="268440028" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="22" lineNum="46" parent="globals/HomeView" pc="268440045" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="22" lineNum="48" parent="globals/HomeView" pc="268440071" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="22" lineNum="49" parent="globals/HomeView" pc="268440080" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="22" lineNum="53" parent="globals/HomeView" pc="268440098" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="22" lineNum="54" parent="globals/HomeView" pc="268440117" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="22" lineNum="55" parent="globals/HomeView" pc="268440134" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="22" lineNum="56" parent="globals/HomeView" pc="268440162" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="23" lineNum="186" parent="globals/HomeView" pc="268440194" symbol="setCurrentVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="23" lineNum="187" parent="globals/HomeView" pc="268440196" symbol="setCurrentVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeView.mc" id="23" lineNum="188" parent="globals/HomeView" pc="268440205" symbol="setCurrentVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="24" lineNum="23" parent="globals/SettingsView" pc="268440217" symbol="onLayout"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="25" lineNum="18" parent="globals/SettingsView" pc="268440220" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="25" lineNum="19" parent="globals/SettingsView" pc="268440222" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="25" lineNum="20" parent="globals/SettingsView" pc="268440238" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="27" parent="globals/SettingsView" pc="268440256" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="28" parent="globals/SettingsView" pc="268440259" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="29" parent="globals/SettingsView" pc="268440268" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="32" parent="globals/SettingsView" pc="268440277" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="33" parent="globals/SettingsView" pc="268440295" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="36" parent="globals/SettingsView" pc="268440303" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="37" parent="globals/SettingsView" pc="268440320" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="39" parent="globals/SettingsView" pc="268440336" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="40" parent="globals/SettingsView" pc="268440353" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="43" parent="globals/SettingsView" pc="268440379" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="44" parent="globals/SettingsView" pc="268440383" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="45" parent="globals/SettingsView" pc="268440393" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="48" parent="globals/SettingsView" pc="268440397" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="49" parent="globals/SettingsView" pc="268440401" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="50" parent="globals/SettingsView" pc="268440405" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="51" parent="globals/SettingsView" pc="268440421" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="53" parent="globals/SettingsView" pc="268440441" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="54" parent="globals/SettingsView" pc="268440458" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="56" parent="globals/SettingsView" pc="268440486" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="57" parent="globals/SettingsView" pc="268440503" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="60" parent="globals/SettingsView" pc="268440546" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="61" parent="globals/SettingsView" pc="268440556" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="62" parent="globals/SettingsView" pc="268440572" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="64" parent="globals/SettingsView" pc="268440592" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="65" parent="globals/SettingsView" pc="268440609" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="67" parent="globals/SettingsView" pc="268440637" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="68" parent="globals/SettingsView" pc="268440654" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="71" parent="globals/SettingsView" pc="268440704" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="72" parent="globals/SettingsView" pc="268440714" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="73" parent="globals/SettingsView" pc="268440730" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="75" parent="globals/SettingsView" pc="268440750" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="76" parent="globals/SettingsView" pc="268440767" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="78" parent="globals/SettingsView" pc="268440795" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="79" parent="globals/SettingsView" pc="268440812" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="82" parent="globals/SettingsView" pc="268440855" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="83" parent="globals/SettingsView" pc="268440872" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="84" parent="globals/SettingsView" pc="268440900" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="87" parent="globals/SettingsView" pc="268440928" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsView.mc" id="26" lineNum="88" parent="globals/SettingsView" pc="268440945" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeDelegate.mc" id="27" lineNum="32" parent="globals/HomeDelegate" pc="268440974" symbol="onBack"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeDelegate.mc" id="27" lineNum="34" parent="globals/HomeDelegate" pc="268440976" symbol="onBack"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeDelegate.mc" id="28" lineNum="26" parent="globals/HomeDelegate" pc="268440992" symbol="onMenu"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeDelegate.mc" id="28" lineNum="28" parent="globals/HomeDelegate" pc="268440995" symbol="onMenu"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeDelegate.mc" id="28" lineNum="29" parent="globals/HomeDelegate" pc="268441015" symbol="onMenu"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeDelegate.mc" id="29" lineNum="14" parent="globals/HomeDelegate" pc="268441051" symbol="onSwipeUp"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeDelegate.mc" id="29" lineNum="16" parent="globals/HomeDelegate" pc="268441054" symbol="onSwipeUp"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeDelegate.mc" id="29" lineNum="17" parent="globals/HomeDelegate" pc="268441079" symbol="onSwipeUp"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeDelegate.mc" id="30" lineNum="9" parent="globals/HomeDelegate" pc="268441117" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeDelegate.mc" id="30" lineNum="10" parent="globals/HomeDelegate" pc="268441119" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeDelegate.mc" id="30" lineNum="11" parent="globals/HomeDelegate" pc="268441131" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeDelegate.mc" id="31" lineNum="20" parent="globals/HomeDelegate" pc="268441141" symbol="onSwipeDown"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeDelegate.mc" id="31" lineNum="22" parent="globals/HomeDelegate" pc="268441144" symbol="onSwipeDown"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/HomeDelegate.mc" id="31" lineNum="23" parent="globals/HomeDelegate" pc="268441169" symbol="onSwipeDown"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="32" lineNum="28" parent="globals/ThemesDelegate" pc="268441207" symbol="onBack"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="32" lineNum="29" parent="globals/ThemesDelegate" pc="268441209" symbol="onBack"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="33" lineNum="9" parent="globals/ThemesDelegate" pc="268441225" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="33" lineNum="10" parent="globals/ThemesDelegate" pc="268441227" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="33" lineNum="11" parent="globals/ThemesDelegate" pc="268441239" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="34" lineNum="14" parent="globals/ThemesDelegate" pc="268441249" symbol="onKeyPressed"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="34" lineNum="15" parent="globals/ThemesDelegate" pc="268441251" symbol="onKeyPressed"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="34" lineNum="16" parent="globals/ThemesDelegate" pc="268441264" symbol="onKeyPressed"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="34" lineNum="17" parent="globals/ThemesDelegate" pc="268441276" symbol="onKeyPressed"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="34" lineNum="18" parent="globals/ThemesDelegate" pc="268441281" symbol="onKeyPressed"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="34" lineNum="19" parent="globals/ThemesDelegate" pc="268441294" symbol="onKeyPressed"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="34" lineNum="20" parent="globals/ThemesDelegate" pc="268441306" symbol="onKeyPressed"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="34" lineNum="21" parent="globals/ThemesDelegate" pc="268441311" symbol="onKeyPressed"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="34" lineNum="22" parent="globals/ThemesDelegate" pc="268441324" symbol="onKeyPressed"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="34" lineNum="23" parent="globals/ThemesDelegate" pc="268441336" symbol="onKeyPressed"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesDelegate.mc" id="34" lineNum="25" parent="globals/ThemesDelegate" pc="268441341" symbol="onKeyPressed"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="35" lineNum="86" parent="globals/Storage" pc="268441343" symbol="&lt;globals/Storage/&lt;&gt;findVerseByReference&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="35" lineNum="87" parent="globals/Storage" pc="268441346" symbol="&lt;globals/Storage/&lt;&gt;findVerseByReference&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="35" lineNum="88" parent="globals/Storage" pc="268441359" symbol="&lt;globals/Storage/&lt;&gt;findVerseByReference&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="35" lineNum="89" parent="globals/Storage" pc="268441375" symbol="&lt;globals/Storage/&lt;&gt;findVerseByReference&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="35" lineNum="90" parent="globals/Storage" pc="268441398" symbol="&lt;globals/Storage/&lt;&gt;findVerseByReference&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="35" lineNum="93" parent="globals/Storage" pc="268441417" symbol="&lt;globals/Storage/&lt;&gt;findVerseByReference&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="36" lineNum="15" parent="globals/Storage" pc="268441419" symbol="getValue"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="36" lineNum="16" parent="globals/Storage" pc="268441421" symbol="getValue"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="37" lineNum="40" parent="globals/Storage" pc="268441436" symbol="addFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="37" lineNum="41" parent="globals/Storage" pc="268441438" symbol="addFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="37" lineNum="42" parent="globals/Storage" pc="268441451" symbol="addFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="37" lineNum="44" parent="globals/Storage" pc="268441456" symbol="addFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="37" lineNum="45" parent="globals/Storage" pc="268441472" symbol="addFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="37" lineNum="46" parent="globals/Storage" pc="268441479" symbol="addFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="38" lineNum="72" parent="globals/Storage" pc="268441481" symbol="load"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="38" lineNum="73" parent="globals/Storage" pc="268441484" symbol="load"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="38" lineNum="74" parent="globals/Storage" pc="268441503" symbol="load"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="38" lineNum="75" parent="globals/Storage" pc="268441509" symbol="load"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="38" lineNum="76" parent="globals/Storage" pc="268441518" symbol="load"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="38" lineNum="77" parent="globals/Storage" pc="268441535" symbol="load"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="38" lineNum="78" parent="globals/Storage" pc="268441550" symbol="load"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="38" lineNum="79" parent="globals/Storage" pc="268441556" symbol="load"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="39" lineNum="25" parent="globals/Storage" pc="268441589" symbol="getFavorites"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="39" lineNum="26" parent="globals/Storage" pc="268441591" symbol="getFavorites"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="40" lineNum="20" parent="globals/Storage" pc="268441597" symbol="setValue"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="40" lineNum="21" parent="globals/Storage" pc="268441599" symbol="setValue"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="41" lineNum="50" parent="globals/Storage" pc="268441617" symbol="removeFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="41" lineNum="51" parent="globals/Storage" pc="268441620" symbol="removeFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="41" lineNum="52" parent="globals/Storage" pc="268441640" symbol="removeFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="41" lineNum="53" parent="globals/Storage" pc="268441670" symbol="removeFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="41" lineNum="54" parent="globals/Storage" pc="268441686" symbol="removeFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="41" lineNum="55" parent="globals/Storage" pc="268441693" symbol="removeFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="41" lineNum="58" parent="globals/Storage" pc="268441708" symbol="removeFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="42" lineNum="62" parent="globals/Storage" pc="268441710" symbol="save"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="42" lineNum="64" parent="globals/Storage" pc="268441713" symbol="save"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="42" lineNum="65" parent="globals/Storage" pc="268441717" symbol="save"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="42" lineNum="66" parent="globals/Storage" pc="268441737" symbol="save"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="42" lineNum="68" parent="globals/Storage" pc="268441770" symbol="save"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="43" lineNum="10" parent="globals/Storage" pc="268441791" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="43" lineNum="11" parent="globals/Storage" pc="268441793" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="44" lineNum="30" parent="globals/Storage" pc="268441801" symbol="isFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="44" lineNum="31" parent="globals/Storage" pc="268441804" symbol="isFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="44" lineNum="32" parent="globals/Storage" pc="268441824" symbol="isFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="44" lineNum="33" parent="globals/Storage" pc="268441854" symbol="isFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Storage.mc" id="44" lineNum="36" parent="globals/Storage" pc="268441869" symbol="isFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="45" lineNum="103" parent="globals/ThemesView" pc="268441871" symbol="selectPrevious"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="45" lineNum="104" parent="globals/ThemesView" pc="268441873" symbol="selectPrevious"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="45" lineNum="105" parent="globals/ThemesView" pc="268441912" symbol="selectPrevious"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="46" lineNum="28" parent="globals/ThemesView" pc="268441924" symbol="onLayout"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="47" lineNum="98" parent="globals/ThemesView" pc="268441927" symbol="selectNext"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="47" lineNum="99" parent="globals/ThemesView" pc="268441929" symbol="selectNext"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="47" lineNum="100" parent="globals/ThemesView" pc="268441956" symbol="selectNext"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="58" parent="globals/ThemesView" pc="268441968" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="59" parent="globals/ThemesView" pc="268441971" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="60" parent="globals/ThemesView" pc="268441975" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="61" parent="globals/ThemesView" pc="268441979" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="62" parent="globals/ThemesView" pc="268441983" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="63" parent="globals/ThemesView" pc="268441999" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="65" parent="globals/ThemesView" pc="268442003" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="67" parent="globals/ThemesView" pc="268442007" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="68" parent="globals/ThemesView" pc="268442027" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="69" parent="globals/ThemesView" pc="268442034" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="71" parent="globals/ThemesView" pc="268442041" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="72" parent="globals/ThemesView" pc="268442054" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="74" parent="globals/ThemesView" pc="268442067" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="77" parent="globals/ThemesView" pc="268442077" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="78" parent="globals/ThemesView" pc="268442082" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="79" parent="globals/ThemesView" pc="268442098" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="82" parent="globals/ThemesView" pc="268442118" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="83" parent="globals/ThemesView" pc="268442135" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="85" parent="globals/ThemesView" pc="268442158" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="86" parent="globals/ThemesView" pc="268442174" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="90" parent="globals/ThemesView" pc="268442194" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="91" parent="globals/ThemesView" pc="268442214" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="93" parent="globals/ThemesView" pc="268442228" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="48" lineNum="94" parent="globals/ThemesView" pc="268442244" symbol="drawThemesGrid"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="49" lineNum="108" parent="globals/ThemesView" pc="268442287" symbol="selectTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="49" lineNum="109" parent="globals/ThemesView" pc="268442290" symbol="selectTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="49" lineNum="111" parent="globals/ThemesView" pc="268442303" symbol="selectTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="49" lineNum="112" parent="globals/ThemesView" pc="268442320" symbol="selectTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="49" lineNum="113" parent="globals/ThemesView" pc="268442332" symbol="selectTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="49" lineNum="114" parent="globals/ThemesView" pc="268442349" symbol="selectTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="49" lineNum="116" parent="globals/ThemesView" pc="268442368" symbol="selectTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="50" lineNum="21" parent="globals/ThemesView" pc="268442384" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="50" lineNum="22" parent="globals/ThemesView" pc="268442386" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="50" lineNum="23" parent="globals/ThemesView" pc="268442402" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="50" lineNum="24" parent="globals/ThemesView" pc="268442411" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="50" lineNum="25" parent="globals/ThemesView" pc="268442428" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="51" lineNum="32" parent="globals/ThemesView" pc="268442447" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="51" lineNum="33" parent="globals/ThemesView" pc="268442450" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="51" lineNum="34" parent="globals/ThemesView" pc="268442459" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="51" lineNum="37" parent="globals/ThemesView" pc="268442468" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="51" lineNum="38" parent="globals/ThemesView" pc="268442486" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="51" lineNum="41" parent="globals/ThemesView" pc="268442494" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="51" lineNum="42" parent="globals/ThemesView" pc="268442511" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="51" lineNum="44" parent="globals/ThemesView" pc="268442527" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="51" lineNum="45" parent="globals/ThemesView" pc="268442544" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="51" lineNum="47" parent="globals/ThemesView" pc="268442570" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="51" lineNum="48" parent="globals/ThemesView" pc="268442587" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="51" lineNum="51" parent="globals/ThemesView" pc="268442612" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="51" lineNum="54" parent="globals/ThemesView" pc="268442627" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/ThemesView.mc" id="51" lineNum="55" parent="globals/ThemesView" pc="268442644" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="52" lineNum="169" parent="globals/FavoritesView" pc="268442673" symbol="removeSelected"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="52" lineNum="170" parent="globals/FavoritesView" pc="268442676" symbol="removeSelected"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="52" lineNum="171" parent="globals/FavoritesView" pc="268442692" symbol="removeSelected"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="52" lineNum="172" parent="globals/FavoritesView" pc="268442705" symbol="removeSelected"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="52" lineNum="173" parent="globals/FavoritesView" pc="268442721" symbol="removeSelected"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="52" lineNum="174" parent="globals/FavoritesView" pc="268442728" symbol="removeSelected"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="53" lineNum="162" parent="globals/FavoritesView" pc="268442743" symbol="selectPrevious"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="53" lineNum="163" parent="globals/FavoritesView" pc="268442745" symbol="selectPrevious"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="53" lineNum="164" parent="globals/FavoritesView" pc="268442761" symbol="selectPrevious"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="53" lineNum="165" parent="globals/FavoritesView" pc="268442800" symbol="selectPrevious"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="54" lineNum="35" parent="globals/FavoritesView" pc="268442815" symbol="onLayout"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="111" parent="globals/FavoritesView" pc="268442818" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="112" parent="globals/FavoritesView" pc="268442821" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="113" parent="globals/FavoritesView" pc="268442825" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="114" parent="globals/FavoritesView" pc="268442832" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="117" parent="globals/FavoritesView" pc="268442839" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="118" parent="globals/FavoritesView" pc="268442842" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="119" parent="globals/FavoritesView" pc="268442855" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="121" parent="globals/FavoritesView" pc="268442873" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="123" parent="globals/FavoritesView" pc="268442887" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="124" parent="globals/FavoritesView" pc="268442919" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="126" parent="globals/FavoritesView" pc="268442934" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="127" parent="globals/FavoritesView" pc="268442962" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="128" parent="globals/FavoritesView" pc="268442974" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="130" parent="globals/FavoritesView" pc="268442984" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="132" parent="globals/FavoritesView" pc="268442988" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="135" parent="globals/FavoritesView" pc="268442998" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="136" parent="globals/FavoritesView" pc="268443005" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="138" parent="globals/FavoritesView" pc="268443020" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="139" parent="globals/FavoritesView" pc="268443048" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="140" parent="globals/FavoritesView" pc="268443060" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="142" parent="globals/FavoritesView" pc="268443067" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="144" parent="globals/FavoritesView" pc="268443071" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="148" parent="globals/FavoritesView" pc="268443081" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="149" parent="globals/FavoritesView" pc="268443099" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="55" lineNum="152" parent="globals/FavoritesView" pc="268443114" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="56" lineNum="155" parent="globals/FavoritesView" pc="268443117" symbol="selectNext"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="56" lineNum="156" parent="globals/FavoritesView" pc="268443119" symbol="selectNext"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="56" lineNum="157" parent="globals/FavoritesView" pc="268443135" symbol="selectNext"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="56" lineNum="158" parent="globals/FavoritesView" pc="268443162" symbol="selectNext"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="71" parent="globals/FavoritesView" pc="268443177" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="72" parent="globals/FavoritesView" pc="268443180" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="74" parent="globals/FavoritesView" pc="268443193" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="75" parent="globals/FavoritesView" pc="268443197" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="76" parent="globals/FavoritesView" pc="268443207" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="79" parent="globals/FavoritesView" pc="268443211" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="82" parent="globals/FavoritesView" pc="268443218" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="83" parent="globals/FavoritesView" pc="268443238" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="84" parent="globals/FavoritesView" pc="268443250" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="86" parent="globals/FavoritesView" pc="268443257" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="87" parent="globals/FavoritesView" pc="268443261" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="88" parent="globals/FavoritesView" pc="268443275" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="92" parent="globals/FavoritesView" pc="268443288" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="93" parent="globals/FavoritesView" pc="268443304" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="96" parent="globals/FavoritesView" pc="268443324" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="97" parent="globals/FavoritesView" pc="268443341" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="100" parent="globals/FavoritesView" pc="268443369" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="101" parent="globals/FavoritesView" pc="268443386" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="102" parent="globals/FavoritesView" pc="268443402" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="106" parent="globals/FavoritesView" pc="268443447" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="57" lineNum="107" parent="globals/FavoritesView" pc="268443464" symbol="drawFavoriteVerse"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="58" lineNum="28" parent="globals/FavoritesView" pc="268443503" symbol="refreshFavorites"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="58" lineNum="29" parent="globals/FavoritesView" pc="268443505" symbol="refreshFavorites"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="58" lineNum="30" parent="globals/FavoritesView" pc="268443523" symbol="refreshFavorites"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="58" lineNum="31" parent="globals/FavoritesView" pc="268443543" symbol="refreshFavorites"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="59" lineNum="178" parent="globals/FavoritesView" pc="268443555" symbol="viewSelected"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="59" lineNum="179" parent="globals/FavoritesView" pc="268443557" symbol="viewSelected"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="59" lineNum="181" parent="globals/FavoritesView" pc="268443573" symbol="viewSelected"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="59" lineNum="182" parent="globals/FavoritesView" pc="268443585" symbol="viewSelected"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="60" lineNum="21" parent="globals/FavoritesView" pc="268443604" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="60" lineNum="22" parent="globals/FavoritesView" pc="268443606" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="60" lineNum="23" parent="globals/FavoritesView" pc="268443622" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="60" lineNum="24" parent="globals/FavoritesView" pc="268443631" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="60" lineNum="25" parent="globals/FavoritesView" pc="268443648" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="39" parent="globals/FavoritesView" pc="268443656" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="40" parent="globals/FavoritesView" pc="268443659" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="41" parent="globals/FavoritesView" pc="268443668" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="44" parent="globals/FavoritesView" pc="268443677" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="45" parent="globals/FavoritesView" pc="268443695" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="48" parent="globals/FavoritesView" pc="268443703" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="49" parent="globals/FavoritesView" pc="268443720" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="51" parent="globals/FavoritesView" pc="268443736" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="52" parent="globals/FavoritesView" pc="268443753" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="54" parent="globals/FavoritesView" pc="268443779" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="55" parent="globals/FavoritesView" pc="268443796" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="57" parent="globals/FavoritesView" pc="268443833" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="59" parent="globals/FavoritesView" pc="268443849" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="60" parent="globals/FavoritesView" pc="268443866" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="61" parent="globals/FavoritesView" pc="268443895" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="63" parent="globals/FavoritesView" pc="268443929" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="67" parent="globals/FavoritesView" pc="268443944" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesView.mc" id="61" lineNum="68" parent="globals/FavoritesView" pc="268443961" symbol="onUpdate"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="62" lineNum="100" parent="globals/VerseVaultApp" pc="268443990" symbol="getVersesByTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="62" lineNum="101" parent="globals/VerseVaultApp" pc="268443992" symbol="getVersesByTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="63" lineNum="68" parent="globals/VerseVaultApp" pc="268444008" symbol="getFavorites"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="63" lineNum="69" parent="globals/VerseVaultApp" pc="268444010" symbol="getFavorites"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="63" lineNum="70" parent="globals/VerseVaultApp" pc="268444019" symbol="getFavorites"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="63" lineNum="72" parent="globals/VerseVaultApp" pc="268444034" symbol="getFavorites"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="64" lineNum="27" parent="globals/VerseVaultApp" pc="268444037" symbol="getInitialView"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="64" lineNum="28" parent="globals/VerseVaultApp" pc="268444040" symbol="getInitialView"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="64" lineNum="29" parent="globals/VerseVaultApp" pc="268444061" symbol="getInitialView"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="65" lineNum="105" parent="globals/VerseVaultApp" pc="268444094" symbol="getAllVerses"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="65" lineNum="106" parent="globals/VerseVaultApp" pc="268444096" symbol="getAllVerses"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="66" lineNum="61" parent="globals/VerseVaultApp" pc="268444108" symbol="onVerseRead"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="66" lineNum="62" parent="globals/VerseVaultApp" pc="268444110" symbol="onVerseRead"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="66" lineNum="63" parent="globals/VerseVaultApp" pc="268444125" symbol="onVerseRead"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="66" lineNum="64" parent="globals/VerseVaultApp" pc="268444140" symbol="onVerseRead"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="67" lineNum="53" parent="globals/VerseVaultApp" pc="268444148" symbol="saveStats"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="67" lineNum="54" parent="globals/VerseVaultApp" pc="268444150" symbol="saveStats"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="67" lineNum="55" parent="globals/VerseVaultApp" pc="268444159" symbol="saveStats"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="67" lineNum="56" parent="globals/VerseVaultApp" pc="268444183" symbol="saveStats"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="68" lineNum="76" parent="globals/VerseVaultApp" pc="268444211" symbol="addFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="68" lineNum="77" parent="globals/VerseVaultApp" pc="268444213" symbol="addFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="68" lineNum="78" parent="globals/VerseVaultApp" pc="268444222" symbol="addFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="68" lineNum="80" parent="globals/VerseVaultApp" pc="268444241" symbol="addFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="69" lineNum="32" parent="globals/VerseVaultApp" pc="268444243" symbol="onStart"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="70" lineNum="45" parent="globals/VerseVaultApp" pc="268444246" symbol="loadStats"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="70" lineNum="46" parent="globals/VerseVaultApp" pc="268444248" symbol="loadStats"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="70" lineNum="47" parent="globals/VerseVaultApp" pc="268444257" symbol="loadStats"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="70" lineNum="48" parent="globals/VerseVaultApp" pc="268444308" symbol="loadStats"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="71" lineNum="84" parent="globals/VerseVaultApp" pc="268444363" symbol="removeFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="71" lineNum="85" parent="globals/VerseVaultApp" pc="268444365" symbol="removeFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="71" lineNum="86" parent="globals/VerseVaultApp" pc="268444374" symbol="removeFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="71" lineNum="88" parent="globals/VerseVaultApp" pc="268444393" symbol="removeFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="72" lineNum="21" parent="globals/VerseVaultApp" pc="268444395" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="72" lineNum="22" parent="globals/VerseVaultApp" pc="268444397" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="72" lineNum="23" parent="globals/VerseVaultApp" pc="268444409" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="72" lineNum="24" parent="globals/VerseVaultApp" pc="268444434" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="73" lineNum="36" parent="globals/VerseVaultApp" pc="268444442" symbol="onStop"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="73" lineNum="38" parent="globals/VerseVaultApp" pc="268444444" symbol="onStop"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="73" lineNum="39" parent="globals/VerseVaultApp" pc="268444451" symbol="onStop"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="73" lineNum="40" parent="globals/VerseVaultApp" pc="268444460" symbol="onStop"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="74" lineNum="92" parent="globals/VerseVaultApp" pc="268444476" symbol="isFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="74" lineNum="93" parent="globals/VerseVaultApp" pc="268444478" symbol="isFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="74" lineNum="94" parent="globals/VerseVaultApp" pc="268444487" symbol="isFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/VerseVaultApp.mc" id="74" lineNum="96" parent="globals/VerseVaultApp" pc="268444506" symbol="isFavorite"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="75" lineNum="187" parent="globals/Verses" pc="268444508" symbol="getThemes"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="75" lineNum="188" parent="globals/Verses" pc="268444510" symbol="getThemes"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="76" lineNum="154" parent="globals/Verses" pc="268444516" symbol="getAll"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="76" lineNum="155" parent="globals/Verses" pc="268444518" symbol="getAll"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="77" lineNum="172" parent="globals/Verses" pc="268444524" symbol="getRandom"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="77" lineNum="173" parent="globals/Verses" pc="268444526" symbol="getRandom"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="77" lineNum="174" parent="globals/Verses" pc="268444553" symbol="getRandom"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="78" lineNum="159" parent="globals/Verses" pc="268444565" symbol="getByTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="78" lineNum="160" parent="globals/Verses" pc="268444568" symbol="getByTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="78" lineNum="161" parent="globals/Verses" pc="268444572" symbol="getByTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="78" lineNum="162" parent="globals/Verses" pc="268444592" symbol="getByTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="78" lineNum="163" parent="globals/Verses" pc="268444613" symbol="getByTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="78" lineNum="166" parent="globals/Verses" pc="268444644" symbol="getByTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="80" lineNum="178" parent="globals/Verses" pc="268444647" symbol="getRandomFrom"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="80" lineNum="179" parent="globals/Verses" pc="268444649" symbol="getRandomFrom"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="80" lineNum="180" parent="globals/Verses" pc="268444661" symbol="getRandomFrom"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="80" lineNum="182" parent="globals/Verses" pc="268444672" symbol="getRandomFrom"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="80" lineNum="183" parent="globals/Verses" pc="268444695" symbol="getRandomFrom"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsDelegate.mc" id="81" lineNum="11" parent="globals/SettingsDelegate" pc="268444704" symbol="onBack"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsDelegate.mc" id="81" lineNum="12" parent="globals/SettingsDelegate" pc="268444706" symbol="onBack"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsDelegate.mc" id="82" lineNum="7" parent="globals/SettingsDelegate" pc="268444722" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/SettingsDelegate.mc" id="82" lineNum="8" parent="globals/SettingsDelegate" pc="268444724" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="83" lineNum="23" parent="globals/Verse" pc="268444737" symbol="getThemes"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="83" lineNum="24" parent="globals/Verse" pc="268444739" symbol="getThemes"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="84" lineNum="19" parent="globals/Verse" pc="268444745" symbol="getText"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="84" lineNum="20" parent="globals/Verse" pc="268444747" symbol="getText"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="85" lineNum="9" parent="globals/Verse" pc="268444753" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="85" lineNum="10" parent="globals/Verse" pc="268444755" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="85" lineNum="11" parent="globals/Verse" pc="268444764" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="85" lineNum="12" parent="globals/Verse" pc="268444773" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="86" lineNum="27" parent="globals/Verse" pc="268444783" symbol="hasTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="86" lineNum="28" parent="globals/Verse" pc="268444786" symbol="hasTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="86" lineNum="29" parent="globals/Verse" pc="268444806" symbol="hasTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="86" lineNum="30" parent="globals/Verse" pc="268444827" symbol="hasTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="86" lineNum="33" parent="globals/Verse" pc="268444842" symbol="hasTheme"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="87" lineNum="15" parent="globals/Verse" pc="268444844" symbol="getReference"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/Verses.mc" id="87" lineNum="16" parent="globals/Verse" pc="268444846" symbol="getReference"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesDelegate.mc" id="88" lineNum="22" parent="globals/FavoritesDelegate" pc="268444852" symbol="onBack"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesDelegate.mc" id="88" lineNum="23" parent="globals/FavoritesDelegate" pc="268444854" symbol="onBack"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesDelegate.mc" id="89" lineNum="18" parent="globals/FavoritesDelegate" pc="268444870" symbol="onPreviousPage"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesDelegate.mc" id="89" lineNum="19" parent="globals/FavoritesDelegate" pc="268444872" symbol="onPreviousPage"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesDelegate.mc" id="90" lineNum="9" parent="globals/FavoritesDelegate" pc="268444885" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesDelegate.mc" id="90" lineNum="10" parent="globals/FavoritesDelegate" pc="268444887" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesDelegate.mc" id="90" lineNum="11" parent="globals/FavoritesDelegate" pc="268444899" symbol="initialize"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesDelegate.mc" id="91" lineNum="14" parent="globals/FavoritesDelegate" pc="268444909" symbol="onNextPage"/>
+        <entry filename="/home/cechinel/.openclaw/workspace/versevault-garmin/source/FavoritesDelegate.mc" id="91" lineNum="15" parent="globals/FavoritesDelegate" pc="268444911" symbol="onNextPage"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="16" object="true" symbol="Verses"/>
+        <entry field="true" id="8389346" symbol="text"/>
+        <entry field="true" id="98" symbol="STRENGTH"/>
+        <entry id="8" object="true" symbol="HomeDelegate"/>
+        <entry field="true" id="18" symbol="&lt;globals/HomeView/&lt;&gt;_currentVerse&gt;"/>
+        <entry field="true" id="99" symbol="THEMES"/>
+        <entry field="true" id="81" symbol="ALREADY_FAVORITE"/>
+        <entry field="true" id="96" symbol="STATS"/>
+        <entry field="true" id="67" symbol="&lt;globals/Verses/&lt;statics&gt;/&lt;&gt;allVerses&gt;"/>
+        <entry field="true" id="33" symbol="&lt;globals/Storage/&lt;&gt;_favoritesKey&gt;"/>
+        <entry field="true" id="90" symbol="HOPE"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry field="true" id="57" symbol="currentScreen"/>
+        <entry id="21" method="true" symbol="drawVerse"/>
+        <entry id="34" method="true" symbol="addFavorite"/>
+        <entry field="true" id="84" symbol="COURAGE"/>
+        <entry field="true" id="65" symbol="streak"/>
+        <entry field="true" id="20" symbol="&lt;globals/HomeView/&lt;&gt;_showHint&gt;"/>
+        <entry id="37" method="true" symbol="isFavorite"/>
+        <entry id="26" method="true" symbol="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;"/>
+        <entry id="8390424" module="true" object="true" symbol="Storage"/>
+        <entry field="true" id="48" symbol="&lt;globals/FavoritesView/&lt;&gt;_app&gt;"/>
+        <entry field="true" id="43" symbol="&lt;globals/ThemesView/&lt;&gt;_themes&gt;"/>
+        <entry id="8391036" method="true" symbol="getText"/>
+        <entry id="59" method="true" symbol="getAllVerses"/>
+        <entry id="8389629" method="true" symbol="getValue"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="89" symbol="HOLD_TO_SAVE"/>
+        <entry field="true" id="100" symbol="VERSES_READ"/>
+        <entry id="4" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389080" method="true" symbol="onMenu"/>
+        <entry field="true" id="101" symbol="VERSEVAULT"/>
+        <entry field="true" id="66" symbol="versesRead"/>
+        <entry id="54" method="true" symbol="removeSelected"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8389081" method="true" symbol="onBack"/>
+        <entry id="47" method="true" symbol="selectTheme"/>
+        <entry field="true" id="86" symbol="FAITH"/>
+        <entry field="true" id="28" symbol="&lt;globals/HomeDelegate/&lt;&gt;_view&gt;"/>
+        <entry id="13" object="true" symbol="ThemesView"/>
+        <entry field="true" id="92" symbol="NO_FAVORITES"/>
+        <entry field="true" id="80" symbol="ADDED_TO_FAVORITES"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="53" method="true" symbol="refreshFavorites"/>
+        <entry field="true" id="85" symbol="DAILY_DEVOTIONAL"/>
+        <entry field="true" id="41" symbol="&lt;globals/ThemesView/&lt;&gt;_homeView&gt;"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="63" method="true" symbol="saveStats"/>
+        <entry id="38" method="true" symbol="load"/>
+        <entry field="true" id="87" symbol="FAVORITES"/>
+        <entry id="15" object="true" symbol="VerseVaultApp"/>
+        <entry id="8389553" method="true" symbol="onKeyPressed"/>
+        <entry id="45" method="true" symbol="selectNext"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="12" object="true" symbol="ThemesDelegate"/>
+        <entry field="true" id="82" symbol="BACK"/>
+        <entry field="true" id="78" symbol="&lt;globals/FavoritesDelegate/&lt;&gt;_view&gt;"/>
+        <entry id="69" method="true" symbol="getByTheme"/>
+        <entry id="29" method="true" symbol="onSwipeDown"/>
+        <entry id="8389079" method="true" symbol="onPreviousPage"/>
+        <entry field="true" id="73" symbol="&lt;globals/Verses/&lt;statics&gt;/&lt;&gt;verseCounter&gt;"/>
+        <entry field="true" id="42" symbol="&lt;globals/ThemesView/&lt;&gt;_selectedIndex&gt;"/>
+        <entry id="68" method="true" symbol="getAll"/>
+        <entry id="55" method="true" symbol="viewSelected"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="77" symbol="themes"/>
+        <entry id="44" method="true" symbol="drawThemesGrid"/>
+        <entry id="8389098" method="true" symbol="onTap"/>
+        <entry id="7" object="true" symbol="FavoritesView"/>
+        <entry field="true" id="49" symbol="&lt;globals/FavoritesView/&lt;&gt;_favorites&gt;"/>
+        <entry field="true" id="94" symbol="RANDOM_VERSE"/>
+        <entry field="true" id="32" symbol="&lt;globals/Storage/&lt;&gt;_favorites&gt;"/>
+        <entry id="74" method="true" symbol="getReference"/>
+        <entry id="8388882" method="true" symbol="save"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="9" object="true" symbol="HomeView"/>
+        <entry id="62" method="true" symbol="onVerseRead"/>
+        <entry id="70" method="true" symbol="getRandom"/>
+        <entry field="true" id="40" symbol="&lt;globals/ThemesView/&lt;&gt;_app&gt;"/>
+        <entry id="46" method="true" symbol="selectPrevious"/>
+        <entry field="true" id="91" symbol="LOVE"/>
+        <entry id="72" method="true" symbol="getThemes"/>
+        <entry id="56" method="true" symbol="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;"/>
+        <entry field="true" id="102" symbol="VERSE_SAVED"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="71" method="true" symbol="getRandomFrom"/>
+        <entry field="true" id="95" symbol="SETTINGS"/>
+        <entry id="10" object="true" symbol="SettingsDelegate"/>
+        <entry field="true" id="97" symbol="STREAK"/>
+        <entry id="24" method="true" symbol="showFavoriteVerse"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="88" symbol="FAVORITES_COUNT"/>
+        <entry field="true" id="79" symbol="LauncherIcon"/>
+        <entry id="5" module="true" symbol="globals/Verses/&lt;statics&gt;"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry field="true" id="27" symbol="&lt;globals/SettingsView/&lt;&gt;_app&gt;"/>
+        <entry field="true" id="83" symbol="COMFORT"/>
+        <entry id="75" method="true" symbol="hasTheme"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="39" method="true" symbol="removeFavorite"/>
+        <entry id="25" method="true" symbol="showNewVerse"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="14" object="true" symbol="Verse"/>
+        <entry field="true" id="17" symbol="&lt;globals/HomeView/&lt;&gt;_app&gt;"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="22" method="true" symbol="incrementHintTimer"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="23" method="true" symbol="setCurrentVerse"/>
+        <entry field="true" id="31" symbol="&lt;globals/ThemesDelegate/&lt;&gt;_view&gt;"/>
+        <entry field="true" id="103" symbol="WISDOM"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="61" method="true" symbol="loadStats"/>
+        <entry id="36" method="true" symbol="getFavorites"/>
+        <entry id="35" method="true" symbol="&lt;globals/Storage/&lt;&gt;findVerseByReference&gt;"/>
+        <entry id="52" method="true" symbol="drawFavoriteVerse"/>
+        <entry field="true" id="58" symbol="currentTheme"/>
+        <entry field="true" id="93" symbol="PEACE"/>
+        <entry id="6" object="true" symbol="FavoritesDelegate"/>
+        <entry field="true" id="64" symbol="storage"/>
+        <entry id="11" object="true" symbol="SettingsView"/>
+        <entry field="true" id="50" symbol="&lt;globals/FavoritesView/&lt;&gt;_homeView&gt;"/>
+        <entry id="30" method="true" symbol="onSwipeUp"/>
+        <entry id="8390426" method="true" symbol="setValue"/>
+        <entry id="8389078" method="true" symbol="onNextPage"/>
+        <entry field="true" id="76" symbol="reference"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry id="8389099" method="true" symbol="onHold"/>
+        <entry id="60" method="true" symbol="getVersesByTheme"/>
+        <entry field="true" id="51" symbol="&lt;globals/FavoritesView/&lt;&gt;_selectedIndex&gt;"/>
+        <entry field="true" id="19" symbol="&lt;globals/HomeView/&lt;&gt;_hintTimer&gt;"/>
+    </symbolTable>
+    <localVars>
+        <entry endPc="268438999" name="favorites" stackId="1" startPc="268438943"/>
+        <entry arg="true" endPc="268439390" name="text" stackId="1" startPc="268439092"/>
+        <entry arg="true" endPc="268439390" name="maxWidth" stackId="2" startPc="268439092"/>
+        <entry arg="true" endPc="268439390" name="dc" stackId="3" startPc="268439092"/>
+        <entry endPc="268439390" name="lines" stackId="4" startPc="268439095"/>
+        <entry endPc="268439390" name="line" stackId="5" startPc="268439095"/>
+        <entry endPc="268439390" name="space" stackId="6" startPc="268439095"/>
+        <entry endPc="268439390" name="idx" stackId="7" startPc="268439095"/>
+        <entry endPc="268439351" name="c" stackId="8" startPc="268439129"/>
+        <entry endPc="268439268" name="testLine" stackId="9" startPc="268439161"/>
+        <entry endPc="268439268" name="testDims" stackId="10" startPc="268439161"/>
+        <entry endPc="268439351" name="testLine" stackId="11" startPc="268439272"/>
+        <entry endPc="268439351" name="testDims" stackId="12" startPc="268439272"/>
+        <entry arg="true" endPc="268439817" name="dc" stackId="1" startPc="268439409"/>
+        <entry arg="true" endPc="268439817" name="w" stackId="2" startPc="268439409"/>
+        <entry arg="true" endPc="268439817" name="h" stackId="3" startPc="268439409"/>
+        <entry endPc="268439816" name="verse" stackId="4" startPc="268439412"/>
+        <entry endPc="268439816" name="centerX" stackId="5" startPc="268439412"/>
+        <entry endPc="268439816" name="centerY" stackId="6" startPc="268439412"/>
+        <entry endPc="268439816" name="cardPadding" stackId="7" startPc="268439412"/>
+        <entry endPc="268439816" name="cardWidth" stackId="8" startPc="268439412"/>
+        <entry endPc="268439816" name="cardX" stackId="9" startPc="268439412"/>
+        <entry endPc="268439816" name="maxTextWidth" stackId="10" startPc="268439412"/>
+        <entry endPc="268439816" name="words" stackId="11" startPc="268439412"/>
+        <entry endPc="268439816" name="textHeight" stackId="12" startPc="268439412"/>
+        <entry endPc="268439816" name="cardHeight" stackId="13" startPc="268439412"/>
+        <entry endPc="268439816" name="cardY" stackId="14" startPc="268439412"/>
+        <entry endPc="268439816" name="textX" stackId="15" startPc="268439412"/>
+        <entry endPc="268439816" name="textY" stackId="16" startPc="268439412"/>
+        <entry endPc="268439683" name="i" stackId="17" startPc="268439645"/>
+        <entry endPc="268439816" name="refY" stackId="18" startPc="268439412"/>
+        <entry endPc="268439911" name="verses" stackId="1" startPc="268439854"/>
+        <entry arg="true" endPc="268439947" name="app" stackId="1" startPc="268439913"/>
+        <entry arg="true" endPc="268440193" name="dc" stackId="1" startPc="268439948"/>
+        <entry endPc="268440192" name="w" stackId="2" startPc="268439951"/>
+        <entry endPc="268440192" name="h" stackId="3" startPc="268439951"/>
+        <entry arg="true" endPc="268440216" name="verse" stackId="1" startPc="268440194"/>
+        <entry arg="true" endPc="268440973" name="dc" stackId="1" startPc="268440256"/>
+        <entry endPc="268440972" name="w" stackId="2" startPc="268440259"/>
+        <entry endPc="268440972" name="h" stackId="3" startPc="268440259"/>
+        <entry endPc="268440972" name="cardPadding" stackId="4" startPc="268440259"/>
+        <entry endPc="268440972" name="cardWidth" stackId="5" startPc="268440259"/>
+        <entry endPc="268440972" name="cardX" stackId="6" startPc="268440259"/>
+        <entry endPc="268440972" name="card1Y" stackId="7" startPc="268440259"/>
+        <entry endPc="268440972" name="card1Height" stackId="8" startPc="268440259"/>
+        <entry endPc="268440972" name="card2Y" stackId="9" startPc="268440259"/>
+        <entry endPc="268440972" name="card3Y" stackId="10" startPc="268440259"/>
+        <entry endPc="268441049" name="settingsView" stackId="1" startPc="268440995"/>
+        <entry endPc="268441115" name="favView" stackId="1" startPc="268441054"/>
+        <entry arg="true" endPc="268441140" name="view" stackId="1" startPc="268441117"/>
+        <entry endPc="268441205" name="themesView" stackId="1" startPc="268441144"/>
+        <entry arg="true" endPc="268441248" name="view" stackId="1" startPc="268441225"/>
+        <entry arg="true" endPc="268441342" name="key" stackId="1" startPc="268441249"/>
+        <entry arg="true" endPc="268441418" name="ref" stackId="1" startPc="268441343"/>
+        <entry endPc="268441418" name="all" stackId="2" startPc="268441346"/>
+        <entry endPc="268441416" name="i" stackId="3" startPc="268441375"/>
+        <entry arg="true" endPc="268441435" name="key" stackId="1" startPc="268441419"/>
+        <entry arg="true" endPc="268441480" name="verse" stackId="1" startPc="268441436"/>
+        <entry endPc="268441587" name="refs" stackId="1" startPc="268441484"/>
+        <entry endPc="268441584" name="i" stackId="2" startPc="268441535"/>
+        <entry endPc="268441574" name="v" stackId="3" startPc="268441535"/>
+        <entry arg="true" endPc="268441616" name="key" stackId="1" startPc="268441597"/>
+        <entry arg="true" endPc="268441616" name="value" stackId="2" startPc="268441597"/>
+        <entry arg="true" endPc="268441709" name="verse" stackId="1" startPc="268441617"/>
+        <entry endPc="268441707" name="i" stackId="2" startPc="268441640"/>
+        <entry endPc="268441789" name="refs" stackId="1" startPc="268441713"/>
+        <entry endPc="268441769" name="i" stackId="2" startPc="268441737"/>
+        <entry arg="true" endPc="268441870" name="verse" stackId="1" startPc="268441801"/>
+        <entry endPc="268441868" name="i" stackId="2" startPc="268441824"/>
+        <entry arg="true" endPc="268442286" name="dc" stackId="1" startPc="268441968"/>
+        <entry arg="true" endPc="268442286" name="w" stackId="2" startPc="268441968"/>
+        <entry arg="true" endPc="268442286" name="h" stackId="3" startPc="268441968"/>
+        <entry endPc="268442285" name="padding" stackId="4" startPc="268441971"/>
+        <entry endPc="268442285" name="gap" stackId="5" startPc="268441971"/>
+        <entry endPc="268442285" name="cols" stackId="6" startPc="268441971"/>
+        <entry endPc="268442285" name="cardWidth" stackId="7" startPc="268441971"/>
+        <entry endPc="268442285" name="cardHeight" stackId="8" startPc="268441971"/>
+        <entry endPc="268442285" name="startY" stackId="9" startPc="268441971"/>
+        <entry endPc="268442285" name="i" stackId="10" startPc="268442027"/>
+        <entry endPc="268442275" name="col" stackId="11" startPc="268442027"/>
+        <entry endPc="268442275" name="row" stackId="12" startPc="268442027"/>
+        <entry endPc="268442275" name="x" stackId="13" startPc="268442027"/>
+        <entry endPc="268442275" name="y" stackId="14" startPc="268442027"/>
+        <entry endPc="268442275" name="isSelected" stackId="15" startPc="268442027"/>
+        <entry endPc="268442275" name="textColor" stackId="16" startPc="268442027"/>
+        <entry endPc="268442275" name="themeLabel" stackId="17" startPc="268442027"/>
+        <entry endPc="268442382" name="theme" stackId="1" startPc="268442290"/>
+        <entry endPc="268442382" name="verses" stackId="2" startPc="268442290"/>
+        <entry endPc="268442364" name="randomVerse" stackId="3" startPc="268442332"/>
+        <entry arg="true" endPc="268442446" name="homeView" stackId="1" startPc="268442384"/>
+        <entry arg="true" endPc="268442672" name="dc" stackId="1" startPc="268442447"/>
+        <entry endPc="268442671" name="w" stackId="2" startPc="268442450"/>
+        <entry endPc="268442671" name="h" stackId="3" startPc="268442450"/>
+        <entry endPc="268442738" name="verse" stackId="1" startPc="268442692"/>
+        <entry arg="true" endPc="268443116" name="text" stackId="1" startPc="268442818"/>
+        <entry arg="true" endPc="268443116" name="maxWidth" stackId="2" startPc="268442818"/>
+        <entry arg="true" endPc="268443116" name="dc" stackId="3" startPc="268442818"/>
+        <entry endPc="268443116" name="lines" stackId="4" startPc="268442821"/>
+        <entry endPc="268443116" name="line" stackId="5" startPc="268442821"/>
+        <entry endPc="268443116" name="space" stackId="6" startPc="268442821"/>
+        <entry endPc="268443116" name="idx" stackId="7" startPc="268442821"/>
+        <entry endPc="268443077" name="c" stackId="8" startPc="268442855"/>
+        <entry endPc="268442994" name="testLine" stackId="9" startPc="268442887"/>
+        <entry endPc="268442994" name="testDims" stackId="10" startPc="268442887"/>
+        <entry endPc="268443077" name="testLine" stackId="11" startPc="268442998"/>
+        <entry endPc="268443077" name="testDims" stackId="12" startPc="268442998"/>
+        <entry arg="true" endPc="268443502" name="dc" stackId="1" startPc="268443177"/>
+        <entry arg="true" endPc="268443502" name="w" stackId="2" startPc="268443177"/>
+        <entry arg="true" endPc="268443502" name="h" stackId="3" startPc="268443177"/>
+        <entry endPc="268443501" name="verse" stackId="4" startPc="268443180"/>
+        <entry endPc="268443501" name="cardPadding" stackId="5" startPc="268443180"/>
+        <entry endPc="268443501" name="cardWidth" stackId="6" startPc="268443180"/>
+        <entry endPc="268443501" name="cardX" stackId="7" startPc="268443180"/>
+        <entry endPc="268443501" name="maxTextWidth" stackId="8" startPc="268443180"/>
+        <entry endPc="268443501" name="words" stackId="9" startPc="268443180"/>
+        <entry endPc="268443501" name="textHeight" stackId="10" startPc="268443180"/>
+        <entry endPc="268443501" name="cardHeight" stackId="11" startPc="268443180"/>
+        <entry endPc="268443501" name="cardY" stackId="12" startPc="268443180"/>
+        <entry endPc="268443446" name="i" stackId="13" startPc="268443402"/>
+        <entry arg="true" endPc="268443655" name="homeView" stackId="1" startPc="268443604"/>
+        <entry arg="true" endPc="268443989" name="dc" stackId="1" startPc="268443656"/>
+        <entry endPc="268443988" name="w" stackId="2" startPc="268443659"/>
+        <entry endPc="268443988" name="h" stackId="3" startPc="268443659"/>
+        <entry arg="true" endPc="268444007" name="theme" stackId="1" startPc="268443990"/>
+        <entry endPc="268444093" name="homeView" stackId="1" startPc="268444040"/>
+        <entry arg="true" endPc="268444242" name="verse" stackId="1" startPc="268444211"/>
+        <entry arg="true" endPc="268444394" name="verse" stackId="1" startPc="268444363"/>
+        <entry arg="true" endPc="268444475" name="state" stackId="1" startPc="268444442"/>
+        <entry arg="true" endPc="268444507" name="verse" stackId="1" startPc="268444476"/>
+        <entry arg="true" endPc="268444646" name="theme" stackId="1" startPc="268444565"/>
+        <entry endPc="268444646" name="result" stackId="2" startPc="268444568"/>
+        <entry endPc="268444643" name="i" stackId="3" startPc="268444592"/>
+        <entry arg="true" endPc="268444703" name="verses" stackId="1" startPc="268444647"/>
+        <entry arg="true" endPc="268444782" name="ref" stackId="1" startPc="268444753"/>
+        <entry arg="true" endPc="268444782" name="txt" stackId="2" startPc="268444753"/>
+        <entry arg="true" endPc="268444782" name="thms" stackId="3" startPc="268444753"/>
+        <entry arg="true" endPc="268444843" name="theme" stackId="1" startPc="268444783"/>
+        <entry endPc="268444841" name="i" stackId="2" startPc="268444806"/>
+        <entry arg="true" endPc="268444908" name="view" stackId="1" startPc="268444885"/>
+    </localVars>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COMFORT"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="DAILY_DEVOTIONAL"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="HOPE"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="FAVORITES"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RANDOM_VERSE"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="FAITH"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="NO_FAVORITES"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="FAVORITES_COUNT"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LOVE"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="VERSEVAULT"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="HOLD_TO_SAVE"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="BACK"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COURAGE"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="STREAK"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="PEACE"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="STATS"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="WISDOM"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SETTINGS"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="THEMES"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ALREADY_FAVORITE"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="STRENGTH"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="VERSE_SAVED"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="VERSES_READ"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ADDED_TO_FAVORITES"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="58" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/HomeView" offset="206" parentId="globals" symbolId="HomeView" type="class"/>
+        <dataEntry label="globals/Rez" offset="376" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/SettingsView" offset="420" parentId="globals" symbolId="SettingsView" type="class"/>
+        <dataEntry label="globals/HomeDelegate" offset="491" parentId="globals" symbolId="HomeDelegate" type="class"/>
+        <dataEntry label="globals/ThemesDelegate" offset="580" parentId="globals" symbolId="ThemesDelegate" type="class"/>
+        <dataEntry label="globals/Storage" offset="651" parentId="globals" symbolId="Storage" type="class"/>
+        <dataEntry label="globals/ThemesView" offset="794" parentId="globals" symbolId="ThemesView" type="class"/>
+        <dataEntry label="globals/FavoritesView" offset="928" parentId="globals" symbolId="FavoritesView" type="class"/>
+        <dataEntry label="globals/VerseVaultApp" offset="1089" parentId="globals" symbolId="VerseVaultApp" type="class"/>
+        <dataEntry label="globals/Verses" offset="1286" parentId="globals" symbolId="Verses" type="class"/>
+        <dataEntry label="globals/Verses/&lt;statics&gt;" offset="1334" parentId="Verses" symbolId="&lt;statics&gt;" type="module"/>
+        <dataEntry label="globals/SettingsDelegate" offset="1419" parentId="globals" symbolId="SettingsDelegate" type="class"/>
+        <dataEntry label="globals/Verse" offset="1472" parentId="globals" symbolId="Verse" type="class"/>
+        <dataEntry label="globals/FavoritesDelegate" offset="1579" parentId="globals" symbolId="FavoritesDelegate" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="1659" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1694" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="HomeView" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435491" name="&lt;init&gt;" parent="Rez" startPc="268435472">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435503" name="&lt;init&gt;" parent="SettingsView" startPc="268435492">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435515" name="&lt;init&gt;" parent="HomeDelegate" startPc="268435504">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435527" name="&lt;init&gt;" parent="ThemesDelegate" startPc="268435516">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435537" name="&lt;init&gt;" parent="Storage" startPc="268435528">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435558" name="&lt;init&gt;" parent="ThemesView" startPc="268435538">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435579" name="&lt;init&gt;" parent="FavoritesView" startPc="268435559">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435591" name="&lt;init&gt;" parent="VerseVaultApp" startPc="268435580">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Verses">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438915" name="&lt;init&gt;" parent="globals/Verses" startPc="268435592">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438927" name="&lt;init&gt;" parent="SettingsDelegate" startPc="268438916">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Verse">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438939" name="&lt;init&gt;" parent="FavoritesDelegate" startPc="268438928">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439000" name="showFavoriteVerse" parent="HomeView" startPc="268438940">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439088" name="onHold" parent="HomeView" startPc="268439001">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439091" name="onLayout" parent="HomeView" startPc="268439089">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268439390" name="&lt;globals/HomeView/&lt;&gt;wordWrap&gt;" parent="HomeView" startPc="268439092">
+            <param id="text"/>
+            <param id="maxWidth"/>
+            <param id="dc"/>
+            <documentation><![CDATA[<div class="description"> Manual word wrap function<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439408" name="incrementHintTimer" parent="HomeView" startPc="268439391">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439817" name="drawVerse" parent="HomeView" startPc="268439409">
+            <param id="dc"/>
+            <param id="w"/>
+            <param id="h"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439850" name="onTap" parent="HomeView" startPc="268439818">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439912" name="showNewVerse" parent="HomeView" startPc="268439851">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439947" name="initialize" parent="HomeView" startPc="268439913">
+            <param id="app"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440193" name="onUpdate" parent="HomeView" startPc="268439948">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440216" name="setCurrentVerse" parent="HomeView" startPc="268440194">
+            <param id="verse"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440219" name="onLayout" parent="SettingsView" startPc="268440217">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440255" name="initialize" parent="SettingsView" startPc="268440220">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440973" name="onUpdate" parent="SettingsView" startPc="268440256">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440991" name="onBack" parent="HomeDelegate" startPc="268440974">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441050" name="onMenu" parent="HomeDelegate" startPc="268440992">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441116" name="onSwipeUp" parent="HomeDelegate" startPc="268441051">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441140" name="initialize" parent="HomeDelegate" startPc="268441117">
+            <param id="view"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441206" name="onSwipeDown" parent="HomeDelegate" startPc="268441141">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441224" name="onBack" parent="ThemesDelegate" startPc="268441207">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441248" name="initialize" parent="ThemesDelegate" startPc="268441225">
+            <param id="view"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441342" name="onKeyPressed" parent="ThemesDelegate" startPc="268441249">
+            <param id="key"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268441418" name="&lt;globals/Storage/&lt;&gt;findVerseByReference&gt;" parent="Storage" startPc="268441343">
+            <param id="ref"/>
+            <documentation><![CDATA[<div class="description"> Find verse by reference<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441435" name="getValue" parent="Storage" startPc="268441419">
+            <param id="key"/>
+            <documentation><![CDATA[<div class="description"> Get a value from storage<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441480" name="addFavorite" parent="Storage" startPc="268441436">
+            <param id="verse"/>
+            <documentation><![CDATA[<div class="description"> Add verse to favorites<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441588" name="load" parent="Storage" startPc="268441481">
+            <documentation><![CDATA[<div class="description"> Load favorites from storage<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441596" name="getFavorites" parent="Storage" startPc="268441589">
+            <documentation><![CDATA[<div class="description"> Get all favorites<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441616" name="setValue" parent="Storage" startPc="268441597">
+            <param id="key"/>
+            <param id="value"/>
+            <documentation><![CDATA[<div class="description"> Set a value in storage<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441709" name="removeFavorite" parent="Storage" startPc="268441617">
+            <param id="verse"/>
+            <documentation><![CDATA[<div class="description"> Remove verse from favorites<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441790" name="save" parent="Storage" startPc="268441710">
+            <documentation><![CDATA[<div class="description"> Save favorites to storage<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441800" name="initialize" parent="Storage" startPc="268441791">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441870" name="isFavorite" parent="Storage" startPc="268441801">
+            <param id="verse"/>
+            <documentation><![CDATA[<div class="description"> Check if verse is in favorites<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441923" name="selectPrevious" parent="ThemesView" startPc="268441871">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441926" name="onLayout" parent="ThemesView" startPc="268441924">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441967" name="selectNext" parent="ThemesView" startPc="268441927">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442286" name="drawThemesGrid" parent="ThemesView" startPc="268441968">
+            <param id="dc"/>
+            <param id="w"/>
+            <param id="h"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442383" name="selectTheme" parent="ThemesView" startPc="268442287">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442446" name="initialize" parent="ThemesView" startPc="268442384">
+            <param id="homeView"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442672" name="onUpdate" parent="ThemesView" startPc="268442447">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442742" name="removeSelected" parent="FavoritesView" startPc="268442673">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442814" name="selectPrevious" parent="FavoritesView" startPc="268442743">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442817" name="onLayout" parent="FavoritesView" startPc="268442815">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268443116" name="&lt;globals/FavoritesView/&lt;&gt;wordWrap&gt;" parent="FavoritesView" startPc="268442818">
+            <param id="text"/>
+            <param id="maxWidth"/>
+            <param id="dc"/>
+            <documentation><![CDATA[<div class="description"> Manual word wrap function<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443176" name="selectNext" parent="FavoritesView" startPc="268443117">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443502" name="drawFavoriteVerse" parent="FavoritesView" startPc="268443177">
+            <param id="dc"/>
+            <param id="w"/>
+            <param id="h"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443554" name="refreshFavorites" parent="FavoritesView" startPc="268443503">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443603" name="viewSelected" parent="FavoritesView" startPc="268443555">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443655" name="initialize" parent="FavoritesView" startPc="268443604">
+            <param id="homeView"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443989" name="onUpdate" parent="FavoritesView" startPc="268443656">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444007" name="getVersesByTheme" parent="VerseVaultApp" startPc="268443990">
+            <param id="theme"/>
+            <documentation><![CDATA[<div class="description"> Get verses by theme<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444036" name="getFavorites" parent="VerseVaultApp" startPc="268444008">
+            <documentation><![CDATA[<div class="description"> Get all favorites<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444093" name="getInitialView" parent="VerseVaultApp" startPc="268444037">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444107" name="getAllVerses" parent="VerseVaultApp" startPc="268444094">
+            <documentation><![CDATA[<div class="description"> Get all verses<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444147" name="onVerseRead" parent="VerseVaultApp" startPc="268444108">
+            <documentation><![CDATA[<div class="description"> Increment verses read and update streak<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444210" name="saveStats" parent="VerseVaultApp" startPc="268444148">
+            <documentation><![CDATA[<div class="description"> Save statistics<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444242" name="addFavorite" parent="VerseVaultApp" startPc="268444211">
+            <param id="verse"/>
+            <documentation><![CDATA[<div class="description"> Add to favorites<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444245" name="onStart" parent="VerseVaultApp" startPc="268444243">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444362" name="loadStats" parent="VerseVaultApp" startPc="268444246">
+            <documentation><![CDATA[<div class="description"> Load statistics from storage<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444394" name="removeFavorite" parent="VerseVaultApp" startPc="268444363">
+            <param id="verse"/>
+            <documentation><![CDATA[<div class="description"> Remove from favorites<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444441" name="initialize" parent="VerseVaultApp" startPc="268444395">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444475" name="onStop" parent="VerseVaultApp" startPc="268444442">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444507" name="isFavorite" parent="VerseVaultApp" startPc="268444476">
+            <param id="verse"/>
+            <documentation><![CDATA[<div class="description"> Check if verse is favorite<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444515" name="getThemes" parent="Verses" startPc="268444508">
+            <documentation><![CDATA[<div class="description"> Get themes list<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444523" name="getAll" parent="Verses" startPc="268444516">
+            <documentation><![CDATA[<div class="description"> Get all verses<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444564" name="getRandom" parent="Verses" startPc="268444524">
+            <documentation><![CDATA[<div class="description"> Get a random verse (cycles through based on counter)<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444646" name="getByTheme" parent="Verses" startPc="268444565">
+            <param id="theme"/>
+            <documentation><![CDATA[<div class="description"> Get verses by theme<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="Verses">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444703" name="getRandomFrom" parent="Verses" startPc="268444647">
+            <param id="verses"/>
+            <documentation><![CDATA[<div class="description"> Get a random verse from a subset<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444721" name="onBack" parent="SettingsDelegate" startPc="268444704">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444736" name="initialize" parent="SettingsDelegate" startPc="268444722">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444744" name="getThemes" parent="Verse" startPc="268444737">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444752" name="getText" parent="Verse" startPc="268444745">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444782" name="initialize" parent="Verse" startPc="268444753">
+            <param id="ref"/>
+            <param id="txt"/>
+            <param id="thms"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444843" name="hasTheme" parent="Verse" startPc="268444783">
+            <param id="theme"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444851" name="getReference" parent="Verse" startPc="268444844">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444869" name="onBack" parent="FavoritesDelegate" startPc="268444852">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444884" name="onPreviousPage" parent="FavoritesDelegate" startPc="268444870">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444908" name="initialize" parent="FavoritesDelegate" startPc="268444885">
+            <param id="view"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444923" name="onNextPage" parent="FavoritesDelegate" startPc="268444909">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
