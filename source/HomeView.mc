@@ -53,9 +53,10 @@ class HomeView extends WatchUi.View {
         // Hint text at bottom
         if (_showHint && _hintTimer < 3) {
             dc.setColor(COLOR_MUTED, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(w / 2, h - 45, Graphics.FONT_XTINY, "T=new | H = save", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-            dc.drawText(w / 2, h - 30, Graphics.FONT_XTINY, "U=Fav", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-            dc.drawText(w / 2, h - 15, Graphics.FONT_XTINY, "D=Themes", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText(w / 2, h - 60, Graphics.FONT_XTINY, "T=new | H = save", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText(w / 2, h - 45, Graphics.FONT_XTINY, "D=Fav", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText(w / 2, h - 30, Graphics.FONT_XTINY, "U=Themes", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText(w / 2, h - 15, Graphics.FONT_XTINY, "R=Stats", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         }
     }
     

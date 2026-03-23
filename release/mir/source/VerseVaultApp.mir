@@ -1,0 +1,405 @@
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Application,2,14,25]; ]
+import Toybox.Application;
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+import Toybox.WatchUi;
+//! Main application entry point for VerseVault
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 6; @symbol_classdef = [VerseVaultApp,6,6,19]; @symbol_extends<0> = [Application,6,28,39]; @symbol_extends<1> = [AppBase,6,40,47]; ]
+class VerseVaultApp extends Application.AppBase {
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    //! Storage for favorites and stats
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 9; @position = 8; @symbol_vardef = [storage,9,8,15]; @symbol_type<0> = [Storage,9,19,26]; ]
+    var storage as Storage or Null;
+    //! Statistics
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 12; @position = 8; @symbol_vardef = [versesRead,12,8,18]; @symbol_type<0> = [Number,12,22,28]; ]
+    var versesRead as Number = 0;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 13; @position = 8; @symbol_vardef = [streak,13,8,14]; @symbol_type<0> = [Number,13,18,24]; ]
+    var streak as Number = 0;
+    //! Current screen
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 16; @position = 8; @symbol_vardef = [currentScreen,16,8,21]; @symbol_type<0> = [Number,16,25,31]; ]
+    var currentScreen as Number = 0;
+    //! Theme filter
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 19; @position = 8; @symbol_vardef = [currentTheme,19,8,20]; @symbol_type<0> = [String,19,24,30]; ]
+    var currentTheme as String = "";
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 21; @symbol_functiondef = [initialize,21,13,23]; ]
+    function initialize() as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_21_26_25_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 22 8 ]
+        symbol [ AppBase %tmp.2 22 8 15 ];
+        %tmp.2 = getv ? :AppBase;
+        symbol [ initialize %tmp.3 22 16 26 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 23 8 ]
+        symbol [ Storage %tmp.7 23 22 29 ];
+        %tmp.7 = getv ? :Storage;
+        %tmp.4 = newc %tmp.7 ();
+        symbol [ storage ? 23 8 15 ];
+        putv self :storage %tmp.4;
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 24 8 ]
+        %tmp.8 = self;
+        symbol [ loadStats %tmp.9 24 8 17 ];
+        %tmp.9 = getv function %tmp.8 :loadStats;
+        invoke %tmp.8 %tmp.9();
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_21_26_25_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 27; @symbol_functiondef = [getInitialView,27,13,27]; ]
+    function getInitialView() {
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_27_30_30_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 28 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_27_30_30_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_27_30_30_4_stop" ]
+        %homeView.1 = local;
+        symbol [ homeView %homeView.1 28 12 20 ];
+        symbol [ HomeView %tmp.4 28 27 35 ];
+        %tmp.4 = getv ? :HomeView;
+        %tmp.5 = self;
+        symbol [ self %tmp.5 28 36 40 ];
+        %tmp.1 = newc %tmp.4 (%tmp.5);
+        lputv %homeView.1 %tmp.1;
+        symbol [ homeView %homeView.1 28 12 20 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 29 8 ]
+        %tmp.6 = newa 2 [WatchUi.View, WatchUi.InputDelegate];
+        symbol [ WatchUi %tmp.6 29 60 67 ];
+        symbol [ View %tmp.6 29 68 72 ];
+        symbol [ WatchUi %tmp.6 29 74 81 ];
+        symbol [ InputDelegate %tmp.6 29 82 95 ];
+        %tmp.7 = lgetv %homeView.1;
+        symbol [ homeView %tmp.7 29 17 25 ];
+        %tmp.8 = dup %tmp.6;
+        %tmp.9 = aputv %tmp.8 0 %tmp.7;
+        symbol [ HomeDelegate %tmp.13 29 31 43 ];
+        %tmp.13 = getv ? :HomeDelegate;
+        %tmp.14 = lgetv %homeView.1;
+        symbol [ homeView %tmp.14 29 44 52 ];
+        %tmp.10 = newc %tmp.13 (%tmp.14);
+        %tmp.15 = dup %tmp.9;
+        %tmp.16 = aputv %tmp.15 1 %tmp.10;
+        ret %tmp.16;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_27_30_30_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 32; @symbol_functiondef = [onStart,32,13,20]; @symbol_param<0> = [state,32,21,26]; ]
+    function onStart(state) as Void {
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 36; @symbol_functiondef = [onStop,36,13,19]; @symbol_param<0> = [state,36,20,25]; ]
+    function onStop(state) as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_36_35_42_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 38 8 ]
+        %tmp.1 = self;
+        symbol [ saveStats %tmp.2 38 8 17 ];
+        %tmp.2 = getv function %tmp.1 :saveStats;
+        invoke %tmp.1 %tmp.2();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 39 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_39_8_41_8_if_stmt:
+        symbol [ storage %tmp.4 39 12 19 ];
+        %tmp.4 = getv ? :storage;
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_39_8_41_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_39_8_41_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_39_29_41_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 40 12 ]
+        symbol [ storage %tmp.8 40 12 19 ];
+        %tmp.8 = getv ? :storage;
+        %tmp.9 = as %tmp.8 { (!Null) };
+        symbol [ save %tmp.10 40 20 24 ];
+        %tmp.10 = getv function %tmp.9 :save;
+        invoke %tmp.9 %tmp.10();
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_39_29_41_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_39_8_41_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_39_8_41_8_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_36_35_42_4_stop:
+    }
+    //! Load statistics from storage
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 45; @symbol_functiondef = [loadStats,45,13,22]; ]
+    function loadStats() as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_45_33_50_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 46 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_46_8_49_8_if_stmt:
+        symbol [ storage %tmp.2 46 12 19 ];
+        %tmp.2 = getv ? :storage;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_46_8_49_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_46_8_49_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_46_29_49_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 47 12 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_47_25_47_99_begin:
+        symbol [ storage %tmp.6 47 25 32 ];
+        %tmp.6 = getv ? :storage;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ getValue %tmp.8 47 33 41 ];
+        %tmp.8 = getv function %tmp.7 :getValue;
+        %tmp.9 = "versesRead";
+        %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
+        %tmp.11 = null;
+        %tmp.12 = ne %tmp.10 %tmp.11;
+        bf %tmp.12 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_47_25_47_99_else_false;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_47_25_47_99_true:
+        symbol [ storage %tmp.14 47 66 73 ];
+        %tmp.14 = getv ? :storage;
+        symbol [ getValue %tmp.15 47 74 82 ];
+        %tmp.15 = getv function %tmp.14 :getValue;
+        %tmp.16 = "versesRead";
+        %tmp.17 = invoke %tmp.14 %tmp.15(%tmp.16);
+        push %tmp.17;
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_47_25_47_99_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_47_25_47_99_else_false:
+        %tmp.18 = 0;
+        push %tmp.18;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_47_25_47_99_end:
+        %tmp.19 = phi [%tmp.12 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_47_25_47_99_begin] [%tmp.17 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_47_25_47_99_true] [%tmp.18 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_47_25_47_99_else_false] [%tmp.19 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_47_25_47_99_end];
+        symbol [ versesRead ? 47 12 22 ];
+        putv self :versesRead %tmp.19;
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 48 12 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_48_21_48_87_begin:
+        symbol [ storage %tmp.21 48 21 28 ];
+        %tmp.21 = getv ? :storage;
+        symbol [ getValue %tmp.22 48 29 37 ];
+        %tmp.22 = getv function %tmp.21 :getValue;
+        %tmp.23 = "streak";
+        %tmp.24 = invoke %tmp.21 %tmp.22(%tmp.23);
+        %tmp.25 = null;
+        %tmp.26 = ne %tmp.24 %tmp.25;
+        bf %tmp.26 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_48_21_48_87_else_false;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_48_21_48_87_true:
+        symbol [ storage %tmp.28 48 58 65 ];
+        %tmp.28 = getv ? :storage;
+        symbol [ getValue %tmp.29 48 66 74 ];
+        %tmp.29 = getv function %tmp.28 :getValue;
+        %tmp.30 = "streak";
+        %tmp.31 = invoke %tmp.28 %tmp.29(%tmp.30);
+        push %tmp.31;
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_48_21_48_87_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_48_21_48_87_else_false:
+        %tmp.32 = 0;
+        push %tmp.32;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_48_21_48_87_end:
+        %tmp.33 = phi [%tmp.26 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_48_21_48_87_begin] [%tmp.31 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_48_21_48_87_true] [%tmp.32 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_48_21_48_87_else_false] [%tmp.33 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_48_21_48_87_end];
+        symbol [ streak ? 48 12 18 ];
+        putv self :streak %tmp.33;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_46_29_49_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_46_8_49_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_46_8_49_8_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_45_33_50_4_stop:
+    }
+    //! Save statistics
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 53; @symbol_functiondef = [saveStats,53,13,22]; ]
+    function saveStats() as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_53_33_58_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 54 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_54_8_57_8_if_stmt:
+        symbol [ storage %tmp.2 54 12 19 ];
+        %tmp.2 = getv ? :storage;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_54_8_57_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_54_8_57_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_54_29_57_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 55 12 ]
+        symbol [ storage %tmp.6 55 12 19 ];
+        %tmp.6 = getv ? :storage;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ setValue %tmp.8 55 20 28 ];
+        %tmp.8 = getv function %tmp.7 :setValue;
+        %tmp.9 = "versesRead";
+        symbol [ versesRead %tmp.11 55 43 53 ];
+        %tmp.11 = getv ? :versesRead;
+        invoke %tmp.7 %tmp.8(%tmp.9, %tmp.11);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 56 12 ]
+        symbol [ storage %tmp.13 56 12 19 ];
+        %tmp.13 = getv ? :storage;
+        symbol [ setValue %tmp.14 56 20 28 ];
+        %tmp.14 = getv function %tmp.13 :setValue;
+        %tmp.15 = "streak";
+        symbol [ streak %tmp.17 56 39 45 ];
+        %tmp.17 = getv ? :streak;
+        invoke %tmp.13 %tmp.14(%tmp.15, %tmp.17);
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_54_29_57_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_54_8_57_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_54_8_57_8_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_53_33_58_4_stop:
+    }
+    //! Increment verses read and update streak
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 61; @symbol_functiondef = [onVerseRead,61,13,24]; ]
+    function onVerseRead() as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_61_35_65_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 62 8 ]
+        symbol [ versesRead %tmp.3 62 8 18 ];
+        %tmp.3 = getv ? :versesRead;
+        %tmp.4 = add %tmp.3 1;
+        symbol [ versesRead ? 62 8 18 ];
+        putv self :versesRead dup %tmp.4;
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 63 8 ]
+        symbol [ streak %tmp.7 63 8 14 ];
+        %tmp.7 = getv ? :streak;
+        %tmp.8 = add %tmp.7 1;
+        symbol [ streak ? 63 8 14 ];
+        putv self :streak dup %tmp.8;
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 64 8 ]
+        %tmp.9 = self;
+        symbol [ saveStats %tmp.10 64 8 17 ];
+        %tmp.10 = getv function %tmp.9 :saveStats;
+        invoke %tmp.9 %tmp.10();
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_61_35_65_4_stop:
+    }
+    //! Get all favorites
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 68; @symbol_functiondef = [getFavorites,68,13,25]; @symbol_return<0> = [Array,68,31,36]; @symbol_return<1> = [Verse,68,37,42]; ]
+    function getFavorites() as Array<Verse> {
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_68_44_73_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 69 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_69_8_71_8_if_stmt:
+        symbol [ storage %tmp.2 69 12 19 ];
+        %tmp.2 = getv ? :storage;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_69_8_71_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_69_8_71_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_69_29_71_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 70 12 ]
+        symbol [ storage %tmp.6 70 19 26 ];
+        %tmp.6 = getv ? :storage;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ getFavorites %tmp.8 70 27 39 ];
+        %tmp.8 = getv function %tmp.7 :getFavorites;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        ret %tmp.9;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_69_29_71_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_69_8_71_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_69_8_71_8_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 72 8 ]
+        %tmp.10 = newa 0;
+        ret %tmp.10;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_68_44_73_4_stop:
+    }
+    //! Add to favorites
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 76; @symbol_functiondef = [addFavorite,76,13,24]; @symbol_param<0> = [verse,76,25,30]; @symbol_param<0>_type<0> = [Verse,76,34,39]; @symbol_return<0> = [Boolean,76,44,51]; ]
+    function addFavorite(verse as Verse) as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_76_52_81_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 77 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_77_8_79_8_if_stmt:
+        symbol [ storage %tmp.2 77 12 19 ];
+        %tmp.2 = getv ? :storage;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_77_8_79_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_77_8_79_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_77_29_79_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 78 12 ]
+        symbol [ storage %tmp.6 78 19 26 ];
+        %tmp.6 = getv ? :storage;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ addFavorite %tmp.8 78 27 38 ];
+        %tmp.8 = getv function %tmp.7 :addFavorite;
+        %tmp.9 = lgetv %verse;
+        symbol [ verse %tmp.9 78 39 44 ];
+        %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
+        ret %tmp.10;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_77_29_79_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_77_8_79_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_77_8_79_8_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 80 8 ]
+        %tmp.11 = false;
+        ret %tmp.11;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_76_52_81_4_stop:
+    }
+    //! Remove from favorites
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 84; @symbol_functiondef = [removeFavorite,84,13,27]; @symbol_param<0> = [verse,84,28,33]; @symbol_param<0>_type<0> = [Verse,84,37,42]; @symbol_return<0> = [Boolean,84,47,54]; ]
+    function removeFavorite(verse as Verse) as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_84_55_89_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 85 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_85_8_87_8_if_stmt:
+        symbol [ storage %tmp.2 85 12 19 ];
+        %tmp.2 = getv ? :storage;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_85_8_87_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_85_8_87_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_85_29_87_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 86 12 ]
+        symbol [ storage %tmp.6 86 19 26 ];
+        %tmp.6 = getv ? :storage;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ removeFavorite %tmp.8 86 27 41 ];
+        %tmp.8 = getv function %tmp.7 :removeFavorite;
+        %tmp.9 = lgetv %verse;
+        symbol [ verse %tmp.9 86 42 47 ];
+        %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
+        ret %tmp.10;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_85_29_87_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_85_8_87_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_85_8_87_8_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 88 8 ]
+        %tmp.11 = false;
+        ret %tmp.11;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_84_55_89_4_stop:
+    }
+    //! Check if verse is favorite
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 92; @symbol_functiondef = [isFavorite,92,13,23]; @symbol_param<0> = [verse,92,24,29]; @symbol_param<0>_type<0> = [Verse,92,33,38]; @symbol_return<0> = [Boolean,92,43,50]; ]
+    function isFavorite(verse as Verse) as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_92_51_97_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 93 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_93_8_95_8_if_stmt:
+        symbol [ storage %tmp.2 93 12 19 ];
+        %tmp.2 = getv ? :storage;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_93_8_95_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_93_8_95_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_93_29_95_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 94 12 ]
+        symbol [ storage %tmp.6 94 19 26 ];
+        %tmp.6 = getv ? :storage;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ isFavorite %tmp.8 94 27 37 ];
+        %tmp.8 = getv function %tmp.7 :isFavorite;
+        %tmp.9 = lgetv %verse;
+        symbol [ verse %tmp.9 94 38 43 ];
+        %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
+        ret %tmp.10;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_93_29_95_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_93_8_95_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_93_8_95_8_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 96 8 ]
+        %tmp.11 = false;
+        ret %tmp.11;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_92_51_97_4_stop:
+    }
+    //! Get verses by theme
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 100; @symbol_functiondef = [getVersesByTheme,100,13,29]; @symbol_param<0> = [theme,100,30,35]; @symbol_param<0>_type<0> = [String,100,39,45]; @symbol_return<0> = [Array,100,50,55]; @symbol_return<1> = [Verse,100,56,61]; ]
+    function getVersesByTheme(theme as String) as Array<Verse> {
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_100_63_102_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 101 8 ]
+        symbol [ Verses %tmp.2 101 15 21 ];
+        %tmp.2 = getv ? :Verses;
+        symbol [ getByTheme %tmp.3 101 22 32 ];
+        %tmp.3 = getv function %tmp.2 :getByTheme;
+        %tmp.4 = lgetv %theme;
+        symbol [ theme %tmp.4 101 33 38 ];
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        ret %tmp.5;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_100_63_102_4_stop:
+    }
+    //! Get all verses
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 105; @symbol_functiondef = [getAllVerses,105,13,25]; @symbol_return<0> = [Array,105,31,36]; @symbol_return<1> = [Verse,105,37,42]; ]
+    function getAllVerses() as Array<Verse> {
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_105_44_107_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc" 106 8 ]
+        symbol [ Verses %tmp.2 106 15 21 ];
+        %tmp.2 = getv ? :Verses;
+        symbol [ getAll %tmp.3 106 22 28 ];
+        %tmp.3 = getv function %tmp.2 :getAll;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        ret %tmp.4;
+_Users_jeffcechinel_Github_versevault_garmin_source_VerseVaultApp_mc_105_44_107_4_stop:
+    }
+}
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/VerseVaultApp.mc"; @line = 1; ]
+<init> {
+}

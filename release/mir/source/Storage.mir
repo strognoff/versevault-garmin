@@ -1,0 +1,515 @@
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Application,2,14,25]; @symbol_importdef<2> = [Storage,2,26,33]; ]
+import Toybox.Application.Storage;
+//! Simple storage for favorites and settings
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 5; @symbol_classdef = [Storage,5,6,13]; ]
+class Storage {
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 5; ]
+    <init> {
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 7 16 ]
+        %tmp.1 = newa 0;
+        putv self :_favorites %tmp.1;
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 7; @position = 16; @symbol_vardef = [_favorites,7,16,26]; @symbol_type<0> = [Array,7,30,35]; @symbol_type<1> = [Verse,7,36,41]; ]
+    private
+    var _favorites as Array<Verse>;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 8; @position = 16; @symbol_vardef = [_favoritesKey,8,16,29]; @symbol_type<0> = [String,8,33,39]; ]
+    private
+    var _favoritesKey as String = "versevault_favorites";
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 10; @symbol_functiondef = [initialize,10,13,23]; ]
+    function initialize() as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_10_26_12_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 11 8 ]
+        %tmp.1 = self;
+        symbol [ load %tmp.2 11 8 12 ];
+        %tmp.2 = getv function %tmp.1 :load;
+        invoke %tmp.1 %tmp.2();
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_10_26_12_4_stop:
+    }
+    //! Get a value from storage
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 15; @symbol_functiondef = [getValue,15,13,21]; @symbol_param<0> = [key,15,22,25]; @symbol_param<0>_type<0> = [String,15,29,35]; @symbol_return<0> = [Object,15,40,46]; ]
+    function getValue(key as String) as Object or Null {
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_15_48_17_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 16 8 ]
+        symbol [ Storage %tmp.1 16 15 22 ];
+        %tmp.1 = getm $.Toybox.Application.Storage;
+        symbol [ getValue %tmp.2 16 23 31 ];
+        %tmp.2 = getv function %tmp.1 :getValue;
+        %tmp.3 = lgetv %key;
+        symbol [ key %tmp.3 16 32 35 ];
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        ret %tmp.4;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_15_48_17_4_stop:
+    }
+    //! Set a value in storage
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 20; @symbol_functiondef = [setValue,20,13,21]; @symbol_param<0> = [key,20,22,25]; @symbol_param<0>_type<0> = [String,20,29,35]; @symbol_param<1> = [value,20,37,42]; @symbol_param<1>_type<0> = [Object,20,46,52]; ]
+    function setValue(key as String, value as Object) as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_20_62_22_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 21 8 ]
+        symbol [ Storage %tmp.1 21 8 15 ];
+        %tmp.1 = getm $.Toybox.Application.Storage;
+        symbol [ setValue %tmp.2 21 16 24 ];
+        %tmp.2 = getv function %tmp.1 :setValue;
+        %tmp.3 = lgetv %key;
+        symbol [ key %tmp.3 21 25 28 ];
+        %tmp.4 = lgetv %value;
+        symbol [ value %tmp.4 21 30 35 ];
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4);
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_20_62_22_4_stop:
+    }
+    //! Get all favorites
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 25; @symbol_functiondef = [getFavorites,25,13,25]; @symbol_return<0> = [Array,25,31,36]; @symbol_return<1> = [Verse,25,37,42]; ]
+    function getFavorites() as Array<Verse> {
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_25_44_27_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 26 8 ]
+        symbol [ _favorites %tmp.2 26 15 25 ];
+        %tmp.2 = getv ? :_favorites;
+        ret %tmp.2;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_25_44_27_4_stop:
+    }
+    //! Check if verse is in favorites
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 30; @symbol_functiondef = [isFavorite,30,13,23]; @symbol_param<0> = [verse,30,24,29]; @symbol_param<0>_type<0> = [Verse,30,33,38]; @symbol_return<0> = [Boolean,30,43,50]; ]
+    function isFavorite(verse as Verse) as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_30_51_37_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 31 8 ]
+        for @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_31_8_35_8_for_test @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_31_8_35_8_for_incr @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_31_8_35_8_for_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_31_8_35_8_for_init:
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_31_8_35_8_for_begin" "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_31_8_35_8_for_end" ]
+        %i.1 = local;
+        symbol [ i %i.1 31 17 18 ];
+        %tmp.1 = 0;
+        lputv %i.1 %tmp.1;
+        symbol [ i %i.1 31 17 18 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_31_8_35_8_for_test:
+        %tmp.2 = lgetv %i.1;
+        symbol [ i %tmp.2 31 24 25 ];
+        symbol [ _favorites %tmp.4 31 28 38 ];
+        %tmp.4 = getv ? :_favorites;
+        symbol [ size %tmp.5 31 39 43 ];
+        %tmp.5 = getv function %tmp.4 :size;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        %tmp.7 = lt %tmp.2 %tmp.6;
+        bf %tmp.7 @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_31_8_35_8_for_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_31_8_35_8_for_begin:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_31_52_35_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 32 12 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_32_12_34_12_if_stmt:
+        symbol [ _favorites %tmp.9 32 16 26 ];
+        %tmp.9 = getv ? :_favorites;
+        %tmp.10 = lgetv %i.1;
+        symbol [ i %tmp.10 32 27 28 ];
+        %tmp.11 = agetv %tmp.9 %tmp.10;
+        symbol [ reference %tmp.12 32 30 39 ];
+        %tmp.12 = getv %tmp.11 :reference;
+        symbol [ equals %tmp.13 32 40 46 ];
+        %tmp.13 = getv function %tmp.12 :equals;
+        %tmp.14 = lgetv %verse;
+        symbol [ verse %tmp.14 32 47 52 ];
+        symbol [ reference %tmp.15 32 53 62 ];
+        %tmp.15 = getv %tmp.14 :reference;
+        %tmp.16 = invoke %tmp.12 %tmp.13(%tmp.15);
+        bf %tmp.16 @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_32_12_34_12_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_32_12_34_12_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_32_65_34_12_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 33 16 ]
+        %tmp.17 = true;
+        ret %tmp.17;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_32_65_34_12_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_32_12_34_12_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_32_12_34_12_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_31_52_35_8_stop:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_31_8_35_8_for_incr:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 31 ]
+        %tmp.20 = lgetv %i.1;
+        symbol [ i %tmp.20 31 47 48 ];
+        %tmp.21 = add %tmp.20 1;
+        lputv %i.1 %tmp.21;
+        symbol [ i %i.1 31 47 48 ];
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_31_8_35_8_for_test;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_31_8_35_8_for_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 36 8 ]
+        %tmp.22 = false;
+        ret %tmp.22;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_30_51_37_4_stop:
+    }
+    //! Add verse to favorites
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 40; @symbol_functiondef = [addFavorite,40,13,24]; @symbol_param<0> = [verse,40,25,30]; @symbol_param<0>_type<0> = [Verse,40,34,39]; @symbol_return<0> = [Boolean,40,44,51]; ]
+    function addFavorite(verse as Verse) as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_40_52_47_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 41 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_41_8_43_8_if_stmt:
+        %tmp.1 = self;
+        symbol [ isFavorite %tmp.2 41 12 22 ];
+        %tmp.2 = getv function %tmp.1 :isFavorite;
+        %tmp.3 = lgetv %verse;
+        symbol [ verse %tmp.3 41 23 28 ];
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        bf %tmp.4 @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_41_8_43_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_41_8_43_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_41_31_43_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 42 12 ]
+        %tmp.5 = false;
+        ret %tmp.5;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_41_31_43_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_41_8_43_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_41_8_43_8_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 44 8 ]
+        symbol [ _favorites %tmp.7 44 8 18 ];
+        %tmp.7 = getv ? :_favorites;
+        symbol [ add %tmp.8 44 19 22 ];
+        %tmp.8 = getv function %tmp.7 :add;
+        %tmp.9 = lgetv %verse;
+        symbol [ verse %tmp.9 44 23 28 ];
+        invoke %tmp.7 %tmp.8(%tmp.9);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 45 8 ]
+        %tmp.10 = self;
+        symbol [ save %tmp.11 45 8 12 ];
+        %tmp.11 = getv function %tmp.10 :save;
+        invoke %tmp.10 %tmp.11();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 46 8 ]
+        %tmp.12 = true;
+        ret %tmp.12;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_40_52_47_4_stop:
+    }
+    //! Remove verse from favorites
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 50; @symbol_functiondef = [removeFavorite,50,13,27]; @symbol_param<0> = [verse,50,28,33]; @symbol_param<0>_type<0> = [Verse,50,37,42]; @symbol_return<0> = [Boolean,50,47,54]; ]
+    function removeFavorite(verse as Verse) as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_50_55_59_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 51 8 ]
+        for @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_51_8_57_8_for_test @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_51_8_57_8_for_incr @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_51_8_57_8_for_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_51_8_57_8_for_init:
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_51_8_57_8_for_begin" "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_51_8_57_8_for_end" ]
+        %i.1 = local;
+        symbol [ i %i.1 51 17 18 ];
+        %tmp.1 = 0;
+        lputv %i.1 %tmp.1;
+        symbol [ i %i.1 51 17 18 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_51_8_57_8_for_test:
+        %tmp.2 = lgetv %i.1;
+        symbol [ i %tmp.2 51 24 25 ];
+        symbol [ _favorites %tmp.4 51 28 38 ];
+        %tmp.4 = getv ? :_favorites;
+        symbol [ size %tmp.5 51 39 43 ];
+        %tmp.5 = getv function %tmp.4 :size;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        %tmp.7 = lt %tmp.2 %tmp.6;
+        bf %tmp.7 @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_51_8_57_8_for_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_51_8_57_8_for_begin:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_51_52_57_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 52 12 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_52_12_56_12_if_stmt:
+        symbol [ _favorites %tmp.9 52 16 26 ];
+        %tmp.9 = getv ? :_favorites;
+        %tmp.10 = lgetv %i.1;
+        symbol [ i %tmp.10 52 27 28 ];
+        %tmp.11 = agetv %tmp.9 %tmp.10;
+        symbol [ reference %tmp.12 52 30 39 ];
+        %tmp.12 = getv %tmp.11 :reference;
+        symbol [ equals %tmp.13 52 40 46 ];
+        %tmp.13 = getv function %tmp.12 :equals;
+        %tmp.14 = lgetv %verse;
+        symbol [ verse %tmp.14 52 47 52 ];
+        symbol [ reference %tmp.15 52 53 62 ];
+        %tmp.15 = getv %tmp.14 :reference;
+        %tmp.16 = invoke %tmp.12 %tmp.13(%tmp.15);
+        bf %tmp.16 @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_52_12_56_12_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_52_12_56_12_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_52_65_56_12_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 53 16 ]
+        symbol [ _favorites %tmp.18 53 16 26 ];
+        %tmp.18 = getv ? :_favorites;
+        symbol [ remove %tmp.19 53 27 33 ];
+        %tmp.19 = getv function %tmp.18 :remove;
+        %tmp.20 = lgetv %verse;
+        symbol [ verse %tmp.20 53 34 39 ];
+        invoke %tmp.18 %tmp.19(%tmp.20);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 54 16 ]
+        %tmp.21 = self;
+        symbol [ save %tmp.22 54 16 20 ];
+        %tmp.22 = getv function %tmp.21 :save;
+        invoke %tmp.21 %tmp.22();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 55 16 ]
+        %tmp.23 = true;
+        ret %tmp.23;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_52_65_56_12_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_52_12_56_12_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_52_12_56_12_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_51_52_57_8_stop:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_51_8_57_8_for_incr:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 51 ]
+        %tmp.26 = lgetv %i.1;
+        symbol [ i %tmp.26 51 47 48 ];
+        %tmp.27 = add %tmp.26 1;
+        lputv %i.1 %tmp.27;
+        symbol [ i %i.1 51 47 48 ];
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_51_8_57_8_for_test;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_51_8_57_8_for_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 58 8 ]
+        %tmp.28 = false;
+        ret %tmp.28;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_50_55_59_4_stop:
+    }
+    //! Save favorites to storage
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 62; @symbol_functiondef = [save,62,13,17]; ]
+    function save() as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_62_28_69_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 64 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_62_28_69_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_62_28_69_4_stop" ]
+        %refs.1 = local;
+        symbol [ refs %refs.1 64 12 16 ];
+        %tmp.1 = newa 0 Array<String>;
+        symbol [ Array %tmp.1 64 25 30 ];
+        symbol [ String %tmp.1 64 31 37 ];
+        lputv %refs.1 %tmp.1;
+        symbol [ refs %refs.1 64 12 16 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 65 8 ]
+        for @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_65_8_67_8_for_test @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_65_8_67_8_for_incr @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_65_8_67_8_for_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_65_8_67_8_for_init:
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_65_8_67_8_for_begin" "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_65_8_67_8_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 65 17 18 ];
+        %tmp.2 = 0;
+        lputv %i.2 %tmp.2;
+        symbol [ i %i.2 65 17 18 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_65_8_67_8_for_test:
+        %tmp.3 = lgetv %i.2;
+        symbol [ i %tmp.3 65 24 25 ];
+        symbol [ _favorites %tmp.5 65 28 38 ];
+        %tmp.5 = getv ? :_favorites;
+        symbol [ size %tmp.6 65 39 43 ];
+        %tmp.6 = getv function %tmp.5 :size;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        %tmp.8 = lt %tmp.3 %tmp.7;
+        bf %tmp.8 @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_65_8_67_8_for_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_65_8_67_8_for_begin:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_65_52_67_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 66 12 ]
+        %tmp.9 = lgetv %refs.1;
+        symbol [ refs %tmp.9 66 12 16 ];
+        symbol [ add %tmp.10 66 17 20 ];
+        %tmp.10 = getv function %tmp.9 :add;
+        symbol [ _favorites %tmp.12 66 21 31 ];
+        %tmp.12 = getv ? :_favorites;
+        %tmp.13 = lgetv %i.2;
+        symbol [ i %tmp.13 66 32 33 ];
+        %tmp.14 = agetv %tmp.12 %tmp.13;
+        symbol [ reference %tmp.15 66 35 44 ];
+        %tmp.15 = getv %tmp.14 :reference;
+        invoke %tmp.9 %tmp.10(%tmp.15);
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_65_52_67_8_stop:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_65_8_67_8_for_incr:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 65 ]
+        %tmp.18 = lgetv %i.2;
+        symbol [ i %tmp.18 65 47 48 ];
+        %tmp.19 = add %tmp.18 1;
+        lputv %i.2 %tmp.19;
+        symbol [ i %i.2 65 47 48 ];
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_65_8_67_8_for_test;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_65_8_67_8_for_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 68 8 ]
+        symbol [ Storage %tmp.20 68 8 15 ];
+        %tmp.20 = getm $.Toybox.Application.Storage;
+        symbol [ setValue %tmp.21 68 16 24 ];
+        %tmp.21 = getv function %tmp.20 :setValue;
+        symbol [ _favoritesKey %tmp.23 68 25 38 ];
+        %tmp.23 = getv ? :_favoritesKey;
+        %tmp.24 = lgetv %refs.1;
+        symbol [ refs %tmp.24 68 40 44 ];
+        invoke %tmp.20 %tmp.21(%tmp.23, %tmp.24);
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_62_28_69_4_stop:
+    }
+    //! Load favorites from storage
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 72; @symbol_functiondef = [load,72,13,17]; ]
+    function load() as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_72_28_83_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 73 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_72_28_83_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_72_28_83_4_stop" ]
+        %refs.1 = local;
+        symbol [ refs %refs.1 73 12 16 ];
+        symbol [ Storage %tmp.1 73 19 26 ];
+        %tmp.1 = getm $.Toybox.Application.Storage;
+        symbol [ getValue %tmp.2 73 27 35 ];
+        %tmp.2 = getv function %tmp.1 :getValue;
+        symbol [ _favoritesKey %tmp.4 73 36 49 ];
+        %tmp.4 = getv ? :_favoritesKey;
+        %tmp.5 = invoke %tmp.1 %tmp.2(%tmp.4);
+        %tmp.6 = as %tmp.5 Array<String> or Null;
+        symbol [ Array %tmp.6 73 54 59 ];
+        symbol [ String %tmp.6 73 60 66 ];
+        lputv %refs.1 %tmp.6;
+        symbol [ refs %refs.1 73 12 16 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 74 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_74_8_82_8_if_stmt:
+        %tmp.7 = lgetv %refs.1;
+        symbol [ refs %tmp.7 74 12 16 ];
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        bf %tmp.9 @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_74_8_82_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_74_8_82_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_74_26_82_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 75 12 ]
+        %tmp.10 = newa 0;
+        symbol [ _favorites ? 75 12 22 ];
+        putv self :_favorites %tmp.10;
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 76 12 ]
+        for @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_76_12_81_12_for_test @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_76_12_81_12_for_incr @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_76_12_81_12_for_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_76_12_81_12_for_init:
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_76_12_81_12_for_begin" "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_76_12_81_12_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 76 21 22 ];
+        %tmp.11 = 0;
+        lputv %i.2 %tmp.11;
+        symbol [ i %i.2 76 21 22 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_76_12_81_12_for_test:
+        %tmp.12 = lgetv %i.2;
+        symbol [ i %tmp.12 76 28 29 ];
+        %tmp.13 = lgetv %refs.1;
+        symbol [ refs %tmp.13 76 32 36 ];
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ size %tmp.15 76 37 41 ];
+        %tmp.15 = getv function %tmp.14 :size;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        %tmp.17 = lt %tmp.12 %tmp.16;
+        bf %tmp.17 @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_76_12_81_12_for_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_76_12_81_12_for_begin:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_76_50_81_12_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 77 16 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_76_50_81_12_start" "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_76_50_81_12_stop" ]
+        %v.3 = local;
+        symbol [ v %v.3 77 20 21 ];
+        %tmp.18 = self;
+        symbol [ findVerseByReference %tmp.19 77 24 44 ];
+        %tmp.19 = getv function %tmp.18 :findVerseByReference;
+        %tmp.20 = lgetv %refs.1;
+        symbol [ refs %tmp.20 77 45 49 ];
+        %tmp.21 = as %tmp.20 { (!Null) };
+        %tmp.22 = lgetv %i.2;
+        symbol [ i %tmp.22 77 50 51 ];
+        %tmp.23 = agetv %tmp.21 %tmp.22;
+        %tmp.24 = invoke %tmp.18 %tmp.19(%tmp.23);
+        lputv %v.3 %tmp.24;
+        symbol [ v %v.3 77 20 21 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 78 16 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_78_16_80_16_if_stmt:
+        %tmp.25 = lgetv %v.3;
+        symbol [ v %tmp.25 78 20 21 ];
+        %tmp.26 = null;
+        %tmp.27 = ne %tmp.25 %tmp.26;
+        bf %tmp.27 @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_78_16_80_16_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_78_16_80_16_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_78_31_80_16_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 79 20 ]
+        symbol [ _favorites %tmp.29 79 20 30 ];
+        %tmp.29 = getv ? :_favorites;
+        symbol [ add %tmp.30 79 31 34 ];
+        %tmp.30 = getv function %tmp.29 :add;
+        %tmp.31 = lgetv %v.3;
+        symbol [ v %tmp.31 79 35 36 ];
+        %tmp.32 = as %tmp.31 { (!Null) };
+        invoke %tmp.29 %tmp.30(%tmp.32);
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_78_31_80_16_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_78_16_80_16_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_78_16_80_16_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_76_50_81_12_stop:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_76_12_81_12_for_incr:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 76 ]
+        %tmp.35 = lgetv %i.2;
+        symbol [ i %tmp.35 76 45 46 ];
+        %tmp.36 = add %tmp.35 1;
+        lputv %i.2 %tmp.36;
+        symbol [ i %i.2 76 45 46 ];
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_76_12_81_12_for_test;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_76_12_81_12_for_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_74_26_82_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_74_8_82_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_74_8_82_8_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_72_28_83_4_stop:
+    }
+    //! Find verse by reference
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 86; @symbol_functiondef = [findVerseByReference,86,21,41]; @symbol_param<0> = [ref,86,42,45]; @symbol_param<0>_type<0> = [String,86,49,55]; @symbol_return<0> = [Verse,86,60,65]; ]
+    private
+    function findVerseByReference(ref as String) as Verse or Null {
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_86_67_94_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 87 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_86_67_94_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_86_67_94_4_stop" ]
+        %all.1 = local;
+        symbol [ all %all.1 87 12 15 ];
+        symbol [ Verses %tmp.2 87 18 24 ];
+        %tmp.2 = getv ? :Verses;
+        symbol [ getAll %tmp.3 87 25 31 ];
+        %tmp.3 = getv function %tmp.2 :getAll;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %all.1 %tmp.4;
+        symbol [ all %all.1 87 12 15 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 88 8 ]
+        for @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_88_8_92_8_for_test @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_88_8_92_8_for_incr @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_88_8_92_8_for_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_88_8_92_8_for_init:
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_88_8_92_8_for_begin" "_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_88_8_92_8_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 88 17 18 ];
+        %tmp.5 = 0;
+        lputv %i.2 %tmp.5;
+        symbol [ i %i.2 88 17 18 ];
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_88_8_92_8_for_test:
+        %tmp.6 = lgetv %i.2;
+        symbol [ i %tmp.6 88 24 25 ];
+        %tmp.7 = lgetv %all.1;
+        symbol [ all %tmp.7 88 28 31 ];
+        symbol [ size %tmp.8 88 32 36 ];
+        %tmp.8 = getv function %tmp.7 :size;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        %tmp.10 = lt %tmp.6 %tmp.9;
+        bf %tmp.10 @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_88_8_92_8_for_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_88_8_92_8_for_begin:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_88_45_92_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 89 12 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_89_12_91_12_if_stmt:
+        %tmp.11 = lgetv %all.1;
+        symbol [ all %tmp.11 89 16 19 ];
+        %tmp.12 = lgetv %i.2;
+        symbol [ i %tmp.12 89 20 21 ];
+        %tmp.13 = agetv %tmp.11 %tmp.12;
+        symbol [ reference %tmp.14 89 23 32 ];
+        %tmp.14 = getv %tmp.13 :reference;
+        symbol [ equals %tmp.15 89 33 39 ];
+        %tmp.15 = getv function %tmp.14 :equals;
+        %tmp.16 = lgetv %ref;
+        symbol [ ref %tmp.16 89 40 43 ];
+        %tmp.17 = invoke %tmp.14 %tmp.15(%tmp.16);
+        bf %tmp.17 @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_89_12_91_12_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_89_12_91_12_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_89_46_91_12_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 90 16 ]
+        %tmp.18 = lgetv %all.1;
+        symbol [ all %tmp.18 90 23 26 ];
+        %tmp.19 = lgetv %i.2;
+        symbol [ i %tmp.19 90 27 28 ];
+        %tmp.20 = agetv %tmp.18 %tmp.19;
+        ret %tmp.20;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_89_46_91_12_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_89_12_91_12_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_89_12_91_12_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_88_45_92_8_stop:
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_88_8_92_8_for_incr:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 88 ]
+        %tmp.23 = lgetv %i.2;
+        symbol [ i %tmp.23 88 40 41 ];
+        %tmp.24 = add %tmp.23 1;
+        lputv %i.2 %tmp.24;
+        symbol [ i %i.2 88 40 41 ];
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_88_8_92_8_for_test;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_88_8_92_8_for_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc" 93 8 ]
+        %tmp.25 = null;
+        ret %tmp.25;
+_Users_jeffcechinel_Github_versevault_garmin_source_Storage_mc_86_67_94_4_stop:
+    }
+}
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/Storage.mc"; @line = 1; ]
+<init> {
+}

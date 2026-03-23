@@ -34,6 +34,11 @@ class HomeDelegate extends WatchUi.BehaviorDelegate {
             var themesView = new ThemesView(_view);
             WatchUi.pushView(themesView, new ThemesDelegate(themesView), WatchUi.SLIDE_DOWN);
             return true;
+        } else if (direction == WatchUi.SWIPE_RIGHT) {
+            // Open Settings/Stats view (for watches without menu button)
+            var settingsView = new SettingsView();
+            WatchUi.pushView(settingsView, new SettingsDelegate(), WatchUi.SLIDE_LEFT);
+            return true;
         }
         
         return false;

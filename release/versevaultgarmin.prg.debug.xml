@@ -3,7 +3,7 @@
     <manifest filename="/Users/jeffcechinel/Github/versevault-garmin/manifest.xml"/>
     <pcToLineNum>
         <entry filename="/Users/jeffcechinel/Github/versevault-garmin/source/HomeView.mc" id="1" lineNum="6" parent="globals/HomeView" pc="268435460" symbol="&lt;init&gt;"/>
-        <entry filename="/Users/jeffcechinel/Github/versevault-garmin/bin/gen/006-B4533-00/source/Rez.mcgen" id="2" lineNum="7" parent="globals/Rez" pc="268435472" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/jeffcechinel/Github/versevault-garmin/release/gen/006-B3907-00/source/Rez.mcgen" id="2" lineNum="7" parent="globals/Rez" pc="268435472" symbol="&lt;init&gt;"/>
         <entry filename="/Users/jeffcechinel/Github/versevault-garmin/source/SettingsView.mc" id="3" lineNum="6" parent="globals/SettingsView" pc="268435492" symbol="&lt;init&gt;"/>
         <entry filename="/Users/jeffcechinel/Github/versevault-garmin/source/HomeDelegate.mc" id="4" lineNum="5" parent="globals/HomeDelegate" pc="268435504" symbol="&lt;init&gt;"/>
         <entry filename="/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" id="5" lineNum="5" parent="globals/ThemesDelegate" pc="268435516" symbol="&lt;init&gt;"/>
@@ -894,7 +894,7 @@
         <entry arg="true" endPc="268445736" name="view" stackId="1" startPc="268445713"/>
         <entry arg="true" endPc="268445752" name="clickEvent" stackId="1" startPc="268445737"/>
     </localVars>
-    <deviceInfo deviceVersion="5c7ae9cf907f88c116a91dc4ffd75be9b5b7d2e9" partNumber="006-B4533-00"/>
+    <deviceInfo deviceVersion="5c7ae9cf907f88c116a91dc4ffd75be9b5b7d2e9" partNumber="006-B3907-00"/>
     <annotations>
         <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COMFORT"/>

@@ -1,0 +1,284 @@
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+//! Input delegate for ThemesView
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc"; @line = 5; @symbol_classdef = [ThemesDelegate,5,6,20]; @symbol_extends<0> = [WatchUi,5,29,36]; @symbol_extends<1> = [BehaviorDelegate,5,37,53]; ]
+class ThemesDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc"; @line = 7; @position = 16; @symbol_vardef = [_view,7,16,21]; @symbol_type<0> = [ThemesView,7,25,35]; ]
+    private
+    var _view as ThemesView;
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc"; @line = 9; @symbol_functiondef = [initialize,9,13,23]; @symbol_param<0> = [view,9,24,28]; @symbol_param<0>_type<0> = [ThemesView,9,32,42]; ]
+    function initialize(view as ThemesView) as Void {
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_9_44_12_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 10 8 ]
+        symbol [ BehaviorDelegate %tmp.2 10 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 10 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 11 8 ]
+        %tmp.4 = lgetv %view;
+        symbol [ view %tmp.4 11 16 20 ];
+        symbol [ _view ? 11 8 13 ];
+        putv self :_view %tmp.4;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_9_44_12_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc"; @line = 14; @symbol_functiondef = [onSwipe,14,13,20]; @symbol_param<0> = [swipeEvent,14,21,31]; @symbol_param<0>_type<0> = [WatchUi,14,35,42]; @symbol_param<0>_type<1> = [SwipeEvent,14,43,53]; @symbol_return<0> = [Boolean,14,58,65]; ]
+    function onSwipe(swipeEvent as WatchUi.SwipeEvent) as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_14_66_26_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 15 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_14_66_26_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_14_66_26_4_stop" ]
+        %direction.1 = local;
+        symbol [ direction %direction.1 15 12 21 ];
+        %tmp.1 = lgetv %swipeEvent;
+        symbol [ swipeEvent %tmp.1 15 24 34 ];
+        symbol [ getDirection %tmp.2 15 35 47 ];
+        %tmp.2 = getv function %tmp.1 :getDirection;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %direction.1 %tmp.3;
+        symbol [ direction %direction.1 15 12 21 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 17 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_17_8_23_8_if_stmt:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_17_12_17_68_begin:
+        %tmp.4 = lgetv %direction.1;
+        symbol [ direction %tmp.4 17 12 21 ];
+        symbol [ WatchUi %tmp.5 17 25 32 ];
+        %tmp.5 = getm $.Toybox.WatchUi;
+        symbol [ SWIPE_LEFT %tmp.6 17 33 43 ];
+        %tmp.6 = getv %tmp.5 :SWIPE_LEFT;
+        %tmp.7 = eq %tmp.4 %tmp.6;
+        bt %tmp.7 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_17_8_23_8_if_true;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_17_47_17_68_false:
+        %tmp.8 = lgetv %direction.1;
+        symbol [ direction %tmp.8 17 47 56 ];
+        symbol [ WatchUi %tmp.9 17 60 67 ];
+        %tmp.9 = getm $.Toybox.WatchUi;
+        symbol [ SWIPE_DOWN %tmp.10 17 68 78 ];
+        %tmp.10 = getv %tmp.9 :SWIPE_DOWN;
+        %tmp.11 = eq %tmp.8 %tmp.10;
+        push %tmp.11;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_17_47_17_68_end:
+        %tmp.12 = phi [%tmp.7 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_17_12_17_68_begin] [%tmp.11 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_17_47_17_68_false] [%tmp.12 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_17_47_17_68_end];
+        bf %tmp.12 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_17_8_23_8_if_false;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_17_8_23_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_17_80_20_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 18 12 ]
+        symbol [ _view %tmp.14 18 12 17 ];
+        %tmp.14 = getv ? :_view;
+        symbol [ selectNext %tmp.15 18 18 28 ];
+        %tmp.15 = getv function %tmp.14 :selectNext;
+        invoke %tmp.14 %tmp.15();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 19 12 ]
+        %tmp.16 = true;
+        ret %tmp.16;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_17_80_20_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_17_8_23_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_17_8_23_8_if_false:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 20 15 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_20_15_23_8_if_stmt:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_20_19_20_76_begin:
+        %tmp.17 = lgetv %direction.1;
+        symbol [ direction %tmp.17 20 19 28 ];
+        symbol [ WatchUi %tmp.18 20 32 39 ];
+        %tmp.18 = getm $.Toybox.WatchUi;
+        symbol [ SWIPE_RIGHT %tmp.19 20 40 51 ];
+        %tmp.19 = getv %tmp.18 :SWIPE_RIGHT;
+        %tmp.20 = eq %tmp.17 %tmp.19;
+        bt %tmp.20 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_20_15_23_8_if_true;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_20_55_20_76_false:
+        %tmp.21 = lgetv %direction.1;
+        symbol [ direction %tmp.21 20 55 64 ];
+        symbol [ WatchUi %tmp.22 20 68 75 ];
+        %tmp.22 = getm $.Toybox.WatchUi;
+        symbol [ SWIPE_UP %tmp.23 20 76 84 ];
+        %tmp.23 = getv %tmp.22 :SWIPE_UP;
+        %tmp.24 = eq %tmp.21 %tmp.23;
+        push %tmp.24;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_20_55_20_76_end:
+        %tmp.25 = phi [%tmp.20 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_20_19_20_76_begin] [%tmp.24 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_20_55_20_76_false] [%tmp.25 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_20_55_20_76_end];
+        bf %tmp.25 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_20_15_23_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_20_15_23_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_20_86_23_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 21 12 ]
+        symbol [ _view %tmp.27 21 12 17 ];
+        %tmp.27 = getv ? :_view;
+        symbol [ selectPrevious %tmp.28 21 18 32 ];
+        %tmp.28 = getv function %tmp.27 :selectPrevious;
+        invoke %tmp.27 %tmp.28();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 22 12 ]
+        %tmp.29 = true;
+        ret %tmp.29;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_20_86_23_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_20_15_23_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_20_15_23_8_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_17_8_23_8_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 25 8 ]
+        %tmp.30 = false;
+        ret %tmp.30;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_14_66_26_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc"; @line = 28; @symbol_functiondef = [onTap,28,13,18]; @symbol_param<0> = [clickEvent,28,19,29]; @symbol_param<0>_type<0> = [WatchUi,28,33,40]; @symbol_param<0>_type<1> = [ClickEvent,28,41,51]; @symbol_return<0> = [Boolean,28,56,63]; ]
+    function onTap(clickEvent as WatchUi.ClickEvent) as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_28_64_31_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 29 8 ]
+        symbol [ _view %tmp.2 29 8 13 ];
+        %tmp.2 = getv ? :_view;
+        symbol [ selectTheme %tmp.3 29 14 25 ];
+        %tmp.3 = getv function %tmp.2 :selectTheme;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 30 8 ]
+        %tmp.4 = true;
+        ret %tmp.4;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_28_64_31_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc"; @line = 33; @symbol_functiondef = [onNextPage,33,13,23]; @symbol_return<0> = [Boolean,33,29,36]; ]
+    function onNextPage() as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_33_37_36_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 34 8 ]
+        symbol [ _view %tmp.2 34 8 13 ];
+        %tmp.2 = getv ? :_view;
+        symbol [ selectNext %tmp.3 34 14 24 ];
+        %tmp.3 = getv function %tmp.2 :selectNext;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 35 8 ]
+        %tmp.4 = true;
+        ret %tmp.4;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_33_37_36_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc"; @line = 38; @symbol_functiondef = [onPreviousPage,38,13,27]; @symbol_return<0> = [Boolean,38,33,40]; ]
+    function onPreviousPage() as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_38_41_41_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 39 8 ]
+        symbol [ _view %tmp.2 39 8 13 ];
+        %tmp.2 = getv ? :_view;
+        symbol [ selectPrevious %tmp.3 39 14 28 ];
+        %tmp.3 = getv function %tmp.2 :selectPrevious;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 40 8 ]
+        %tmp.4 = true;
+        ret %tmp.4;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_38_41_41_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc"; @line = 43; @symbol_functiondef = [onKey,43,13,18]; @symbol_param<0> = [keyEvent,43,19,27]; @symbol_param<0>_type<0> = [WatchUi,43,31,38]; @symbol_param<0>_type<1> = [KeyEvent,43,39,47]; @symbol_return<0> = [Boolean,43,52,59]; ]
+    function onKey(keyEvent as WatchUi.KeyEvent) as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_43_60_57_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 44 8 ]
+        [ "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_43_60_57_4_start" "_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_43_60_57_4_stop" ]
+        %key.1 = local;
+        symbol [ key %key.1 44 12 15 ];
+        %tmp.1 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.1 44 18 26 ];
+        symbol [ getKey %tmp.2 44 27 33 ];
+        %tmp.2 = getv function %tmp.1 :getKey;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %key.1 %tmp.3;
+        symbol [ key %key.1 44 12 15 ];
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 46 8 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_46_8_55_8_if_stmt:
+        %tmp.4 = lgetv %key.1;
+        symbol [ key %tmp.4 46 12 15 ];
+        symbol [ WatchUi %tmp.5 46 19 26 ];
+        %tmp.5 = getm $.Toybox.WatchUi;
+        symbol [ KEY_ENTER %tmp.6 46 27 36 ];
+        %tmp.6 = getv %tmp.5 :KEY_ENTER;
+        %tmp.7 = eq %tmp.4 %tmp.6;
+        bf %tmp.7 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_46_8_55_8_if_false;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_46_8_55_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_46_38_49_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 47 12 ]
+        symbol [ _view %tmp.9 47 12 17 ];
+        %tmp.9 = getv ? :_view;
+        symbol [ selectTheme %tmp.10 47 18 29 ];
+        %tmp.10 = getv function %tmp.9 :selectTheme;
+        invoke %tmp.9 %tmp.10();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 48 12 ]
+        %tmp.11 = true;
+        ret %tmp.11;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_46_38_49_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_46_8_55_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_46_8_55_8_if_false:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 49 15 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_49_15_55_8_if_stmt:
+        %tmp.12 = lgetv %key.1;
+        symbol [ key %tmp.12 49 19 22 ];
+        symbol [ WatchUi %tmp.13 49 26 33 ];
+        %tmp.13 = getm $.Toybox.WatchUi;
+        symbol [ KEY_UP %tmp.14 49 34 40 ];
+        %tmp.14 = getv %tmp.13 :KEY_UP;
+        %tmp.15 = eq %tmp.12 %tmp.14;
+        bf %tmp.15 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_49_15_55_8_if_false;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_49_15_55_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_49_42_52_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 50 12 ]
+        symbol [ _view %tmp.17 50 12 17 ];
+        %tmp.17 = getv ? :_view;
+        symbol [ selectPrevious %tmp.18 50 18 32 ];
+        %tmp.18 = getv function %tmp.17 :selectPrevious;
+        invoke %tmp.17 %tmp.18();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 51 12 ]
+        %tmp.19 = true;
+        ret %tmp.19;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_49_42_52_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_49_15_55_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_49_15_55_8_if_false:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 52 15 ]
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_52_15_55_8_if_stmt:
+        %tmp.20 = lgetv %key.1;
+        symbol [ key %tmp.20 52 19 22 ];
+        symbol [ WatchUi %tmp.21 52 26 33 ];
+        %tmp.21 = getm $.Toybox.WatchUi;
+        symbol [ KEY_DOWN %tmp.22 52 34 42 ];
+        %tmp.22 = getv %tmp.21 :KEY_DOWN;
+        %tmp.23 = eq %tmp.20 %tmp.22;
+        bf %tmp.23 @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_52_15_55_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_52_15_55_8_if_true:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_52_44_55_8_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 53 12 ]
+        symbol [ _view %tmp.25 53 12 17 ];
+        %tmp.25 = getv ? :_view;
+        symbol [ selectNext %tmp.26 53 18 28 ];
+        %tmp.26 = getv function %tmp.25 :selectNext;
+        invoke %tmp.25 %tmp.26();
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 54 12 ]
+        %tmp.27 = true;
+        ret %tmp.27;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_52_44_55_8_stop:
+        goto @_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_52_15_55_8_if_end;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_52_15_55_8_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_49_15_55_8_if_end:
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_46_8_55_8_if_end:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 56 8 ]
+        %tmp.28 = false;
+        ret %tmp.28;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_43_60_57_4_stop:
+    }
+    [ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc"; @line = 59; @symbol_functiondef = [onBack,59,13,19]; @symbol_return<0> = [Boolean,59,25,32]; ]
+    function onBack() as Boolean {
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_59_33_62_4_start:
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 60 8 ]
+        symbol [ WatchUi %tmp.1 60 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.2 60 16 23 ];
+        %tmp.2 = getv function %tmp.1 :popView;
+        symbol [ WatchUi %tmp.3 60 24 31 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_UP %tmp.4 60 32 40 ];
+        %tmp.4 = getv %tmp.3 :SLIDE_UP;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc" 61 8 ]
+        %tmp.5 = true;
+        ret %tmp.5;
+_Users_jeffcechinel_Github_versevault_garmin_source_ThemesDelegate_mc_59_33_62_4_stop:
+    }
+}
+[ @file = "/Users/jeffcechinel/Github/versevault-garmin/source/ThemesDelegate.mc"; @line = 1; ]
+<init> {
+}
